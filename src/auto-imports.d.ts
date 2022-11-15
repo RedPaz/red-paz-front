@@ -2,6 +2,10 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const HEADER_ITEMS: typeof import('./common/constants/menuItems')['HEADER_ITEMS']
+  const JOB_AREAS: typeof import('./common/constants/jobAreas')['JOB_AREAS']
+  const PARTNERS: typeof import('./common/constants/partners')['PARTNERS']
+  const TERRITORY_MEMORIES: typeof import('./common/constants/territoryMemories')['TERRITORY_MEMORIES']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
   const customRef: typeof import('vue')['customRef']

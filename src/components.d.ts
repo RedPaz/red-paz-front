@@ -7,7 +7,10 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    FooterUnal: typeof import('./common/components/FooterUnal.vue')['default']
+    HeaderUnal: typeof import('./common/components/HeaderUnal.vue')['default']
     HelloWorld: typeof import('./common/components/HelloWorld.vue')['default']
+    Home: typeof import('./views/Home.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
