@@ -125,7 +125,7 @@ function setCurrentParent(index: number) {
             type="submit"
             class="form-submit"
           >
-            <div class="i-mdi-magnify"/>
+            <i-mdi-magnify/>
           </button>
         </form>
       </div>
@@ -151,9 +151,9 @@ function setCurrentParent(index: number) {
           >
             {{ item.label }}
 
-            <div
+            <i-mdi-menu-down
               v-if="item.subItems!.length > 0"
-              class="icon i-mdi-menu-down ml-2"
+              class="icon ml-2"
             />
           </a>
 
@@ -251,7 +251,7 @@ function setCurrentParent(index: number) {
 }
 
 .form-submit {
-  @apply text-sm right-5 absolute text-white h-full px-2 top-0 bg-green-unal rounded-tr-md rounded-br-md flex items-center;
+  @apply text-lg right-5 absolute text-white h-full px-2 top-0 bg-green-unal rounded-tr-md rounded-br-md flex items-center;
   @apply xl:right-0;
 }
 
@@ -268,8 +268,8 @@ function setCurrentParent(index: number) {
 }
 
 .main-url {
-  @apply w-full text-white text-xl relative tracking-wide px-5 py-1;
-  @apply xl:text-2xl hover:no-underline flex items-center;
+  @apply w-full text-white flex items-center text-xl relative tracking-wide px-5 py-1;
+  @apply xl:text-2xl xl:px-3 xl:w-1/2 xl:pb-0 hover:no-underline ;
 }
 
 .items-menu {
@@ -290,8 +290,8 @@ function setCurrentParent(index: number) {
 }
 
 .item-name .icon {
-  @apply absolute right-5 text-base top-1/2 -translate-y-1/2 text-green-unal duration-150;
-  @apply xl:text-xl xl:right-1;
+  @apply absolute right-5 text-xl top-1/2 -translate-y-1/2 text-green-unal duration-150;
+  @apply xl:right-0;
 }
 
 .has-submenu .item-name {

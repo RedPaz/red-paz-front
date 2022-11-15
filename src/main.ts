@@ -1,12 +1,10 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia';
 
-import 'uno.css'; // unoCSS
-import '@unocss/reset/tailwind.css'; // Reset styles
-import '@/assets/css/style.css'; // Main styles
 import App from '@/App.vue'
 import router from '@/router';
 
+import './assets/css/style.css';
 
 const app = createApp(App);
 // Add routes

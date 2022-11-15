@@ -1,4 +1,4 @@
-import { Partner } from "@/interfaces";
+import { Partner } from "@/common/interfaces";
 
 export const PARTNERS: Partner[] = [
   {

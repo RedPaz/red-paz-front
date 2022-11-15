@@ -3,8 +3,9 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 // Plugins
-import Unocss from 'unocss/vite';
+import Icons from 'unplugin-icons/vite';
 import AutoImport from 'unplugin-auto-import/vite';
+import IconsResolver from 'unplugin-icons/resolver';
 import Components from 'unplugin-vue-components/vite';
 
 // https://vitejs.dev/config/
@@ -18,10 +19,7 @@ export default defineConfig({
   plugins: [
     vue(),
 
-     // https://github.com/antfu/unocss
-     Unocss(),
-
-     // https://github.com/antfu/unplugin-auto-import
+    // https://github.com/antfu/unplugin-auto-import
      AutoImport({
        include: [
          /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
@@ -68,7 +66,14 @@ export default defineConfig({
         names: ['RouterLink', 'RouterView'],
       }],
 
+      resolvers: [
+        IconsResolver(),
+      ],
+
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
     }),
+
+    // https://github.com/antfu/unplugin-icons
+    Icons(),
   ],
 })

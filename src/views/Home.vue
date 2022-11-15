@@ -1,46 +1,48 @@
 <script setup lang="ts">
+import { buildImageSrc } from '@/common/utils';
+import { JOB_AREAS, PARTNERS } from '@/common/constants';
 
-</script>
+</script> 
 
 <template>
-  <HeaderUnal/>
+  <section class="home-content">
+    <GridItems
+      :items="JOB_AREAS"
+      :image-width="60"
+      title="Áreas de trabajo"
+      cover-image="/images/home/jobs-background.png"
+      background="#F8F8F8"
+    />
 
-  <div class="main-content">
-      <router-view/>
-      <!-- Notifications -->
-      <notifications
-        position="bottom left"
-        :close-on-click="true"
-        :ignore-duplicates="true"
-      >
-        <template #body="props">
-          <div
-            class="red-notification"
-            :class="props.item.type"
+    <div class="partners">
+      <h2 class="section-title text-white">Conoce a nuestros aliados</h2>
+
+      <div class="logos">
+        <div
+          v-for="(partner, index) in PARTNERS"
+          :key="index"
+          class="logo text-center inline-grid justify-items-center items-center"
+          :class="partner.isLarge ? 'col-span-2 xl:col-span-4' : 'col-span-1 xl:col-span-2'"
+        >
+          <img
+            :src="buildImageSrc(partner.image)"
+            :alt="partner.name"
+            :class="{ 'w-4/5 my-4 xl:w-2/3 xl:my-0': partner.isLarge }"
           >
-            <h4 class="title">
-              {{ props.item.title }}
-            </h4>
-
-            <div v-html="props.item.text"/>
-          </div>
-        </template>
-      </notifications>
+        </div>
+      </div>
     </div>
-
-  <FooterUnal/>
+  </section>
 </template>
 
 <style scoped>
-.main-content {
-  @apply min-h-[calc(100vh-250px)];
+.partners {
+  @apply bg-green-red px-10 py-8;
+  @apply xl:px-60 xl:py-40
 }
 
-.red-notification {
-  @apply font-sans text-base p-3 mt-0 mx-1.5 mb-1.5 text-white bg-gray-500 border-l-4 border-l-gray-900 cursor-pointer;
-}
-
-.red-notification.error {
-  @apply bg-red-700 border-l-red-900;
+.logos {
+  @apply grid grid-cols-2 gap-10;
+  @apply xl:grid-cols-8 xl:gap-20;
 }
 </style>

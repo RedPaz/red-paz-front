@@ -1,4 +1,4 @@
-import { GridItem } from '@/interfaces/gridItem';
+import { GridItem } from '@/common/interfaces';
 
 export const JOB_AREAS: GridItem[] = [
   {

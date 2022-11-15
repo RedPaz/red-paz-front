@@ -1,4 +1,4 @@
-import { HeaderItem } from './../interfaces/headerItem';
+import { HeaderItem } from '@/common/interfaces';
 
 export const HEADER_ITEMS: HeaderItem[] = [
   {

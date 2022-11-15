@@ -6,6 +6,7 @@ declare global {
   const JOB_AREAS: typeof import('./common/constants/jobAreas')['JOB_AREAS']
   const PARTNERS: typeof import('./common/constants/partners')['PARTNERS']
   const TERRITORY_MEMORIES: typeof import('./common/constants/territoryMemories')['TERRITORY_MEMORIES']
+  const buildImageSrc: typeof import('./common/utils/buildImageSrc')['default']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
   const customRef: typeof import('vue')['customRef']
