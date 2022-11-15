@@ -25,7 +25,7 @@ module.exports = {
         'green-red': '#4DB372',
       },
       backgroundImage: {
-        social: "url('/images/header-unal/redes_sociales.png')"
+        social: "url('/src/assets/images/header-unal/redes_sociales.png')"
       },
     },
   },

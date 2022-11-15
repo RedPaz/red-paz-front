@@ -10,7 +10,7 @@ import { JOB_AREAS, PARTNERS } from '@/common/constants';
       :items="JOB_AREAS"
       :image-width="60"
       title="Áreas de trabajo"
-      cover-image="/images/home/jobs-background.png"
+      cover-image="/src/assets/images/home/jobs-background.png"
       background="#F8F8F8"
     />
 

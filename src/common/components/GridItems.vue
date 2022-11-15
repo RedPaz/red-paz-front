@@ -77,7 +77,7 @@ defineProps({
         <div 
           v-if="coverImage"
           class="mask"
-          :style="{ backgroundImage: `url(${coverImage})` }">
+          :style="{ backgroundImage: `url(${buildImageSrc(coverImage)})` }">
         </div>
       </div>
     </div>
