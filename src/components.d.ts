@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AboutUs: typeof import('./views/AboutUs.vue')['default']
+    DescriptionSection: typeof import('./common/components/DescriptionSection.vue')['default']
     FooterUnal: typeof import('./common/components/FooterUnal.vue')['default']
     GridItems: typeof import('./common/components/GridItems.vue')['default']
     HeaderUnal: typeof import('./common/components/HeaderUnal.vue')['default']

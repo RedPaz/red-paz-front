@@ -1,11 +1,28 @@
 <script setup lang="ts">
 import { buildImageSrc } from '@/common/utils';
 import { JOB_AREAS, PARTNERS } from '@/common/constants';
+import { DescriptionItem } from '@/common/interfaces';
+
+const description: DescriptionItem = {
+  title: '¿Qué es la RedPaz Unal?',
+  description: `
+    Es un instrumento de articulación, coordinación e impulso del conocimiento y las acciones que la UNAL está emprendiendo como actor fundamental en la consolidación de la paz en todo el territorio nacional, teniendo en cuenta las particularidades de cada región, y la posibilidad de hacer alianzas con diversos actores sociales.
+    
+    Somos una red de Ética, Cultura, Creación, Ciencia, Tecnología e innovación para la paz`,
+  links: [
+    { label: 'Conoce más', src: '#' },
+  ],
+};
 
 </script> 
 
 <template>
   <section class="home-content">
+    <DescriptionSection
+      :items="[description]"
+      main-image="/src/assets/images/home/description-image.png"
+    />
+
     <GridItems
       :items="JOB_AREAS"
       :image-width="60"
