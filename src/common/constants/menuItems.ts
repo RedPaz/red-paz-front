@@ -3,12 +3,12 @@ import { HeaderItem } from '@/common/interfaces';
 export const HEADER_ITEMS: HeaderItem[] = [
   {
     label: 'Inicio',
-    src: '#',
+    src: '/',
     subItems: [],
   },
   {
     label: 'Sobre Nosotros',
-    src: '#',
+    src: '/sobre-nosotros',
     subItems: [],
   },
   {

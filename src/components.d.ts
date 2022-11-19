@@ -19,6 +19,7 @@ declare module '@vue/runtime-core' {
     IMdiChevronRight: typeof import('~icons/mdi/chevron-right')['default']
     IMdiMagnify: typeof import('~icons/mdi/magnify')['default']
     IMdiMenuDown: typeof import('~icons/mdi/menu-down')['default']
+    PageHeader: typeof import('./common/components/PageHeader.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

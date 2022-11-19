@@ -3,13 +3,13 @@
 </script>
 
 <template>
-  <div class="name">
-    <h1>About us !!</h1>
-
-    <h1 class="text-3xl font-bold underline text-red-400">
-      Hello world!
-    </h1>
-  </div>
+  <section class="about-us">
+    <PageHeader
+      title="Sobre Nosotros"
+      background="#4DB372"
+      image="/src/assets/images/about-us/header-image.png"
+    />
+  </section>
 </template>
 
 <style scoped>

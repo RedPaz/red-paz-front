@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
-
 import { buildImageSrc } from '@/common/utils';
 import { DescriptionItem } from '@/common/interfaces';
 
@@ -27,7 +26,7 @@ defineProps({
       <h3
         :class="[
           item.isBannerItem ? 'section-title' : 'section-subtitle',
-          {'!text-white pr-32 xl:pr-0': item.isBannerItem },
+          {'!text-white pr-32 xl:text-left xl:pr-0': item.isBannerItem },
           { '!mb-0': item.logos && item.logos.length > 0 },
         ]"
       >
@@ -45,7 +44,7 @@ defineProps({
         <div
           v-if="item.logos && item.logos.length > 0"
           class="logos"
-          :class="{ 'order-first mb-5': item.isBannerItem }"
+          :class="{ 'order-first mb-5 px-1': item.isBannerItem }"
         >
           <img
             v-for="(logo, j) in item.logos"
