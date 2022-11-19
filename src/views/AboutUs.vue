@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { DescriptionItem, Item } from '@/common/interfaces';
+import TEAM_MEMBERS from '@/common/constants/teamMembers';
+import { DescriptionItem } from '@/common/interfaces';
 
 const aboutUsDescriptions: DescriptionItem[] = [
   {
@@ -12,7 +13,7 @@ const aboutUsDescriptions: DescriptionItem[] = [
   }
 ];
 
-const objectives: Item[] = [
+const objectives: any[] = [
   {
     image: '/src/assets/images/about-us/red-paz.svg',
     description: 'Potenciar las capacidades de investigación, extensión y docencia de la Universidad Nacional de Colombia en función de las necesidades y retos de la construcción de paz.',
@@ -34,7 +35,7 @@ const whichWeDo: DescriptionItem = {
 - Apoya la identificación  y vinculación de fuentes de financiación internas y externas que contribuyan al desarrollo de iniciativas de construcción de paz territorial en el corto, mediano y largo plazo`
 }
 
-const actionLines: Item[] = [
+const actionLines: any[] = [
   {
     image: '/src/assets/images/about-us/red-paz.svg',
     description: 'Apoyo interdisciplinario e intersedes a procesos de reincorporación y reconciliación en los territorios de influencia de las sedes de presencia nacional',
@@ -78,10 +79,38 @@ const actionLines: Item[] = [
       :swap-items="true"
     />
 
-    <GridColumnItems
+    <!-- <GridColumnItems
       title="Líneas de acción estratégicas"
       :items="actionLines"
-    />
+    /> -->
+    <GridSection
+      title="Líneas de acción estratégicas"
+      background="bg-gray-100"
+    >
+      <template #items>
+        <BaseItem
+          v-for="(item, index) in actionLines"
+          :key="index"
+          :item="item"
+        />
+      </template>
+    </GridSection>
+
+    <div class="team-members">
+      <h2 class="section-title">Equipo de trabajo</h2>
+
+      <div class="members-content">
+        <p class="content">El comité de impulso de la RedPaz Unal se constituye como un espacio que formula un plan y unas líneas generales de trabajo.</p>
+
+        <div class="members">
+          <PersonItem
+            v-for="(person, index) in TEAM_MEMBERS"
+            :key="index"
+            :data="person"
+          />
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 

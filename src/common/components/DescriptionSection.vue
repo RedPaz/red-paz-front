@@ -47,9 +47,7 @@ defineProps({
         <div class="section-content">
           <p
             class="content"
-            :class="[
-              { '!text-white xl:!text-2xl !font-medium': item.isBannerItem },
-            ]"
+            :class="item.isBannerItem ? '!text-white xl:!text-2xl !font-medium !pr-10' : 'pr-0'"
             
           >
             {{ item.description }}
@@ -122,7 +120,7 @@ defineProps({
 }
 
 .section-content .content {
-  @apply text-base font-light mb-5 pr-10 whitespace-pre-line;
+  @apply text-base font-light mb-5 whitespace-pre-line;
   @apply xl:text-xl xl:mb-10 xl:pr-0;
 }
 

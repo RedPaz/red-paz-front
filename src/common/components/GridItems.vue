@@ -37,6 +37,8 @@ defineProps({
     <h2 class="section-title">{{ title }}</h2>
 
     <div class="items">
+      <slot name="items"/>
+
       <div
         v-for="(item, index) in items"
         :key="index"
@@ -114,7 +116,7 @@ defineProps({
 }
 
 .item-action {
-  @apply bg-white rounded-lg text-lg w-32 leading-8;
+  @apply bg-white;
 }
 
 .item-title {

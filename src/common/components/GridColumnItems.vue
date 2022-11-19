@@ -65,7 +65,8 @@ defineProps({
 }
 
 .description {
-  @apply mt-0 mb-4 text-lg font-light text-center leading-6 px-28 text-gray-400;
+  @apply my-3 px-5 text-base font-light text-center leading-6 text-gray-400;
+  @apply xl:mt-0 xl:mb-4 xl:px-24 xl:text-xl;
 }
 
 .item-image {

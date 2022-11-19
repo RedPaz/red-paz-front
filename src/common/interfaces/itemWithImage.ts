@@ -1,6 +1,6 @@
 import { Item } from '@/common/interfaces/item';
 
-export interface GridItem extends Item {
+export interface ItemWithImage extends Item {
   title: string;
   color: string;
   src?: string;
