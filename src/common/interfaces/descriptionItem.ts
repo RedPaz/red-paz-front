@@ -5,4 +5,6 @@ export interface DescriptionItem {
   description: string;
   logos?: string[];
   links?: ActionLink[];
+  isBannerItem?: boolean;
+  linkTextColor?: string;
 }

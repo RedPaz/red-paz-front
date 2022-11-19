@@ -1,9 +1,48 @@
 <script setup lang="ts">
 import { buildImageSrc } from '@/common/utils';
 import { JOB_AREAS, PARTNERS } from '@/common/constants';
-import { DescriptionItem } from '@/common/interfaces';
+import { Banner, DescriptionItem } from '@/common/interfaces';
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Autoplay, Navigation, Pagination } from 'swiper';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import "swiper/css/navigation";
 
-const description: DescriptionItem = {
+const swiperModules = [Pagination, Autoplay, Navigation];
+const swiperControls = { prevEl: '.nav-control.prev', nextEl: '.nav-control.next' }
+
+const homeBanners: Banner[] = [
+  {
+    title: 'Bienvenidos a',
+    description: 'Plataforma de divulgación, encuentro e intercambio de iniciativas de apoyo a la construcción de paz',
+    image: '/src/assets/images/home/banner-image-1.png',
+    background: '#4DB372',
+    logos: ['/src/assets/images/home/logo.svg'],
+    links: [{ label: 'Conoce más', src: '#' }],
+    isBannerItem: true,
+  },
+  {
+    title: 'Encuentro Nacional de Experiencias de paz',
+    description: 'Conoce más sobre las 95 iniciativas en torno a la paz que se están realizando en los territorios por la comunidad.',
+    image: '/src/assets/images/home/banner-image-1.png',
+    background: '#402D5C',
+    links: [{ label: 'Conoce más', src: '#' }],
+    isBannerItem: true,
+  },
+  {
+    title: 'Curso del conflicto armado a la construcción de paz: Memoria, Violencia y Universidad',
+    description: `Sesión 13 | Miércoles 9 de febrero de 2021 | 9:00 a.m.
+    Con la presencia de: Mauricio Archila, Rodrigo Torrejano, Stalin Ballesteros, Oscar Cardozo, Patricia Nieto y Esteban Roncancio.`,
+    image: '/src/assets/images/home/banner-image-1.png',
+    background: '#041449',
+    links: [{ label: 'Conoce más', src: '#' }],
+    isBannerItem: true,
+  },
+];
+
+const homeDescription: DescriptionItem = {
   title: '¿Qué es la RedPaz Unal?',
   description: `
     Es un instrumento de articulación, coordinación e impulso del conocimiento y las acciones que la UNAL está emprendiendo como actor fundamental en la consolidación de la paz en todo el territorio nacional, teniendo en cuenta las particularidades de cada región, y la posibilidad de hacer alianzas con diversos actores sociales.
@@ -13,13 +52,34 @@ const description: DescriptionItem = {
     { label: 'Conoce más', src: '#' },
   ],
 };
-
 </script> 
 
 <template>
   <section class="home-content">
+    <swiper
+      :modules="swiperModules"
+      :slides-per-view="1"
+      :loop="true"
+      :navigation="swiperControls"
+      class="relative"
+    >
+      <swiper-slide
+        v-for="(banner, index) in homeBanners"
+        :key="index"
+      >
+        <BannerItem :banner="banner" />
+      </swiper-slide>
+
+      <template #container-end>
+        <div class="navigation-controls absolute right-10 bottom-10 z-10 text-white">
+          <button class="nav-control prev"><i-mdi-chevron-left/></button>
+          <button class="nav-control next"><i-mdi-chevron-right/></button>
+        </div>
+      </template>
+    </swiper>
+
     <DescriptionSection
-      :items="[description]"
+      :items="[homeDescription]"
       main-image="/src/assets/images/home/description-image.png"
     />
 
@@ -61,5 +121,10 @@ const description: DescriptionItem = {
 .logos {
   @apply grid grid-cols-2 gap-10;
   @apply xl:grid-cols-8 xl:gap-20;
+}
+
+.nav-control {
+  @apply text-3xl p-2 mr-2 bg-white/40 rounded-md shadow-md shadow-gray-500/50 duration-200 ease-in-out;
+  @apply hover:bg-white hover:text-gray-500
 }
 </style>

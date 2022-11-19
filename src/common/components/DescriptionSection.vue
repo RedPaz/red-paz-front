@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
+
 import { buildImageSrc } from '@/common/utils';
 import { DescriptionItem } from '@/common/interfaces';
 
-const props = defineProps({
+
+defineProps({
   items: {
     type: Array as PropType<DescriptionItem[]>,
     required: true, 
@@ -22,20 +24,32 @@ const props = defineProps({
       :key="i"
       class="description"
     >
-      <h3 class="section-subtitle">{{ item.title }}</h3>
+      <h3
+        class="section-subtitle"
+        :class="[{ '!text-white': item.isBannerItem }, { '!mb-0': item.logos && item.logos.length > 0 }]"
+      >
+        {{ item.title }}
+      </h3>
 
       <div class="section-content">
-        <p class="content">{{ item.description }}</p>
+        <p
+          class="content"
+          :class="{ '!text-white xl:!text-2xl !font-medium': item.isBannerItem }"
+        >
+          {{ item.description }}
+        </p>
         <!-- Logos -->
         <div
           v-if="item.logos && item.logos.length > 0"
           class="logos"
+          :class="{ 'order-first mb-5': item.isBannerItem }"
         >
           <img
             v-for="(logo, j) in item.logos"
             :key="`logo-${j}`"
             :src="buildImageSrc(logo)"
             alt="Section image"
+            :class="{ 'w-1/3': item.isBannerItem }"
           >
         </div>
         <!-- Links -->
@@ -48,6 +62,8 @@ const props = defineProps({
             :key="`link-${k}`"
             :href="link.src"
             class="section-link"
+            :class="item.isBannerItem ? 'bg-white' : 'bg-green-red'"
+            :style="{ 'color': item.isBannerItem ? item.linkTextColor : '#fff' }"
           >
             {{ link.label }}
           </a>
@@ -66,7 +82,7 @@ const props = defineProps({
 
 <style scoped>
 .descriptions-section {
-  @apply px-5 py-8 flex items-center justify-between;
+  @apply w-full px-5 py-8 flex items-center justify-between;
   @apply xl:px-28 xl:py-32;
 }
 
@@ -78,6 +94,10 @@ const props = defineProps({
   @apply text-gray-unal-700;
 }
 
+.section-content {
+  @apply flex flex-col;
+}
+
 .section-content .content {
   @apply text-lg xl:text-xl font-light mb-10;
 }
@@ -87,6 +107,6 @@ const props = defineProps({
 }
 
 .section-link {
-  @apply bg-green-red text-white rounded-lg xl:text-xl leading-8 p-2 text-center duration-200 ease-in-out;
+  @apply rounded-lg xl:text-xl leading-8 font-bold p-2 text-center duration-200 ease-in-out;
 }
 </style>
