@@ -4,4 +4,5 @@ export * from './breadcrumbItem';
 export * from './descriptionItem';
 export * from './gridItem';
 export * from './headerItem';
+export * from './item';
 export * from './partner';

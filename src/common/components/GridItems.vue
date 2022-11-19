@@ -92,7 +92,7 @@ defineProps({
 
 .items {
   @apply grid grid-cols-2 gap-5;
-  @apply xl:grid xl:grid-cols-3 xl:gap-8;
+  @apply xl:grid-cols-3 xl:gap-8;
 }
 
 .item {

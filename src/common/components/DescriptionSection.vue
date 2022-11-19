@@ -13,72 +13,87 @@ defineProps({
     type: String,
     required: false,
   },
+  swapItems: {
+    type: Boolean,
+    required: false,
+  }
 });
 </script>
 
 <template>
-  <section class="descriptions-section">
+  <section
+    class="descriptions-section"
+    :class="{ 'xl:!flex-row-reverse': swapItems }"
+  >
     <div
-      v-for="(item, i) in items"
-      :key="i"
-      class="description"
+      class="descriptions"
+      :class="{ 'xl:!pr-0 xl:pl-10': swapItems }"
     >
-      <h3
-        :class="[
-          item.isBannerItem ? 'section-title' : 'section-subtitle',
-          {'!text-white pr-32 xl:text-left xl:pr-0': item.isBannerItem },
-          { '!mb-0': item.logos && item.logos.length > 0 },
-        ]"
+      <div
+        v-for="(item, i) in items"
+        :key="i"
+        class="description"
       >
-        {{ item.title }}
-      </h3>
+        <h3
+          :class="[
+            item.isBannerItem ? 'section-title' : 'section-subtitle',
+            {'!text-white pr-32 xl:text-left xl:pr-0': item.isBannerItem },
+            { '!mb-0': item.logos && item.logos.length > 0 },
+          ]"
+        >
+          {{ item.title }}
+        </h3>
 
-      <div class="section-content">
-        <p
-          class="content"
-          :class="{ '!text-white xl:!text-2xl !font-medium': item.isBannerItem }"
-        >
-          {{ item.description }}
-        </p>
-        <!-- Logos -->
-        <div
-          v-if="item.logos && item.logos.length > 0"
-          class="logos"
-          :class="{ 'order-first mb-5 px-1': item.isBannerItem }"
-        >
-          <img
-            v-for="(logo, j) in item.logos"
-            :key="`logo-${j}`"
-            :src="buildImageSrc(logo)"
-            alt="Section image"
-            :class="{ 'w-1/2 xl:w-1/3': item.isBannerItem }"
+        <div class="section-content">
+          <p
+            class="content"
+            :class="[
+              { '!text-white xl:!text-2xl !font-medium': item.isBannerItem },
+            ]"
+            
           >
-        </div>
-        <!-- Links -->
-        <div
-          v-if="item.links && item.links.length > 0"
-          class="links"
-        >
-          <a
-            v-for="(link, k) in item.links"
-            :key="`link-${k}`"
-            :href="link.src"
-            class="section-link"
-            :class="item.isBannerItem ? 'bg-white' : 'bg-green-red'"
-            :style="{ 'color': item.isBannerItem ? item.linkTextColor : '#fff' }"
+            {{ item.description }}
+          </p>
+          <!-- Logos -->
+          <div
+            v-if="item.logos && item.logos.length > 0"
+            class="logos"
+            :class="{ 'order-first mb-5 px-1': item.isBannerItem }"
           >
-            {{ link.label }}
-          </a>
+            <img
+              v-for="(logo, j) in item.logos"
+              :key="`logo-${j}`"
+              :src="buildImageSrc(logo)"
+              alt="Section image"
+              :class="{ 'w-1/2 xl:w-1/3': item.isBannerItem }"
+            >
+          </div>
+          <!-- Links -->
+          <div
+            v-if="item.links && item.links.length > 0"
+            class="links"
+          >
+            <a
+              v-for="(link, k) in item.links"
+              :key="`link-${k}`"
+              :href="link.src"
+              class="section-link"
+              :class="item.isBannerItem ? 'bg-white' : 'bg-green-red'"
+              :style="{ 'color': item.isBannerItem ? item.linkTextColor : '#fff' }"
+            >
+              {{ link.label }}
+            </a>
+          </div>
         </div>
+
       </div>
-
     </div>
 
     <img
       v-if="mainImage"
       :src="buildImageSrc(mainImage)"
       alt="Section image"
-      class="hidden xl:block"
+      class="hidden xl:block xl:w-1/2"
     >
   </section>
 </template>
@@ -89,9 +104,13 @@ defineProps({
   @apply xl:px-28 xl:py-32 xl:flex-row;
 }
 
-.description {
+.descriptions {
   @apply w-full text-gray-unal-300;
   @apply xl:w-1/2 xl:pr-10;
+}
+
+.description {
+  @apply mb-10 last:mb-0;
 }
 
 .section-subtitle {
@@ -103,7 +122,7 @@ defineProps({
 }
 
 .section-content .content {
-  @apply text-base font-light mb-5 pr-10;
+  @apply text-base font-light mb-5 pr-10 whitespace-pre-line;
   @apply xl:text-xl xl:mb-10 xl:pr-0;
 }
 

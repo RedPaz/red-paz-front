@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     BannerItem: typeof import('./common/components/BannerItem.vue')['default']
     DescriptionSection: typeof import('./common/components/DescriptionSection.vue')['default']
     FooterUnal: typeof import('./common/components/FooterUnal.vue')['default']
+    GridColumnItems: typeof import('./common/components/GridColumnItems.vue')['default']
     GridItems: typeof import('./common/components/GridItems.vue')['default']
     HeaderUnal: typeof import('./common/components/HeaderUnal.vue')['default']
     HelloWorld: typeof import('./common/components/HelloWorld.vue')['default']
@@ -20,6 +21,7 @@ declare module '@vue/runtime-core' {
     IMdiMagnify: typeof import('~icons/mdi/magnify')['default']
     IMdiMenuDown: typeof import('~icons/mdi/menu-down')['default']
     PageHeader: typeof import('./common/components/PageHeader.vue')['default']
+    PersonItem: typeof import('./common/components/PersonItem.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
