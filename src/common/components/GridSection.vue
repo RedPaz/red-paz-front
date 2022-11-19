@@ -31,6 +31,8 @@ const gridClasses = computed(() => `grid-cols-${props.mobileCols} xl:grid-cols-$
   >
     <h2 class="section-title">{{ title }}</h2>
 
+    <slot name="description"/>
+
     <div
       class="items"
       :class="gridClasses"  

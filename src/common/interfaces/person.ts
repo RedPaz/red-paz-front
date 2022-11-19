@@ -7,4 +7,5 @@ export interface Person {
   email: string;
   phone: string;
   link?: ActionLink;
+  highLight?: boolean;
 }

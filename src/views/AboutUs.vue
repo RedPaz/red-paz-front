@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import TEAM_MEMBERS from '@/common/constants/teamMembers';
 import { DescriptionItem } from '@/common/interfaces';
+import TEAM_MEMBERS from '@/common/constants/teamMembers';
 
 const aboutUsDescriptions: DescriptionItem[] = [
   {
@@ -68,10 +68,18 @@ const actionLines: any[] = [
       main-image="/src/assets/images/home/description-image.png"
     />
 
-    <GridColumnItems
+    <GridSection
       title="Objetivos específicos"
-      :items="objectives"
-    />
+      background="bg-gray-100"
+    >
+      <template #items>
+        <BaseItem
+          v-for="(item, index) in objectives"
+          :key="index"
+          :item="item"
+        />
+      </template>
+    </GridSection>
 
     <DescriptionSection
       :items="[whichWeDo]"
@@ -79,10 +87,6 @@ const actionLines: any[] = [
       :swap-items="true"
     />
 
-    <!-- <GridColumnItems
-      title="Líneas de acción estratégicas"
-      :items="actionLines"
-    /> -->
     <GridSection
       title="Líneas de acción estratégicas"
       background="bg-gray-100"
@@ -96,21 +100,23 @@ const actionLines: any[] = [
       </template>
     </GridSection>
 
-    <div class="team-members">
-      <h2 class="section-title">Equipo de trabajo</h2>
+    <GridSection
+      title="Equipo de trabajo"
+      :desktop-cols="3"
+    >
+      <template #description>
+        <p class="text-xl mb-10">El comité de impulso de la RedPaz Unal se constituye como un espacio que formula un plan y unas líneas generales de trabajo.</p>
+      </template>
 
-      <div class="members-content">
-        <p class="content">El comité de impulso de la RedPaz Unal se constituye como un espacio que formula un plan y unas líneas generales de trabajo.</p>
-
-        <div class="members">
-          <PersonItem
-            v-for="(person, index) in TEAM_MEMBERS"
-            :key="index"
-            :data="person"
-          />
-        </div>
-      </div>
-    </div>
+      <template #items>
+        <PersonItem
+          v-for="(person, index) in TEAM_MEMBERS"
+          :key="index"
+          :data="person"
+          :highlight="person.highLight"
+        />
+      </template>
+    </GridSection>
   </section>
 </template>
 

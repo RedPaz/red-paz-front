@@ -87,11 +87,6 @@ defineProps({
   @apply bg-white;
 }
 
-.item-title {
-  @apply text-lg text-center leading-6;
-  @apply xl:text-2xl xl:text-left;
-}
-
 .mask {
   @apply absolute w-full h-full top-0 left-0 opacity-25 bg-cover;
 }

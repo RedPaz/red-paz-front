@@ -21,12 +21,12 @@ body {
 }
 
 .item-title {
-  @apply text-lg text-center leading-6;
+  @apply text-lg text-center leading-6 font-bold;
   @apply xl:text-2xl xl:text-left;
 }
 
 .item-action {
-  @apply bg-green-red text-white rounded-lg text-lg w-32 leading-8;
+  @apply inline-block bg-green-red text-white text-center rounded-lg text-lg w-32 leading-8 pt-1 mt-2;
 }
 
 @layer base {

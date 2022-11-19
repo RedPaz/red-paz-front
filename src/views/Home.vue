@@ -83,13 +83,22 @@ const homeDescription: DescriptionItem = {
       main-image="/src/assets/images/home/description-image.png"
     />
 
-    <GridItems
-      :items="JOB_AREAS"
-      :image-width="60"
+    <GridSection
       title="Áreas de trabajo"
-      cover-image="/src/assets/images/home/jobs-background.png"
-      background="#F8F8F8"
-    />
+      background="bg-gray-100"
+      :desktop-cols="3"
+      :mobile-cols="2"
+    >
+      <template #items>
+        <ItemWithImage
+          v-for="(item, index) in JOB_AREAS"
+          :key="index"
+          :item="item"
+          :image-width="60"
+          cover-image="/src/assets/images/home/jobs-background.png"
+        />
+      </template>
+    </GridSection>
 
     <div class="partners">
       <h2 class="section-title text-white">Conoce a nuestros aliados</h2>
