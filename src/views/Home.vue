@@ -71,7 +71,7 @@ const homeDescription: DescriptionItem = {
       </swiper-slide>
 
       <template #container-end>
-        <div class="navigation-controls absolute right-10 bottom-10 z-10 text-white">
+        <div class="navigation-controls">
           <button class="nav-control prev"><i-mdi-chevron-left/></button>
           <button class="nav-control next"><i-mdi-chevron-right/></button>
         </div>
@@ -123,8 +123,13 @@ const homeDescription: DescriptionItem = {
   @apply xl:grid-cols-8 xl:gap-20;
 }
 
+.navigation-controls {
+  @apply absolute right-8 bottom-8 z-10 text-white;
+  @apply xl:right-10 xl:bottom-10;
+}
 .nav-control {
-  @apply text-3xl p-2 mr-2 bg-white/40 rounded-md shadow-md shadow-gray-500/50 duration-200 ease-in-out;
-  @apply hover:bg-white hover:text-gray-500
+  @apply text-xl p-1 m-1 bg-white/40 rounded-md shadow-md shadow-gray-500/50 duration-200 ease-in-out;
+  @apply hover:bg-white hover:text-gray-500;
+  @apply xl:text-3xl xl:p-2 xl:mr-2;
 }
 </style>

@@ -25,7 +25,7 @@ const bannerInfo: DescriptionItem = {
 
 <template>
   <div
-    class="banner-item relative flex items-center"
+    class="banner-item relative flex items-end py-24 xl:items-center"
     :style="{ backgroundColor: background }"
   >
 
@@ -33,7 +33,7 @@ const bannerInfo: DescriptionItem = {
 
     <div 
       v-if="image"
-      class="banner-image absolute right-0 top-0 w-1/2 h-full z-10 bg-cover"
+      class="banner-image"
       :style="{ backgroundImage: `url(${buildImageSrc(image)})` }">
     </div>
   </div>
@@ -42,5 +42,10 @@ const bannerInfo: DescriptionItem = {
 <style scoped>
 .banner-item {
   @apply h-[calc(100vh_-_111px)];
+}
+
+.banner-image {
+  @apply absolute right-0 top-0 w-full h-full z-10 bg-no-repeat bg-[length:150%];
+  @apply xl:w-1/2 xl:bg-cover;
 }
 </style>

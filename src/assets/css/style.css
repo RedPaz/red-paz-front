@@ -16,7 +16,8 @@ body {
 }
 
 .section-subtitle {
-  @apply font-bold text-4xl mb-8;
+  @apply font-bold text-lg mb-8;
+  @apply xl:text-4xl;
 }
 
 @layer base {

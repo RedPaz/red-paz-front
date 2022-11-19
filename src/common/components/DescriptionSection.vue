@@ -25,8 +25,11 @@ defineProps({
       class="description"
     >
       <h3
-        class="section-subtitle"
-        :class="[{ '!text-white': item.isBannerItem }, { '!mb-0': item.logos && item.logos.length > 0 }]"
+        :class="[
+          item.isBannerItem ? 'section-title' : 'section-subtitle',
+          {'!text-white pr-32 xl:pr-0': item.isBannerItem },
+          { '!mb-0': item.logos && item.logos.length > 0 },
+        ]"
       >
         {{ item.title }}
       </h3>
@@ -49,7 +52,7 @@ defineProps({
             :key="`logo-${j}`"
             :src="buildImageSrc(logo)"
             alt="Section image"
-            :class="{ 'w-1/3': item.isBannerItem }"
+            :class="{ 'w-1/2 xl:w-1/3': item.isBannerItem }"
           >
         </div>
         <!-- Links -->
@@ -76,18 +79,20 @@ defineProps({
       v-if="mainImage"
       :src="buildImageSrc(mainImage)"
       alt="Section image"
+      class="hidden xl:block"
     >
   </section>
 </template>
 
 <style scoped>
 .descriptions-section {
-  @apply w-full px-5 py-8 flex items-center justify-between;
-  @apply xl:px-28 xl:py-32;
+  @apply w-full px-5 py-9 flex flex-col items-center justify-between z-20;
+  @apply xl:px-28 xl:py-32 xl:flex-row;
 }
 
 .description {
-  @apply w-1/2 pr-10 text-gray-unal-300;
+  @apply w-full text-gray-unal-300;
+  @apply xl:w-1/2 xl:pr-10;
 }
 
 .section-subtitle {
@@ -95,18 +100,21 @@ defineProps({
 }
 
 .section-content {
-  @apply flex flex-col;
+  @apply flex flex-col z-20;
 }
 
 .section-content .content {
-  @apply text-lg xl:text-xl font-light mb-10;
+  @apply text-base font-light mb-5 pr-10;
+  @apply xl:text-xl xl:mb-10 xl:pr-0;
 }
 
 .links {
-  @apply grid gap-8 grid-cols-3; 
+  @apply grid gap-8 grid-cols-2;
+  @apply xl:grid-cols-3;
 }
 
 .section-link {
-  @apply rounded-lg xl:text-xl leading-8 font-bold p-2 text-center duration-200 ease-in-out;
+  @apply rounded-lg text-lg leading-8 font-bold px-2 py-1 text-center duration-200 ease-in-out;
+  @apply xl:text-xl xl:p-2;
 }
 </style>
