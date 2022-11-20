@@ -3,6 +3,8 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Home from '@/views/Home.vue';
 import AboutUs from '@/views/AboutUs.vue';
 
+import experienceRoutes from '@/views/experiences/routes';
+
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
@@ -26,6 +28,7 @@ const routes: RouteRecordRaw[] = [
       }
     ],
   },
+  ...experienceRoutes
 ];
 
 const router = createRouter({

@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     BannerItem: typeof import('./common/components/BannerItem.vue')['default']
     BaseItem: typeof import('./common/components/BaseItem.vue')['default']
     DescriptionSection: typeof import('./common/components/DescriptionSection.vue')['default']
+    ExperiencesWrapper: typeof import('./views/experiences/ExperiencesWrapper.vue')['default']
     FooterUnal: typeof import('./common/components/FooterUnal.vue')['default']
     GridColumnItems: typeof import('./common/components/GridColumnItems.vue')['default']
     GridSection: typeof import('./common/components/GridSection.vue')['default']
