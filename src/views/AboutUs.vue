@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { DescriptionItem } from '@/common/interfaces';
-import TEAM_MEMBERS from '@/common/constants/teamMembers';
+import { JOB_AREAS, TEAM_MEMBERS } from '@/common/constants';
 
 const aboutUsDescriptions: DescriptionItem[] = [
   {
@@ -105,7 +105,7 @@ const actionLines: any[] = [
       :desktop-cols="3"
     >
       <template #description>
-        <p class="text-xl mb-10">El comité de impulso de la RedPaz Unal se constituye como un espacio que formula un plan y unas líneas generales de trabajo.</p>
+        <p class="xl:text-xl mb-10 text-base font-light">El comité de impulso de la RedPaz Unal se constituye como un espacio que formula un plan y unas líneas generales de trabajo.</p>
       </template>
 
       <template #items>
@@ -117,8 +117,51 @@ const actionLines: any[] = [
         />
       </template>
     </GridSection>
+
+    <GridSection
+      title="Áreas de trabajo"
+      background="bg-gray-100"
+      :desktop-cols="3"
+      :mobile-cols="2"
+    >
+      <template #items>
+        <ItemWithImage
+          v-for="(item, index) in JOB_AREAS"
+          :key="index"
+          :item="item"
+          :image-width="60"
+          cover-image="/src/assets/images/home/jobs-background.png"
+        />
+      </template>
+
+      <template #end>
+        <div
+          class="end-decoration"
+        >
+          <div
+            class="dec-image"
+            :style="{
+              background: `url(/src/assets/images/about-us/red-paz.svg) repeat-x 0 0 transparent`,
+              backgroundSize: '64px',
+            }"
+          />
+          <div class="dec-color"/>
+        </div>
+      </template>
+    </GridSection>
   </section>
 </template>
 
 <style scoped>
+.end-decoration {
+  @apply absolute bottom-0 left-0 h-16 w-full;
+}
+
+.end-decoration .dec-image {
+  @apply h-8 w-full opacity-20;
+}
+
+.dec-color {
+  @apply h-8 bg-green-red z-10;
+}
 </style>

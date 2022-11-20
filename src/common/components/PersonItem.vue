@@ -18,17 +18,17 @@ const { name, image, position, email, phone, link } = props.data;
 </script>
 
 <template>
-  <div class="person flex justify-between rounded-lg overflow-hidden shadow-md shadow-gray-300">
+  <div class="person">
     <img
       :src="buildImageSrc(image)"
       :alt="name"
-      class="person-image w-1/3"
+      class="w-1/3"
     >
 
-    <div class="person-data px-8 py-6 w-2/3">
-      <h3 class="item-title !leading-6 mb-2 min-h-[48px]">{{ name }}</h3>
+    <div class="person-data">
+      <h3 class="item-title">{{ name }}</h3>
       <h4
-        class="item-subtitle font-bold text-lg"
+        class="item-subtitle"
         :class="{ '!text-green-red': highlight }"
       >
         {{ position }}
@@ -47,7 +47,30 @@ const { name, image, position, email, phone, link } = props.data;
 </template>
 
 <style scoped>
+.person {
+  @apply flex justify-between rounded-lg overflow-hidden shadow-md shadow-gray-300;
+}
+
+.person-data {
+  @apply px-5 xl:py-3 w-2/3 flex flex-col justify-center;
+  @apply xl:px-8 xl:py-6 xl:justify-start;
+}
+
+.item-title {
+  @apply leading-4 mb-1 !text-left;
+  @apply xl:!leading-6 xl:mb-2 xl:min-h-[48px];
+}
+
+.item-subtitle {
+  @apply font-bold text-base;
+  @apply xl:text-lg;
+}
 .content {
-  @apply flex items-center text-gray-unal-100 italic my-1;
+  @apply flex items-center text-gray-unal-100 italic;
+  @apply xl:my-1;
+}
+
+.item-action {
+  @apply mt-3;
 }
 </style>
