@@ -13,9 +13,9 @@ export const HEADER_ITEMS: HeaderItem[] = [
   },
   {
     label: 'Experiencias de Paz',
-    src: '#',
+    src: '/experiencias-de-paz',
     subItems: [
-      { label: 'Iniciativas RedPaz Unal', src: '#' },
+      { label: 'Iniciativas RedPaz Unal', src: '/experiencias-de-paz/iniciativas-redpaz-unal' },
       { label: 'Proyectos de Docencia', src: '#' },
       { label: 'Proyectos de Investigación', src: '#' },
       { label: 'Proyectos de Extensión', src: '#' },

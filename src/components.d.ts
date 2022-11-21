@@ -8,9 +8,11 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AboutUs: typeof import('./views/AboutUs.vue')['default']
+    ActivitiesRedPaz: typeof import('./views/experiences/activities/ActivitiesRedPaz.vue')['default']
     BannerItem: typeof import('./common/components/BannerItem.vue')['default']
     BaseItem: typeof import('./common/components/BaseItem.vue')['default']
     DescriptionSection: typeof import('./common/components/DescriptionSection.vue')['default']
+    DiscussionActivities: typeof import('./views/experiences/activities/DiscussionActivities.vue')['default']
     ExperiencesWrapper: typeof import('./views/experiences/ExperiencesWrapper.vue')['default']
     FooterUnal: typeof import('./common/components/FooterUnal.vue')['default']
     GridColumnItems: typeof import('./common/components/GridColumnItems.vue')['default']
@@ -26,6 +28,7 @@ declare module '@vue/runtime-core' {
     ItemWithImage: typeof import('./common/components/ItemWithImage.vue')['default']
     PageHeader: typeof import('./common/components/PageHeader.vue')['default']
     PersonItem: typeof import('./common/components/PersonItem.vue')['default']
+    PodcastActivities: typeof import('./views/experiences/activities/PodcastActivities.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

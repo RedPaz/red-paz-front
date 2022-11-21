@@ -27,7 +27,7 @@ defineProps({
   >
     <div
       class="descriptions"
-      :class="{ 'xl:!pr-0 xl:pl-10': swapItems }"
+      :class="{ 'xl:!pr-0 xl:pl-24': swapItems }"
     >
       <div
         v-for="(item, i) in items"
@@ -104,7 +104,7 @@ defineProps({
 
 .descriptions {
   @apply w-full text-gray-unal-300;
-  @apply xl:w-1/2 xl:pr-10;
+  @apply xl:w-1/2 xl:pr-24;
 }
 
 .description {

@@ -78,7 +78,7 @@ const routeList = computed(() => {
 <style scoped>
 .header-content {
   @apply text-white w-full px-5 py-8;
-  @apply xl:w-1/2 xl:px-28 xl:py-10;
+  @apply xl:w-1/2 xl:pl-28 xl:py-10;
 }
 
 .section-title {
@@ -90,8 +90,8 @@ const routeList = computed(() => {
 }
 
 .breadcrumb-item {
-  @apply px-3 pt-1 pb-0.5 leading-6 font-light text-sm ;
-  @apply xl:px-5 xl:pt-2 xl:pb-1 xl:text-lg xl:leading-8;
+  @apply px-2 pt-1 pb-0.5 leading-6 font-light text-sm;
+  @apply xl:px-3 xl:pt-2 xl:pb-1 xl:text-lg xl:leading-8 xl:first:pl-5 xl:last:px-5 xl:last:ml-2;
 }
 
 .active {
@@ -99,7 +99,7 @@ const routeList = computed(() => {
 }
 
 .separator {
-  @apply text-lg mr-2;
-  @apply xl:text-2xl xl:mr-3;
+  @apply text-lg;
+  @apply xl:text-2xl;
 }
 </style>

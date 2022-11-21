@@ -44,10 +44,7 @@ const homeBanners: Banner[] = [
 
 const homeDescription: DescriptionItem = {
   title: '¿Qué es la RedPaz Unal?',
-  description: `
-    Es un instrumento de articulación, coordinación e impulso del conocimiento y las acciones que la UNAL está emprendiendo como actor fundamental en la consolidación de la paz en todo el territorio nacional, teniendo en cuenta las particularidades de cada región, y la posibilidad de hacer alianzas con diversos actores sociales.
-    
-    Somos una red de Ética, Cultura, Creación, Ciencia, Tecnología e innovación para la paz`,
+  description: 'Es una iniciativa institucional creada para fortalecer y proyectar el relacionamiento de miembros de la comunidad universitaria de diferentes facultades y sedes interesados en el trabajo colaborativo pertinente y oportuno con comunidades y aliados estratégicos del orden local, regional, nacional e internacional para la construcción de paz en los territorios.',
   links: [
     { label: 'Conoce más', src: '#' },
   ],
