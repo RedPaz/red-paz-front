@@ -11,21 +11,25 @@ const experienceRoutes: RouteRecordRaw[] = [
     path: '/experiencias-de-paz',
     name: 'Experiencias de Paz',
     component: ExperiencesWrapper,
+    meta: { alias: 'Experiencias de Paz' },
     children: [
       {
         path: 'iniciativas-redpaz-unal',
         name: 'Iniciativas RedPaz Unal',
         component: ActivitiesRedPaz,
+        meta: { alias: 'Iniciativas RedPaz Unal' },
         children: [
           {
             path: 'conversatorios',
-            name: 'Conversatorios',
-            component: DiscussionActivities
+            name: 'Conversatorios \nterritoriales y temáticos',
+            component: DiscussionActivities,
+            meta: { alias: 'Conversatorios' },
           },
           {
             path: 'podcast',
             name: 'Podcast',
-            component: PodcastActivities
+            component: PodcastActivities,
+            meta: { alias: 'Podcast' },
           },
         ],
       },

@@ -55,7 +55,7 @@ defineProps({
           <!-- Logos -->
           <div
             v-if="item.logos && item.logos.length > 0"
-            class="logos"
+            class="logos flex items-center"
             :class="{ 'order-first mb-5 px-1': item.isBannerItem }"
           >
             <img
@@ -63,7 +63,7 @@ defineProps({
               :key="`logo-${j}`"
               :src="buildImageSrc(logo)"
               alt="Section image"
-              :class="{ 'w-1/2 xl:w-1/3': item.isBannerItem }"
+              :class="item.isBannerItem ? 'w-1/2 xl:w-1/3' : 'w-1/4 mr-10'"
             >
           </div>
           <!-- Links -->

@@ -23,7 +23,7 @@ const route = useRoute();
 const routeList = computed(() => {
   const currentRoute = route.name;
   const result: BreadCrumbItem[] = [
-    { label: 'Inicio', src: '/', isCurrentRoute: false },
+    { label: 'Inicio', src: '/', isCurrentRoute: false, alias: 'Inicio' },
   ];
   // Add child routes
   route.matched.forEach((r) => {
@@ -31,6 +31,7 @@ const routeList = computed(() => {
       label: r.name?.toString() || '',
       src: r.path,
       isCurrentRoute: r.name === currentRoute,
+      alias: r.meta['alias']?.toString() || '',
     })
   });
   
@@ -44,7 +45,7 @@ const routeList = computed(() => {
     :style="{ background }"
   >
     <div class="header-content">
-      <h2 class="section-title">{{ title }}</h2>
+      <h2 class="section-title whitespace-pre-line">{{ title }}</h2>
 
       <!-- Breadcrumbs -->
       <div class="breadcrumbs">
@@ -57,7 +58,7 @@ const routeList = computed(() => {
             class="breadcrumb-item"
             :href="route.src"
           >
-            {{ route.label }}
+            {{ route.alias }}
           </a>
           <i-mdi-chevron-right
             v-if="index + 1 !== routeList.length"
