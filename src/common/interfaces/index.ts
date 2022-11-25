@@ -8,3 +8,5 @@ export * from './partner';
 export * from './person';
 export * from './item';
 export * from './itemWithImage';
+export * from './episode';
+export * from './mediaSrc';

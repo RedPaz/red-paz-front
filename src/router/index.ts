@@ -15,6 +15,7 @@ const routes: RouteRecordRaw[] = [
     path: '/sobre-nosotros',
     name: 'Sobre Nosotros',
     component: AboutUs,
+    meta: { alias: 'Sobre Nosotros' },
     children: [
       {
         path: 'test',
