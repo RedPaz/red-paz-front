@@ -38,6 +38,8 @@ const gridClasses = computed(() => `grid-cols-${props.mobileCols} xl:grid-cols-$
       :class="{ '!text-left': alignTitleLeft }"
     >
       {{ title }}
+
+      
     </h2>
 
     <slot name="description"/>
@@ -56,7 +58,7 @@ const gridClasses = computed(() => `grid-cols-${props.mobileCols} xl:grid-cols-$
 <style scoped>
 .grid-col-items {
   @apply px-5 py-8 relative;
-  @apply xl:px-28 xl:py-40;
+  @apply xl:px-28 xl:pb-40 xl:pt-32;
 }
 
 .items {

@@ -83,11 +83,12 @@ const routeList = computed(() => {
 }
 
 .section-title {
-  @apply text-left mb-6 xl:mb-8;
+  @apply text-left !mb-0 xl:!mb-8;
 }
 
 .breadcrumbs {
-  @apply inline-flex items-center bg-white/20 rounded-full;
+  @apply hidden items-center bg-white/20 rounded-full;
+  @apply xl:inline-flex;
 }
 
 .breadcrumb-item {

@@ -2,6 +2,7 @@ import { RouteRecordRaw } from 'vue-router';
 
 import ExperiencesWrapper from '@/views/experiences/ExperiencesWrapper.vue';
 
+import ENEP from '@/views/experiences/activities/ENEP.vue';
 import ActivitiesRedPaz from '@/views/experiences/activities/ActivitiesRedPaz.vue';
 import MiniserieActivity from '@/views/experiences/activities/MiniserieActivity.vue';
 import PodcastActivities from '@/views/experiences/activities/PodcastActivities.vue';
@@ -37,6 +38,12 @@ const experienceRoutes: RouteRecordRaw[] = [
             name: 'Miniserie: La Paz en Foco',
             component: MiniserieActivity,
             meta: { alias: 'Miniserie' },
+          },
+          {
+            path: 'enep-2020',
+            name: 'Encuentro Nacional de Experiencias de Paz 2020',
+            component: ENEP,
+            meta: { alias: 'ENEP 2020' },
           },
         ],
       },

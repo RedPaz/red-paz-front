@@ -130,6 +130,7 @@ const actionLines: any[] = [
           :key="index"
           :item="item"
           :image-width="60"
+          :hide-image-in-mobile="true"
           cover-image="/src/assets/images/home/jobs-background.png"
         />
       </template>

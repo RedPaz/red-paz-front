@@ -20,6 +20,10 @@ body {
   @apply xl:text-4xl;
 }
 
+.section-description {
+  @apply xl:text-xl mb-10 text-base font-light;
+}
+
 .item-title {
   @apply text-lg text-center leading-6 font-bold;
   @apply xl:text-2xl xl:text-left;

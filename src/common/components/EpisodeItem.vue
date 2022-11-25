@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
-import YouTube from 'vue3-youtube';
 import AudioPlayer from 'vue3-audio-player';
 import { Episode } from '@/common/interfaces/episode';
 import { buildImageSrc, capitalizeVariable } from '@/common/utils';
@@ -14,6 +13,10 @@ const props = defineProps({
   },
   title: {
     type: String,
+    required: false,
+  },
+  showDivider: {
+    type: Boolean,
     required: false,
   },
 })
@@ -35,13 +38,13 @@ watch(selectedSource, (newValue) => {
 </script>
 
 <template>
-  <div class="episode py-5 flex">
-    <div class="media w-1/2">
-      <YouTube
+  <div class="episode py-0 xl:py-2 flex flex-col xl:flex-row bg-white xl:bg-transparent rounded-xl shadow-md xl:shadow-none shadow-gray-300 ">
+    <div class="media w-full xl:w-1/2">
+      <YoutubeItem
         v-if="data.sources.youtube"
-        :src="data.sources.youtube"
-        :rel="0"
-        ref="youtube"
+        :url="data.sources.youtube"
+        :title="data.name"
+        class="rounded-b-none xl:rounded-xl"
       />
 
       <template v-else>
@@ -49,11 +52,12 @@ watch(selectedSource, (newValue) => {
           v-if="data.image"
           :src="buildImageSrc(data.image)"
           :alt="data.name"
+          class="rounded-t-xl xl:rounded-none"
         >
       </template>
     </div>
 
-    <div class="content w-1/2 px-10">
+    <div class="content p-5 w-full xl:bg-transparent xl:py-0 xl:w-1/2 xl:px-10">
       <h4
         v-if="title"
         class="episode-title uppercase font-bold text-neutral-500 tracking-widest mb-2"
@@ -61,8 +65,8 @@ watch(selectedSource, (newValue) => {
         {{ title }}
       </h4>
 
-      <h2 class="episode-name text-3xl leading-8 font-bold mb-4">{{ data.name }}</h2>
-      <p class="description xl:text-xl text-base font-light whitespace-pre-line">{{ data.description }}</p>
+      <h2 class="episode-name text-xl leading-6 xl:text-3xl xl:leading-8 font-bold mb-2 xl:mb-4">{{ data.name }}</h2>
+      <p class="description hidden xl:block xl:text-xl text-base font-light whitespace-pre-line">{{ data.description }}</p>
       <p class="date flex items-center text-gray-unal-100 italic xl:text-lg my-3 text-base font-light">
         <i-mdi-calendar-month  class="mr-4"/>
         {{ data.date }}
@@ -96,11 +100,11 @@ watch(selectedSource, (newValue) => {
         loading="lazy"
       />
 
-      <div class="actions flex mt-5">
+      <div class="actions flex justify-between xl:justify-start mt-5">
         <button
           v-for="(_, key) in data.sources"
           :key="key"
-          class="media-action relative justify-start text-white rounded-lg w-48 text-lg leading-6 py-2 px-6 mr-5"
+          class="media-action relative justify-start text-white rounded-lg w-40 px-4 py-1 xl:w-48 xl:text-lg leading-6 xl:py-2 xl:px-6 xl:mr-5"
           :class="{
             'bg-yellow-400': key === 'radioUnal',
             'bg-green-400': key === 'spotify',
@@ -123,6 +127,11 @@ watch(selectedSource, (newValue) => {
       </div>
     </div>
   </div>
+
+  <div
+    v-if="showDivider"
+    class="hidden xl:block w-full bg-neutral-200 h-0.5 rounded-md"
+  />
 </template>
 
 <style scoped>

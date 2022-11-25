@@ -16,7 +16,11 @@ defineProps({
   coverImage: {
     type: String,
     required: false,
-  }
+  },
+  hideImageInMobile: {
+    type: Boolean,
+    required: false,
+  },
 });
 </script>
 
@@ -30,6 +34,7 @@ defineProps({
       :src="buildImageSrc(item.image)"
       class="item-image"
       :style="{ 'width': `${imageWidth}px` }"
+      :class="{ 'hidden xl:block': hideImageInMobile }"
     />
 
     <div
@@ -75,12 +80,11 @@ defineProps({
 }
 
 .item-description {
-  @apply my-4 italic text-lg leading-5 font-normal;
+  @apply my-4 italic text-lg leading-5 font-light;
 }
 
 .item-image {
-  @apply hidden object-cover mr-5 z-10;
-  @apply xl:block;
+  @apply object-cover mr-5 z-10;
 }
 
 .item-action {

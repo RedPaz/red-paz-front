@@ -12,7 +12,9 @@ declare module '@vue/runtime-core' {
     BannerItem: typeof import('./common/components/BannerItem.vue')['default']
     BaseItem: typeof import('./common/components/BaseItem.vue')['default']
     DescriptionSection: typeof import('./common/components/DescriptionSection.vue')['default']
+    DescriptionVideo: typeof import('./common/components/DescriptionVideo.vue')['default']
     DiscussionActivities: typeof import('./views/experiences/activities/DiscussionActivities.vue')['default']
+    ENEP: typeof import('./views/experiences/activities/ENEP.vue')['default']
     EpisodeItem: typeof import('./common/components/EpisodeItem.vue')['default']
     ExperiencesWrapper: typeof import('./views/experiences/ExperiencesWrapper.vue')['default']
     FooterUnal: typeof import('./common/components/FooterUnal.vue')['default']
@@ -20,7 +22,6 @@ declare module '@vue/runtime-core' {
     GridSection: typeof import('./common/components/GridSection.vue')['default']
     HeaderUnal: typeof import('./common/components/HeaderUnal.vue')['default']
     Home: typeof import('./views/Home.vue')['default']
-    'IMdi-${key}': typeof import('~icons/mdi/${key}')['default']
     IMdiCalendarMonth: typeof import('~icons/mdi/calendar-month')['default']
     IMdiCheck: typeof import('~icons/mdi/check')['default']
     IMdiChevronLeft: typeof import('~icons/mdi/chevron-left')['default']
@@ -29,7 +30,6 @@ declare module '@vue/runtime-core' {
     IMdiMagnify: typeof import('~icons/mdi/magnify')['default']
     IMdiMenuDown: typeof import('~icons/mdi/menu-down')['default']
     IMdiPhoneOutline: typeof import('~icons/mdi/phone-outline')['default']
-    IMdiRadio: typeof import('~icons/mdi/radio')['default']
     IMdiRadioTower: typeof import('~icons/mdi/radio-tower')['default']
     IMdiSpotify: typeof import('~icons/mdi/spotify')['default']
     IMdiYoutube: typeof import('~icons/mdi/youtube')['default']
@@ -41,5 +41,6 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SectionDecoration: typeof import('./common/components/SectionDecoration.vue')['default']
+    YoutubeItem: typeof import('./common/components/YoutubeItem.vue')['default']
   }
 }

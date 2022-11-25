@@ -8,6 +8,8 @@ declare global {
   const TEAM_MEMBERS: typeof import('./common/constants/teamMembers')['TEAM_MEMBERS']
   const TERRITORY_MEMORIES: typeof import('./common/constants/territoryMemories')['TERRITORY_MEMORIES']
   const buildImageSrc: typeof import('./common/utils/buildImageSrc')['default']
+  const capitalize: typeof import('./common/utils/capitalize')['default']
+  const capitalizeVariable: typeof import('./common/utils/capitalizeVariable')['default']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
   const customRef: typeof import('vue')['customRef']

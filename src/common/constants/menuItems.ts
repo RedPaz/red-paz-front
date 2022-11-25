@@ -13,7 +13,7 @@ export const HEADER_ITEMS: HeaderItem[] = [
   },
   {
     label: 'Experiencias de Paz',
-    src: '/experiencias-de-paz',
+    src: '#',
     subItems: [
       { label: 'Iniciativas RedPaz Unal', src: '/experiencias-de-paz/iniciativas-redpaz-unal' },
       { label: 'Proyectos de Docencia', src: '#' },

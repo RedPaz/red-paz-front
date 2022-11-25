@@ -76,7 +76,7 @@ const episodes: Episode[] = [
   <div class="podcast">
     <DescriptionSection
       :items="[description]"
-      main-image="/src/assets/images/experiences/podcast-description.png"
+      main-image="/src/assets/images/experiences/podcasts/podcast-description.png"
     />
 
     <GridSection
@@ -86,7 +86,7 @@ const episodes: Episode[] = [
       :align-title-left="true"
     >
       <template #description>
-        <p class="xl:text-xl mb-10 text-base font-light">Escucha los episodios en  Radio UNAL o en el canal de Fescol en Spotify</p>
+        <p class="section-description">Escucha los episodios en  Radio UNAL o en el canal de Fescol en Spotify</p>
       </template>
 
       <template #items>
@@ -95,6 +95,7 @@ const episodes: Episode[] = [
           :key="index"
           :data="episode"
           :title="`Capítulo ${index + 1}`"
+          :show-divider="(index + 1) < episodes.length"
         />
       </template>
 
