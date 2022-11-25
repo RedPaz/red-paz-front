@@ -18,12 +18,19 @@ const props = defineProps({
   },
 })
 
+const youtube = ref();
 const selectedSource = ref<'spotify' | 'radioUnal' | 'youtube'>('spotify');
 
 const embedSpotifySrc = computed(() => {
   if (!props.data.sources.spotify) return '';
   
   return props.data.sources.spotify.replace('https://open.spotify.com/', '');
+});
+
+watch(selectedSource, (newValue) => {
+  if (newValue === 'youtube') {
+    youtube.value.playVideo();
+  }
 });
 </script>
 
@@ -33,6 +40,8 @@ const embedSpotifySrc = computed(() => {
       <YouTube
         v-if="data.sources.youtube"
         :src="data.sources.youtube"
+        :rel="0"
+        ref="youtube"
       />
 
       <template v-else>
@@ -52,8 +61,8 @@ const embedSpotifySrc = computed(() => {
         {{ title }}
       </h4>
 
-      <h2 class="episode-name text-3xl leading-6 font-bold mb-4">{{ data.name }}</h2>
-      <p class="description xl:text-xl text-base font-light">{{ data.description }}</p>
+      <h2 class="episode-name text-3xl leading-8 font-bold mb-4">{{ data.name }}</h2>
+      <p class="description xl:text-xl text-base font-light whitespace-pre-line">{{ data.description }}</p>
       <p class="date flex items-center text-gray-unal-100 italic xl:text-lg my-3 text-base font-light">
         <i-mdi-calendar-month  class="mr-4"/>
         {{ data.date }}
@@ -75,6 +84,7 @@ const embedSpotifySrc = computed(() => {
         />
       </div>
       
+      <!-- Change 'theme=0' by 't=0' to set spotify background -->
       <iframe
         v-if="(selectedSource === 'spotify') && data.sources.spotify"
         style="border-radius:12px"

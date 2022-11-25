@@ -9,7 +9,8 @@ const isRoot = route.name === 'Iniciativas RedPaz Unal';
     class="activities"
   >
     <a href="/experiencias-de-paz/iniciativas-redpaz-unal/conversatorios">Conversatorios</a><br/>
-    <a href="/experiencias-de-paz/iniciativas-redpaz-unal/podcast">Podcast</a>
+    <a href="/experiencias-de-paz/iniciativas-redpaz-unal/podcast">Podcast</a><br/>
+    <a href="/experiencias-de-paz/iniciativas-redpaz-unal/miniserie">Miniserie</a><br/>
   </section>
 
   <router-view v-else/>

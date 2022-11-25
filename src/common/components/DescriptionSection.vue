@@ -38,7 +38,8 @@ defineProps({
           :class="[
             item.isBannerItem ? 'section-title' : 'section-subtitle',
             {'!text-white pr-32 xl:text-left xl:pr-0': item.isBannerItem },
-            { '!mb-0': item.logos && item.logos.length > 0 },
+            { '!mb-0': (item.logos && item.logos.length > 0) && item.isBannerItem },
+            { '!mb-5': (item.logos && item.logos.length > 0) && !item.isBannerItem },
           ]"
         >
           {{ item.title }}

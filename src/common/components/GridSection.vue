@@ -19,6 +19,10 @@ const props = defineProps({
     required: false,
     default: 1,
   },
+  alignTitleLeft: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const gridClasses = computed(() => `grid-cols-${props.mobileCols} xl:grid-cols-${props.desktopCols}`)
@@ -27,9 +31,14 @@ const gridClasses = computed(() => `grid-cols-${props.mobileCols} xl:grid-cols-$
 <template>
   <div
     class="grid-col-items"
-    :class="[background, { '!pb-24': $slots['end'] }]"
+    :class="[background, { '!pb-36': $slots['end'] }]"
   >
-    <h2 class="section-title">{{ title }}</h2>
+    <h2
+      class="section-title"
+      :class="{ '!text-left': alignTitleLeft }"
+    >
+      {{ title }}
+    </h2>
 
     <slot name="description"/>
 

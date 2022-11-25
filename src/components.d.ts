@@ -34,10 +34,12 @@ declare module '@vue/runtime-core' {
     IMdiSpotify: typeof import('~icons/mdi/spotify')['default']
     IMdiYoutube: typeof import('~icons/mdi/youtube')['default']
     ItemWithImage: typeof import('./common/components/ItemWithImage.vue')['default']
+    MiniserieActivity: typeof import('./views/experiences/activities/MiniserieActivity.vue')['default']
     PageHeader: typeof import('./common/components/PageHeader.vue')['default']
     PersonItem: typeof import('./common/components/PersonItem.vue')['default']
     PodcastActivities: typeof import('./views/experiences/activities/PodcastActivities.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SectionDecoration: typeof import('./common/components/SectionDecoration.vue')['default']
   }
 }
