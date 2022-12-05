@@ -18,7 +18,6 @@ declare module '@vue/runtime-core' {
     EpisodeItem: typeof import('./common/components/EpisodeItem.vue')['default']
     ExperiencesWrapper: typeof import('./views/experiences/ExperiencesWrapper.vue')['default']
     FooterUnal: typeof import('./common/components/FooterUnal.vue')['default']
-    GridColumnItems: typeof import('./common/components/GridColumnItems.vue')['default']
     GridSection: typeof import('./common/components/GridSection.vue')['default']
     HeaderUnal: typeof import('./common/components/HeaderUnal.vue')['default']
     Home: typeof import('./views/Home.vue')['default']
