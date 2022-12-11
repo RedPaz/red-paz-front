@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
-import { buildImageSrc } from '@/common/utils';
 import { Banner, DescriptionItem } from '@/common/interfaces';
 
 const props = defineProps({
