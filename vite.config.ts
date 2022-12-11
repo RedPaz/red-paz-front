@@ -12,7 +12,7 @@ import Components from 'unplugin-vue-components/vite';
 export default defineConfig({
   resolve: {
     alias: {
-      '@/': `${path.resolve(__dirname, 'src')}/`,
+      '@/': new URL("./src/", import.meta.url).pathname,
     },
   },
 
