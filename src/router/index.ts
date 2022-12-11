@@ -29,7 +29,11 @@ const routes: RouteRecordRaw[] = [
       }
     ],
   },
-  ...experienceRoutes
+  ...experienceRoutes,  
+  {
+    path: '/:catchAll(.*)*',
+    component: () => import(/* webpackChunkName: "ErrorView404" */ '@/common/pages/ErrorView404.vue'),
+  },
 ];
 
 const router = createRouter({
