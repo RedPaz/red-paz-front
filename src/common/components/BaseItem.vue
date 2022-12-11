@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
 import { Item } from '@/common/interfaces';
-import { buildImageSrc } from '@/common/utils';
 
 defineProps({
   item: {
@@ -15,7 +14,7 @@ defineProps({
   <div class="item">
     <img
       v-if="item.image"
-      :src="buildImageSrc(item.image)"
+      :src="item.image"
       class="item-image"
     />
 

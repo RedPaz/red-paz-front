@@ -6,8 +6,8 @@ const description: DescriptionItem = {
   description: '\“Prácticas de resistencia y propuestas para salir de la guerra”\
   \nEn esta miniserie del programa La Paz en Foco profundizamos en diferentes escenarios de construcción de paz desarrollados por las organizaciones sociales desde diferentes territorios y grupos sociales colombianos.',
   logos: [
-    '/src/assets/images/experiences/red-paz.png',
-    '/src/assets/images/experiences/FES.png',
+    '/images/experiences/red-paz.png',
+    '/images/experiences/FES.png',
   ],
 }
 
@@ -79,7 +79,7 @@ Alejo Vargas | Director del Centro de Pensamiento y Seguimiento al Diálogo de P
   <div class="miniserie">
     <DescriptionSection
       :items="[description]"
-      main-image="/src/assets/images/experiences/miniseries/miniserie-description.png"
+      main-image="/images/experiences/miniseries/miniserie-description.png"
     />
     
     <GridSection

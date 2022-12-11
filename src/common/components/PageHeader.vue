@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { buildImageSrc } from '@/common/utils';
 import { BreadCrumbItem } from '@/common/interfaces';
 
 defineProps({
@@ -69,7 +68,7 @@ const routeList = computed(() => {
     </div>
 
     <img
-      :src="buildImageSrc(image)"
+      :src="image"
       alt="Header image"
       class="hidden w-1/2 xl:block"
     >

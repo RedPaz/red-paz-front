@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { buildImageSrc } from '@/common/utils';
 import { JOB_AREAS, PARTNERS } from '@/common/constants';
 import { Banner, DescriptionItem } from '@/common/interfaces';
 // Import Swiper Vue.js components
@@ -17,16 +16,16 @@ const homeBanners: Banner[] = [
   {
     title: 'Bienvenidos a',
     description: 'Plataforma de divulgación, encuentro e intercambio de iniciativas de apoyo a la construcción de paz',
-    image: '/src/assets/images/home/banner-image-1.png',
+    image: '/images/home/banner-image-1.png',
     background: '#4DB372',
-    logos: ['/src/assets/images/home/logo.svg'],
+    logos: ['/images/home/logo.svg'],
     links: [{ label: 'Conoce más', src: '#' }],
     isBannerItem: true,
   },
   {
     title: 'Encuentro Nacional de Experiencias de paz',
     description: 'Conoce más sobre las 95 iniciativas en torno a la paz que se están realizando en los territorios por la comunidad.',
-    image: '/src/assets/images/home/banner-image-1.png',
+    image: '/images/home/banner-image-1.png',
     background: '#402D5C',
     links: [{ label: 'Conoce más', src: '#' }],
     isBannerItem: true,
@@ -35,7 +34,7 @@ const homeBanners: Banner[] = [
     title: 'Curso del conflicto armado a la construcción de paz: Memoria, Violencia y Universidad',
     description: `Sesión 13 | Miércoles 9 de febrero de 2021 | 9:00 a.m.
     Con la presencia de: Mauricio Archila, Rodrigo Torrejano, Stalin Ballesteros, Oscar Cardozo, Patricia Nieto y Esteban Roncancio.`,
-    image: '/src/assets/images/home/banner-image-1.png',
+    image: '/images/home/banner-image-1.png',
     background: '#041449',
     links: [{ label: 'Conoce más', src: '#' }],
     isBannerItem: true,
@@ -77,7 +76,7 @@ const homeDescription: DescriptionItem = {
 
     <DescriptionSection
       :items="[homeDescription]"
-      main-image="/src/assets/images/home/description-image.png"
+      main-image="/images/home/description-image.png"
     />
 
     <GridSection
@@ -93,7 +92,7 @@ const homeDescription: DescriptionItem = {
           :item="item"
           :image-width="60"
           :hide-image-in-mobile="true"
-          cover-image="/src/assets/images/home/jobs-background.png"
+          cover-image="/images/home/jobs-background.png"
         />
       </template>
     </GridSection>
@@ -109,7 +108,7 @@ const homeDescription: DescriptionItem = {
           :class="partner.isLarge ? 'col-span-2 xl:col-span-4' : 'col-span-1 xl:col-span-2'"
         >
           <img
-            :src="buildImageSrc(partner.image)"
+            :src="partner.image"
             :alt="partner.name"
             :class="{ 'w-4/5 my-4 xl:w-2/3 xl:my-0': partner.isLarge }"
           >

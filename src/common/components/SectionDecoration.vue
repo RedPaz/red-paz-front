@@ -6,7 +6,7 @@
     <div
       class="dec-image"
       :style="{
-        background: `url(/src/assets/images/about-us/red-paz.svg) repeat-x 0 0 transparent`,
+        background: `url(/images/about-us/red-paz.svg) repeat-x 0 0 transparent`,
         backgroundSize: '64px',
       }"
     />

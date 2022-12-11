@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
-import { buildImageSrc } from '@/common/utils';
 import { DescriptionItem } from '@/common/interfaces';
 
 
@@ -62,7 +61,7 @@ defineProps({
             <img
               v-for="(logo, j) in item.logos"
               :key="`logo-${j}`"
-              :src="buildImageSrc(logo)"
+              :src="logo"
               alt="Section image"
               :class="item.isBannerItem ? 'w-1/2 xl:w-1/3' : 'w-1/4 mr-10'"
             >
@@ -90,7 +89,7 @@ defineProps({
 
     <img
       v-if="mainImage"
-      :src="buildImageSrc(mainImage)"
+      :src="mainImage"
       alt="Section image"
       class="hidden xl:block xl:w-1/2"
     >

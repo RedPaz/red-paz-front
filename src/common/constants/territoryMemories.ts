@@ -3,7 +3,7 @@ import { GridItem } from '@/common/interfaces';
 export const TERRITORY_MEMORIES: GridItem[] = [
   {
     title: 'Catatumbo',
-    image: '/src/assets/images/experiences/discussions/catatumbo.png',
+    image: '/images/experiences/discussions/catatumbo.png',
     src: '#',
     color: '#402B5A',
     description: 'Entre la violencia que no cesa y la resistencia que se hace siembra y autocuidado',
@@ -11,7 +11,7 @@ export const TERRITORY_MEMORIES: GridItem[] = [
   },
   {
     title: 'Pacífico Sur',
-    image: '/src/assets/images/experiences/discussions/pacifico.png',
+    image: '/images/experiences/discussions/pacifico.png',
     src: '#',
     color: '#427C7E',
     description: 'Las pandemias en el sur del pacífico colombiano',
@@ -19,7 +19,7 @@ export const TERRITORY_MEMORIES: GridItem[] = [
   },
   {
     title: 'Putumayo',
-    image: '/src/assets/images/experiences/discussions/putumayo.png',
+    image: '/images/experiences/discussions/putumayo.png',
     src: '#',
     color: '#334B3C',
     description: 'Rutas hacia la paz',
@@ -27,7 +27,7 @@ export const TERRITORY_MEMORIES: GridItem[] = [
   },
   {
     title: 'Chocó-Buenaventura',
-    image: '/src/assets/images/experiences/discussions/choco.png',
+    image: '/images/experiences/discussions/choco.png',
     src: '#',
     color: '#283B5C',
     description: 'Violencias, luchas y resistencias en el norte del pacífico Colombiano',
@@ -35,7 +35,7 @@ export const TERRITORY_MEMORIES: GridItem[] = [
   },
   {
     title: 'Cesar',
-    image: '/src/assets/images/experiences/discussions/cesar.png',
+    image: '/images/experiences/discussions/cesar.png',
     src: '#',
     color: '#A77F5B',
     description: 'Política de la vida, conflictos por la tierray minería en el centro del Cesar',
@@ -43,7 +43,7 @@ export const TERRITORY_MEMORIES: GridItem[] = [
   },
   {
     title: 'Orinoquía',
-    image: '/src/assets/images/experiences/discussions/orinoquia.png',
+    image: '/images/experiences/discussions/orinoquia.png',
     src: '#',
     color: '#7A7E4A',
     description: 'Paz y derechos humanos: Experiencias en la frontera',

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
-import { buildImageSrc } from '@/common/utils';
 import { ItemWithImage } from '@/common/interfaces';
 
 defineProps({
@@ -31,7 +30,7 @@ defineProps({
   >
     <img
       v-if="item.image"
-      :src="buildImageSrc(item.image)"
+      :src="item.image"
       class="item-image"
       :style="{ 'width': `${imageWidth}px` }"
       :class="{ 'hidden xl:block': hideImageInMobile }"
@@ -64,7 +63,7 @@ defineProps({
     <div 
       v-if="coverImage"
       class="mask"
-      :style="{ backgroundImage: `url(${buildImageSrc(coverImage)})` }">
+      :style="{ backgroundImage: `url(${coverImage})` }">
     </div>
   </div>
 </template>

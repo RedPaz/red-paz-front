@@ -2,7 +2,7 @@
 import { PropType } from 'vue';
 import AudioPlayer from 'vue3-audio-player';
 import { Episode } from '@/common/interfaces/episode';
-import { buildImageSrc, capitalizeVariable } from '@/common/utils';
+import { capitalizeVariable } from '@/common/utils';
 
 import 'vue3-audio-player/dist/style.css';
 
@@ -50,7 +50,7 @@ watch(selectedSource, (newValue) => {
       <template v-else>
         <img
           v-if="data.image"
-          :src="buildImageSrc(data.image)"
+          :src="data.image"
           :alt="data.name"
           class="rounded-t-xl xl:rounded-none"
         >

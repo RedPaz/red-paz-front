@@ -37,7 +37,7 @@ const records: Episode[] = [
 <template>
   <DescriptionSection
     :items="[description]"
-    main-image="/src/assets/images/experiences/discussions/discussions-description.png"
+    main-image="/images/experiences/discussions/discussions-description.png"
   />
 
   <GridSection
@@ -53,7 +53,7 @@ const records: Episode[] = [
         :item="item"
         :image-width="60"
         :hide-image-in-mobile="true"
-        cover-image="/src/assets/images/home/jobs-background.png"
+        cover-image="/images/home/jobs-background.png"
       />
     </template>
   </GridSection>

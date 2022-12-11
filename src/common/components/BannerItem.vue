@@ -34,7 +34,7 @@ const bannerInfo: DescriptionItem = {
     <div 
       v-if="image"
       class="banner-image"
-      :style="{ backgroundImage: `url(${buildImageSrc(image)})` }">
+      :style="{ backgroundImage: `url(${image})` }">
     </div>
   </div>
 </template>

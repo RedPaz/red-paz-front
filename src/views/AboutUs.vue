@@ -15,11 +15,11 @@ const aboutUsDescriptions: DescriptionItem[] = [
 
 const objectives: any[] = [
   {
-    image: '/src/assets/images/about-us/red-paz.svg',
+    image: '/images/about-us/red-paz.svg',
     description: 'Potenciar las capacidades de investigación, extensión y docencia de la Universidad Nacional de Colombia en función de las necesidades y retos de la construcción de paz.',
   },
   {
-    image: '/src/assets/images/about-us/red-paz.svg',
+    image: '/images/about-us/red-paz.svg',
     description: 'Generar vínculos locales, regionales y nacionales al interior de la Universidad, y entre instituciones gubernamentales, gremios, organizaciones sociales y comunidad en general.',
   },
 ]
@@ -37,19 +37,19 @@ const whichWeDo: DescriptionItem = {
 
 const actionLines: any[] = [
   {
-    image: '/src/assets/images/about-us/red-paz.svg',
+    image: '/images/about-us/red-paz.svg',
     description: 'Apoyo interdisciplinario e intersedes a procesos de reincorporación y reconciliación en los territorios de influencia de las sedes de presencia nacional',
   },
   {
-    image: '/src/assets/images/about-us/red-paz.svg',
+    image: '/images/about-us/red-paz.svg',
     description: 'Creación de espacios de discusión en la comunidad universitaria y entre esta y otros actores sociales sobre temas de coyuntura relacionados con el proceso de construcción de paz',
   },
   {
-    image: '/src/assets/images/about-us/red-paz.svg',
+    image: '/images/about-us/red-paz.svg',
     description: 'Creación de espacios de discusión en la comunidad universitaria y entre esta y otros actores sociales sobre temas de coyuntura relacionados con el proceso de construcción de paz',
   },
   {
-    image: '/src/assets/images/about-us/red-paz.svg',
+    image: '/images/about-us/red-paz.svg',
     description: 'Identificación de líneas de acción curricular que promuevan la formación transdisciplinar de los miembros de la comunidad universitaria participantes que se requieren en la articulación de las funciones misionales de docencia, investigación y extensión en y para la construcción de paz',
   },
 ];
@@ -60,12 +60,12 @@ const actionLines: any[] = [
     <PageHeader
       title="Sobre Nosotros"
       background="#4DB372"
-      image="/src/assets/images/about-us/header-image.png"
+      image="/images/about-us/header-image.png"
     />
 
     <DescriptionSection
       :items="aboutUsDescriptions"
-      main-image="/src/assets/images/home/description-image.png"
+      main-image="/images/home/description-image.png"
     />
 
     <GridSection
@@ -83,7 +83,7 @@ const actionLines: any[] = [
 
     <DescriptionSection
       :items="[whichWeDo]"
-      main-image="/src/assets/images/about-us/which-description.png"
+      main-image="/images/about-us/which-description.png"
       :swap-items="true"
     />
 
@@ -131,7 +131,7 @@ const actionLines: any[] = [
           :item="item"
           :image-width="60"
           :hide-image-in-mobile="true"
-          cover-image="/src/assets/images/home/jobs-background.png"
+          cover-image="/images/home/jobs-background.png"
         />
       </template>
 

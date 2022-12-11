@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
 import { Person } from '@/common/interfaces';
-import { buildImageSrc } from '@/common/utils';
 
 const props = defineProps({
   data: {
@@ -20,7 +19,7 @@ const { name, image, position, email, phone, link } = props.data;
 <template>
   <div class="person">
     <img
-      :src="buildImageSrc(image)"
+      :src="image"
       :alt="name"
       class="w-1/3"
     >

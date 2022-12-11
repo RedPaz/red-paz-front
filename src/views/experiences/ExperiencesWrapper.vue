@@ -7,7 +7,7 @@ const routeName = route.name?.toString() || '';
   <PageHeader
     :title="routeName"
     background="#4DB372"
-    image="/src/assets/images/about-us/header-image.png"
+    image="/images/about-us/header-image.png"
   />
   <router-view/>
 </template>

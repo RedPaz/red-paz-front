@@ -31,7 +31,7 @@ Te invitamos a leer las memorias de estos conversatorios`,
 
     <DescriptionSection
       :items="[description]"
-      main-image="/src/assets/images/experiences/discussions/discussions-description.png"
+      main-image="/images/experiences/discussions/discussions-description.png"
     />
 
     <GridSection
@@ -44,7 +44,7 @@ Te invitamos a leer las memorias de estos conversatorios`,
           v-for="(place, index) in TERRITORY_MEMORIES"
           :key="index"
           :item="place"
-          cover-image="/src/assets/images/experiences/discussions/lines.png"
+          cover-image="/images/experiences/discussions/lines.png"
         />
       </template>
 
