@@ -2,6 +2,7 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const FEATURED_AREAS: typeof import('./common/constants/featuredAreas')['FEATURED_AREAS']
   const HEADER_ITEMS: typeof import('./common/constants/menuItems')['HEADER_ITEMS']
   const JOB_AREAS: typeof import('./common/constants/jobAreas')['JOB_AREAS']
   const PARTNERS: typeof import('./common/constants/partners')['PARTNERS']

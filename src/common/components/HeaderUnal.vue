@@ -70,7 +70,7 @@ function setCurrentParent(index: number) {
     <div class="headerUN">
       <div class="shield">
         <img src="@/assets/images/header-unal/sealBck.png" alt="Fondo Escudo" title="Fondo Escudo" class="hidden xl:block">
-        
+
         <a href="https://unal.edu.co" class="logo" target="_blank">
           <img src="@/assets/images/header-unal/escudoUnal.svg" alt="Escudo de la Universidad Nacional de Colombia" title="Escudo de la Universidad Nacional de Colombia" class="object-fit"/>
         </a>
@@ -100,7 +100,7 @@ function setCurrentParent(index: number) {
       </li>
     </ul>
 
-    <div 
+    <div
       id="menu"
       v-if="showMenu || !isMobile"
     >
@@ -120,12 +120,12 @@ function setCurrentParent(index: number) {
             placeholder="Buscar en la universidad"
             class="input-search"
           >
-          
+
           <button
             type="submit"
             class="form-submit"
           >
-            <i-mdi-magnify/>
+            <Icon icon="mdi-magnify"/>
           </button>
         </form>
       </div>

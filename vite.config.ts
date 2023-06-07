@@ -24,12 +24,12 @@ export default defineConfig({
          /\.vue$/, /\.vue\?vue/, // .vue
          /\.md$/, // .md
        ],
- 
+
        imports: [
          'vue',
          'vue-router',
        ],
- 
+
        dirs: [
          './src/common/composables/**',
          './src/common/constants/**',
@@ -40,7 +40,7 @@ export default defineConfig({
          './src/mocks/**',
          './src/store/**',
        ],
- 
+
        dts: 'src/auto-imports.d.ts',
     }),
 

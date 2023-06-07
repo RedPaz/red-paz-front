@@ -6,25 +6,6 @@
 
   <div class="main-content">
     <router-view/>
-    <!-- Notifications -->
-    <!-- <Notifications
-      position="bottom left"
-      :close-on-click="true"
-      :ignore-duplicates="true"
-    >
-      <template #body="props">
-        <div
-          class="red-notification"
-          :class="props.item.type"
-        >
-          <h4 class="title">
-            {{ props.item.title }}
-          </h4>
-
-          <div v-html="props.item.text"/>
-        </div>
-      </template>
-    </Notifications> -->
   </div>
 
   <FooterUnal/>

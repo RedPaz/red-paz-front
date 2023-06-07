@@ -10,3 +10,5 @@ export * from './item';
 export * from './itemWithImage';
 export * from './episode';
 export * from './mediaSrc';
+export * from './featuredItem';
+export * from './area';
