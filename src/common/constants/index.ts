@@ -1,3 +1,4 @@
+export * from './featuredAreas';
 export * from './jobAreas';
 export * from './menuItems';
 export * from './partners';

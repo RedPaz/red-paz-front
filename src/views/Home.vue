@@ -1,18 +1,8 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue';
-import { JOB_AREAS, PARTNERS } from '@/common/constants';
+import { SwiperSlide } from 'swiper/vue';
+import { JOB_AREAS, PARTNERS, FEATURED_AREAS } from '@/common/constants';
 import { Banner, DescriptionItem, FeaturedItem } from '@/common/interfaces';
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Autoplay, Navigation, Pagination } from 'swiper';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import "swiper/css/navigation";
-import { FEATURED_AREAS } from '@/common/constants/featuredAreas';
-
-const swiperModules = [Pagination, Autoplay, Navigation];
-const swiperControls = { prevEl: '.nav-control.prev', nextEl: '.nav-control.next' }
 
 const homeBanners: Banner[] = [
   {
@@ -95,32 +85,32 @@ const featuredItems: FeaturedItem[] = [
     url: '#',
     area: { ...FEATURED_AREAS.events }
   },
+  {
+    category: 'INICIATIVAS REDPAZ UNAL',
+    image: '/images/home/featured/featured-2.jpg',
+    title: 'Catedra: Del conflicto armado a la construcción de paz',
+    date: '16 de septiembre de 2022',
+    url: '#',
+    area: { ...FEATURED_AREAS.training }
+  },
 ];
 </script>
 
 <template>
   <section class="home-content">
-    <swiper
-      :modules="swiperModules"
-      :slides-per-view="1"
-      :loop="true"
-      :navigation="swiperControls"
-      class="relative"
+    <RedSlider
+      :slider-per-view="1"
+      :show-pagination="false"
     >
-      <swiper-slide
-        v-for="(banner, index) in homeBanners"
-        :key="index"
-      >
-        <BannerItem :banner="banner" />
-      </swiper-slide>
-
-      <template #container-end>
-        <div class="navigation-controls">
-          <button class="nav-control prev"><i-mdi-chevron-left/></button>
-          <button class="nav-control next"><i-mdi-chevron-right/></button>
-        </div>
+      <template #slides>
+        <swiper-slide
+          v-for="(banner, index) in homeBanners"
+          :key="index"
+        >
+          <BannerItem :banner="banner" />
+        </swiper-slide>
       </template>
-    </swiper>
+    </RedSlider>
 
     <DescriptionSection
       :items="[homeDescription]"
@@ -169,45 +159,54 @@ const featuredItems: FeaturedItem[] = [
       title="Contenidos destacados"
       background="bg-gray-100"
       align-title-left
+      :desktop-cols="1"
     >
       <template #items>
-        <div
-          v-for="(item, i) in featuredItems"
-          :key="i"
-          class="featured-item rounded-lg overflow-hidden shadow-md"
+        <RedSlider
+          :slider-per-view="3"
+          show-pagination
+          navigation-position="topOut"
         >
-          <div class="item-image relative">
-            <img :src="item.image" :alt="item.title">
-
-            <div
-              class="item-type text-white flex items-center justify-center p-1 w-1/4 absolute top-0 right-0 rounded-bl-lg"
-              :style="{ backgroundColor: item.area.color }"
+          <template #slides>
+            <swiper-slide
+              v-for="(item, index) in featuredItems"
+              :key="index"
+              class="featured-item rounded-lg overflow-hidden shadow-sm bg-white"
             >
-              <Icon
-                :icon="`mdi-${item.area.icon}`"
-                class="mr-3"
-              />
+            <div class="item-image relative">
+              <img :src="item.image" :alt="item.title">
 
-              {{ item.area.name }}
-            </div>
-          </div>
+              <div
+                class="item-type text-white flex items-center justify-center p-1 w-1/4 absolute top-0 right-0 rounded-bl-lg"
+                :style="{ backgroundColor: item.area.color }"
+              >
+                <Icon
+                  :icon="`mdi-${item.area.icon}`"
+                  class="mr-3"
+                />
 
-          <div class="item-content p-6">
-            <h3 class="item-title">
-              <span class="item-category text-gray-unal-400 uppercase tracking-widest block text-lg">{{ item.category }}</span>
-              {{ item.title }}
-            </h3>
-
-            <div class="item-details mt-5 flex justify-between items-center">
-              <div class="item-date flex items-center">
-                <Icon icon="mdi-clock-outline" class="mr-3" />
-                {{ item.date }}
+                {{ item.area.name }}
               </div>
-
-              <a class="item-link bg-green-red text-white px-12 py-1.5 font-xl tracking-wider rounded-md" :href="item.url">Ver más</a>
             </div>
-          </div>
-        </div>
+
+            <div class="item-content p-6">
+              <h3 class="item-title">
+                <span class="item-category text-gray-unal-400 uppercase tracking-widest block text-lg">{{ item.category }}</span>
+                {{ item.title }}
+              </h3>
+
+              <div class="item-details mt-5 flex justify-between items-center">
+                <div class="item-date flex items-center italic text-gray-unal-100">
+                  <Icon icon="mdi-clock-outline" class="mr-3" />
+                  {{ item.date }}
+                </div>
+
+                <a class="item-link bg-green-red text-white px-12 py-1.5 font-xl tracking-wider rounded-md" :href="item.url">Ver más</a>
+              </div>
+            </div>
+            </swiper-slide>
+          </template>
+        </RedSlider>
       </template>
     </GridSection>
 
@@ -241,16 +240,6 @@ const featuredItems: FeaturedItem[] = [
 .logos {
   @apply grid grid-cols-2 gap-10;
   @apply xl:grid-cols-8 xl:gap-20;
-}
-
-.navigation-controls {
-  @apply absolute right-8 bottom-8 z-10 text-white;
-  @apply xl:right-10 xl:bottom-10;
-}
-.nav-control {
-  @apply text-xl p-1 m-1 bg-white/40 rounded-md shadow-md shadow-gray-500/50 duration-200 ease-in-out;
-  @apply hover:bg-white hover:text-gray-500;
-  @apply xl:text-3xl xl:p-2 xl:mr-2;
 }
 
 .description {

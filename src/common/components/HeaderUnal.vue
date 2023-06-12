@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Icon } from '@iconify/vue';
 import { computed, ref } from 'vue';
 import useVuelidate from '@vuelidate/core';
 import { notify } from '@kyvg/vue3-notification';

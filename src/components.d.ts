@@ -39,6 +39,7 @@ declare module '@vue/runtime-core' {
     PageHeader: typeof import('./common/components/PageHeader.vue')['default']
     PersonItem: typeof import('./common/components/PersonItem.vue')['default']
     PodcastActivities: typeof import('./views/experiences/activities/PodcastActivities.vue')['default']
+    RedSlider: typeof import('./common/components/RedSlider.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SectionDecoration: typeof import('./common/components/SectionDecoration.vue')['default']
