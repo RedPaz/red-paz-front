@@ -13,7 +13,7 @@ const props = defineProps({
   },
 });
 
-const { name, image, position, email, phone, link } = props.data;
+const { name, image, faculty, location, email, link } = props.data;
 </script>
 
 <template>
@@ -26,14 +26,12 @@ const { name, image, position, email, phone, link } = props.data;
 
     <div class="person-data">
       <h3 class="item-title">{{ name }}</h3>
-      <h4
+      <h6
         class="item-subtitle"
-        :class="{ '!text-green-red': highlight }"
       >
-        {{ position }}
-      </h4>
+        {{ faculty }} <span class="block font-normal">{{ location }}</span>
+      </h6>
       <p class="content"><i-mdi-email-outline class="mr-3"/> {{ email }}</p>
-      <p class="content"><i-mdi-phone-outline class="mr-3"/> {{ phone }}</p>
       <a
         v-if="link"
         :href="link.src"
@@ -61,8 +59,8 @@ const { name, image, position, email, phone, link } = props.data;
 }
 
 .item-subtitle {
-  @apply font-bold text-base;
-  @apply xl:text-lg;
+  @apply font-bold text-green-red italic text-sm;
+  @apply xl:text-base;
 }
 .content {
   @apply flex items-center text-gray-unal-100 italic;

@@ -1,28 +1,43 @@
 <script setup lang="ts">
-import { DescriptionItem } from '@/common/interfaces';
-import { JOB_AREAS, TEAM_MEMBERS } from '@/common/constants';
+import { SwiperSlide } from 'swiper/vue';
+import { buildBaseItems } from '@/common/utils';
+import { TEAM_MEMBERS } from '@/common/constants';
+import { DescriptionItem, Item } from '@/common/interfaces';
+
+const historyItems: DescriptionItem[] = [
+  {
+    title: '2018',
+    description: `La idea de una red para la paz en la Universidad Nacional de Colombia (UNAL) surge a comienzos de 2018 cuando la profesora Dolly Montoya la incluye en su programa como candidata a la Rectoría para el período 2018-2021.
+
+    En mayo 2018, ya designada como Rectora de nuestra universidad, la Profesora Dolly Montoya delega la creación de una red para la paz de la universidad a la Vicerrectoría de Investigación (VRI).`,
+  },
+  {
+    title: '2019',
+    description: 'En agosto de 2019, la profesora Martha Nubia Bello, Directora Nacional de Investigación y Laboratorios de la VRI, como primera coordinadora de la Red de Ética, Cultura, Creación, Ciencia, Tecnología e Innovación para la Paz de la Universidad Nacional de Colombia (RedPaz UNAL), convoca a seis profesores a conformar su Comité de Impulso.'
+  },
+  {
+    title: '2020',
+    description: 'A mediados de 2020 este Comité convoca a la comunidad universitaria a un Encuentro Nacional de Experiencias de Paz en modalidad virtual. Este evento se realiza en agosto de ese año con la participación de 81 experiencias, entre iniciativas de docencia, investigación y extensión para la paz. A partir de las conversaciones suscitadas en este evento, la profesora Martha Bello invita a profesores de tres áreas de conocimiento más a participar del Comité de Impulso.',
+  },
+  {
+    title: '2021',
+    description: 'En abril de 2021, bajo la coordinación del profesor Camilo Borrero de la Facultad de Derecho, Ciencias Políticas y Sociales, la RedPaz UNAL pone en marcha un plan de acción con seis líneas estratégicas relacionadas con el quehacer académico de los miembros del Comité de Impulso.',
+  },
+];
 
 const aboutUsDescriptions: DescriptionItem[] = [
   {
-    title: '¿Qué es la Red de Ética, Cultura, Creación, Ciencia, Tecnología e Innovación para la Paz de la Universidad Nacional de Colombia (Red Paz UNAL)?',
+    title: '¿Qué es la Red de Ética, Cultura, Creación, Ciencia, Tecnología e Innovación para la Paz de la Universidad Nacional de Colombia (RedPaz UNAL)?',
     description: 'Es una iniciativa institucional creada para fortalecer y proyectar el relacionamiento de miembros de la comunidad universitaria de diferentes facultades y sedes interesados en el trabajo colaborativo pertinente y oportuno con comunidades y aliados estratégicos del orden local, regional, nacional e internacional para la construcción de paz en los territorios.',
   },
-  {
-    title: 'Objetivo general',
-    description: 'Articular una red de cultura y ciencia, tecnología e innovación que integre la riqueza académica de la Universidad Nacional de Colombia y potencie las capacidades de trabajo de la comunidad universitaria de cara a los retos de la construcción paz y la consolidación de la nación, teniendo en cuenta las particularidades territoriales de cada región, y la posibilidad de hacer alianzas con diversos actores sociales.',
-  }
 ];
 
-const objectives: any[] = [
-  {
-    image: '/images/about-us/red-paz.svg',
-    description: 'Potenciar las capacidades de investigación, extensión y docencia de la Universidad Nacional de Colombia en función de las necesidades y retos de la construcción de paz.',
-  },
-  {
-    image: '/images/about-us/red-paz.svg',
-    description: 'Generar vínculos locales, regionales y nacionales al interior de la Universidad, y entre instituciones gubernamentales, gremios, organizaciones sociales y comunidad en general.',
-  },
-]
+const whatWeDoItems: Item[] = buildBaseItems([
+  'Promueve el diálogo de saberes entre los diferentes actores sociales interesados en el abordaje integral de la construcción de paz territorial',
+  'Define con las comunidades canales y formas de comunicación adecuados, pertinentes y efectivos en la construcción de paz territorial',
+  'Establece formas de relacionamiento y colaboración significativas y efectivas entre los miembros de la comunidad universitaria y entre estos y los diferentes actores sociales interesados en la construcción de paz territorial',
+  'Apoya la identificación  y vinculación de fuentes de financiación internas y externas que contribuyan al desarrollo de iniciativas de construcción de paz territorial en el corto, mediano y largo plazo',
+]);
 
 const whichWeDo: DescriptionItem = {
   title: '¿Qué hace la RedPaz Unal?',
@@ -35,22 +50,25 @@ const whichWeDo: DescriptionItem = {
 - Apoya la identificación  y vinculación de fuentes de financiación internas y externas que contribuyan al desarrollo de iniciativas de construcción de paz territorial en el corto, mediano y largo plazo`
 }
 
-const actionLines: any[] = [
+const actionLines: Item[] = buildBaseItems([
+  'Seguir apoyando, a partir del trabajo entre facultades y sedes, los procesos de reincorporación y reconciliación que toman lugar en los territorios de influencia de las sedes de la Universidad',
+  'Crear espacios de discusión en la comunidad universitaria y entre esta y otros actores sociales sobre temas de coyuntura relacionados con el proceso de construcción de paz',
+  'Continuar apoyando al Sistema Integral de Verdad, Justicia, Reparación y No Repetición en el abordaje de los nuevos desafíos misionales de sus diferentes componentes',
+  'Identificar líneas de trabajo curricular que promuevan la formación transdisciplinar de los miembros de la comunidad universitaria que participan en la articulación de las funciones misionales de docencia, investigación y extensión en y para la construcción de paz',
+]);
+
+const teamDescription: DescriptionItem[] = [
   {
-    image: '/images/about-us/red-paz.svg',
-    description: 'Apoyo interdisciplinario e intersedes a procesos de reincorporación y reconciliación en los territorios de influencia de las sedes de presencia nacional',
-  },
-  {
-    image: '/images/about-us/red-paz.svg',
-    description: 'Creación de espacios de discusión en la comunidad universitaria y entre esta y otros actores sociales sobre temas de coyuntura relacionados con el proceso de construcción de paz',
-  },
-  {
-    image: '/images/about-us/red-paz.svg',
-    description: 'Creación de espacios de discusión en la comunidad universitaria y entre esta y otros actores sociales sobre temas de coyuntura relacionados con el proceso de construcción de paz',
-  },
-  {
-    image: '/images/about-us/red-paz.svg',
-    description: 'Identificación de líneas de acción curricular que promuevan la formación transdisciplinar de los miembros de la comunidad universitaria participantes que se requieren en la articulación de las funciones misionales de docencia, investigación y extensión en y para la construcción de paz',
+    title: 'Equipo de trabajo',
+    description: `Como equipo de trabajo de la RedPaz UNAL buscamos:
+
+    - Formular conjuntamente un plan estratégico que permita el logro de los objetivos de la RedPaz UNAL.
+
+    - Promover la participación de profesore(a)s de todas las sedes y de todas las áreas del conocimiento en el Comité de Impulso.
+
+    - Fortalecer el trabajo colaborativo entre miembros de la comunidad universitaria pertenecientes a diferentes facultades y a diferentes sedes.
+
+    - Proponer una estrategia orientada a avanzar en la sostenibilidad académica, organizacional, comunicacional y financiera de la RedPaz UNAL en el corto, mediano y largo plazo.`,
   },
 ];
 </script>
@@ -65,32 +83,67 @@ const actionLines: any[] = [
 
     <DescriptionSection
       :items="aboutUsDescriptions"
-      main-image="/images/home/description-image.png"
+      main-image="/images/about-us/aboutUs.png"
     />
 
     <GridSection
-      title="Objetivos específicos"
+      title="¿Qué hace la RedPaz UNAL?"
       background="bg-gray-100"
     >
       <template #items>
         <BaseItem
-          v-for="(item, index) in objectives"
+          v-for="(item, index) in whatWeDoItems"
           :key="index"
           :item="item"
         />
       </template>
     </GridSection>
 
-    <DescriptionSection
-      :items="[whichWeDo]"
-      main-image="/images/about-us/which-description.png"
-      :swap-items="true"
-    />
-
     <GridSection
-      title="Líneas de acción estratégicas"
+      title="Nuestra historia"
+      background="bg-green-red"
+      align-title-left
+      :desktop-cols="1"
+    >
+      <template #items>
+        <RedSlider
+          show-pagination
+          navigation-style="transparency"
+          navigation-position="topOut"
+          :slider-per-view="3"
+          :show-navs-in-mobile="false"
+        >
+          <template #slides>
+            <swiper-slide
+              v-for="(item, index) in historyItems"
+              :key="index"
+              class="featured-item rounded-lg overflow-hidden shadow-sm bg-white/20"
+            >
+
+            <div class="item-content p-6 text-white">
+              <h3 class="item-title text-left">
+                {{ item.title }}
+              </h3>
+
+              <p class="item-description mt-5 mb-16 whitespace-pre-line">
+                {{ item.description }}
+              </p>
+            </div>
+            </swiper-slide>
+          </template>
+        </RedSlider>
+      </template>
+    </GridSection>
+
+    <!-- TODO: Duplicated with Home -->
+    <GridSection
+      title="Líneas de acción"
       background="bg-gray-100"
     >
+      <template #description>
+        <p class="description">La RedPaz UNAL busca hacer un aporte significativo a la construcción de paz desde las siguientes líneas de acción en el período 2022-2024.</p>
+      </template>
+
       <template #items>
         <BaseItem
           v-for="(item, index) in actionLines"
@@ -100,38 +153,18 @@ const actionLines: any[] = [
       </template>
     </GridSection>
 
-    <GridSection
-      title="Equipo de trabajo"
-      :desktop-cols="3"
-    >
-      <template #description>
-        <p class="xl:text-xl mb-10 text-base font-light">El comité de impulso de la RedPaz Unal se constituye como un espacio que formula un plan y unas líneas generales de trabajo.</p>
-      </template>
+    <DescriptionSection
+      :items="teamDescription"
+      main-image="/images/about-us/team.png"
+    />
 
+    <GridSection :desktop-cols="3">
       <template #items>
         <PersonItem
           v-for="(person, index) in TEAM_MEMBERS"
           :key="index"
           :data="person"
           :highlight="person.highLight"
-        />
-      </template>
-    </GridSection>
-
-    <GridSection
-      title="Áreas de trabajo"
-      background="bg-gray-100"
-      :desktop-cols="3"
-      :mobile-cols="2"
-    >
-      <template #items>
-        <ItemWithImage
-          v-for="(item, index) in JOB_AREAS"
-          :key="index"
-          :item="item"
-          :image-width="60"
-          :hide-image-in-mobile="true"
-          cover-image="/images/home/jobs-background.png"
         />
       </template>
 
@@ -143,4 +176,7 @@ const actionLines: any[] = [
 </template>
 
 <style scoped>
+.description {
+  @apply text-center mb-8 text-lg;
+}
 </style>

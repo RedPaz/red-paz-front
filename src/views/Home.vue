@@ -99,6 +99,7 @@ const featuredItems: FeaturedItem[] = [
 <template>
   <section class="home-content">
     <RedSlider
+      navigation-style="transparency"
       :slider-per-view="1"
       :show-pagination="false"
     >

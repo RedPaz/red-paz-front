@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PropType } from 'vue';
+import { Prop, PropType } from 'vue';
 import { Icon } from '@iconify/vue';
 import { Swiper } from 'swiper/vue';
 import { PaginationOptions } from 'swiper/types';
@@ -16,6 +16,11 @@ const props = defineProps({
   sliderPerView: {
     type: Number,
     required: true,
+  },
+  navigationStyle: {
+    type: String as PropType<'dark' | 'light' | 'transparency'>,
+    required: false,
+    default: 'light',
   },
   navigationPosition: {
     type: String as PropType<'topIn' | 'topOut' | 'bottomIn' | 'bottomOut'>,
@@ -38,9 +43,16 @@ const breakpoints = useBreakpoints(breakpointsTailwind);
 const swiperModules = [Pagination, Autoplay, Navigation];
 const swiperControls = { prevEl: '.nav-control.prev', nextEl: '.nav-control.next' }
 
-const paginationOptions: PaginationOptions = {
-  clickable: true,
-}
+const paginationOptions = computed((): PaginationOptions => {
+  const bulletOptions = (props.navigationStyle ==='transparency') ? 'bg-neutral-200' : 'bg-neutral-500';
+  const bulletActiveOptions = (props.navigationStyle ==='transparency') ? '!bg-neutral-100' : '!bg-neutral-400';
+
+  return {
+    clickable: true,
+    bulletClass: `swiper-pagination-bullet w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full !mx-1 lg:!mx-1.5 last:!mr-0 ${bulletOptions}`,
+    bulletActiveClass: `swiper-pagination-bullet-active !w-16 lg:!w-20 ${bulletActiveOptions}`,
+  };
+});
 
 const slidesToShow = computed(() => {
   if (props.sliderPerView === 1 || breakpoints.isSmaller('sm')) return 1;
@@ -68,9 +80,10 @@ const navigationClass = computed(() => {
 });
 
 const navButtonClass = computed(() => {
-  if (props.navigationPosition.includes('In')) return 'bg-white/40 hover:bg-white hover:text-gray-500';
+  if (props.navigationStyle === 'dark') return 'bg-black/40 hover:bg-black hover:text-white';
+  if (props.navigationStyle === 'light') return 'bg-white/40 hover:bg-white text-gray-unal-600';
 
-  return 'bg-white text-gray-unal-800 hover:bg-neutral-200';
+  return 'bg-transparent text-white hover:bg-white/30';
 });
 
 </script>
@@ -111,6 +124,7 @@ const navButtonClass = computed(() => {
         </button>
       </div>
     </template>
+
   </swiper>
 </template>
 
@@ -126,14 +140,5 @@ const navButtonClass = computed(() => {
 
 :deep(.swiper-pagination) {
   @apply -bottom-14 text-right;
-}
-
-:deep(.swiper-pagination-bullet) {
-  @apply w-2.5 h-2.5 lg:w-3 lg:h-3 bg-neutral-500 rounded-full !mx-1 lg:!mx-1.5;
-  @apply last:!mr-0;
-}
-
-:deep(.swiper-pagination-bullet-active) {
-  @apply w-16 lg:w-20 bg-neutral-400;
 }
 </style>

@@ -6,7 +6,7 @@ import { DescriptionItem } from '@/common/interfaces';
 defineProps({
   items: {
     type: Array as PropType<DescriptionItem[]>,
-    required: true, 
+    required: true,
   },
   mainImage: {
     type: String,
@@ -48,7 +48,7 @@ defineProps({
           <p
             class="content"
             :class="item.isBannerItem ? '!text-white xl:!text-2xl !font-medium !pr-10' : 'pr-0'"
-            
+
           >
             {{ item.description }}
           </p>
@@ -91,7 +91,7 @@ defineProps({
       v-if="mainImage"
       :src="mainImage"
       alt="Section image"
-      class="hidden xl:block xl:w-1/2"
+      class="xl:w-1/2"
     >
   </section>
 </template>
