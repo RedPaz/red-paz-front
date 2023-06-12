@@ -163,9 +163,10 @@ const featuredItems: FeaturedItem[] = [
     >
       <template #items>
         <RedSlider
-          :slider-per-view="3"
           show-pagination
           navigation-position="topOut"
+          :slider-per-view="3"
+          :show-navs-in-mobile="false"
         >
           <template #slides>
             <swiper-slide
@@ -177,7 +178,7 @@ const featuredItems: FeaturedItem[] = [
               <img :src="item.image" :alt="item.title">
 
               <div
-                class="item-type text-white flex items-center justify-center p-1 w-1/4 absolute top-0 right-0 rounded-bl-lg"
+                class="item-type text-white flex items-center justify-center p-1 w-1/3 xl:w-1/4 absolute top-0 right-0 rounded-bl-lg"
                 :style="{ backgroundColor: item.area.color }"
               >
                 <Icon
@@ -190,18 +191,18 @@ const featuredItems: FeaturedItem[] = [
             </div>
 
             <div class="item-content p-6">
-              <h3 class="item-title">
-                <span class="item-category text-gray-unal-400 uppercase tracking-widest block text-lg">{{ item.category }}</span>
+              <h3 class="item-title !text-left">
+                <span class="item-category text-gray-unal-400 uppercase tracking-widest block text-base xl:text-lg text-left">{{ item.category }}</span>
                 {{ item.title }}
               </h3>
 
               <div class="item-details mt-5 flex justify-between items-center">
-                <div class="item-date flex items-center italic text-gray-unal-100">
-                  <Icon icon="mdi-clock-outline" class="mr-3" />
+                <div class="item-date flex items-center italic text-gray-unal-100 text-sm xl:text-base">
+                  <Icon icon="mdi-clock-outline" class="mr-2 lg:mr-3 mb-1" />
                   {{ item.date }}
                 </div>
 
-                <a class="item-link bg-green-red text-white px-12 py-1.5 font-xl tracking-wider rounded-md" :href="item.url">Ver más</a>
+                <a class="item-link bg-green-red text-white px-6 lg:px-8 xl:px-10 2xl:px-12 py-1 xl:py-1.5 text-sm lg:text-base xl:text-lg 2xl:text-xl tracking-wider rounded-md" :href="item.url">Ver más</a>
               </div>
             </div>
             </swiper-slide>

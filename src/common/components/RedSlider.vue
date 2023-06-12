@@ -3,6 +3,7 @@ import { PropType } from 'vue';
 import { Icon } from '@iconify/vue';
 import { Swiper } from 'swiper/vue';
 import { PaginationOptions } from 'swiper/types';
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
 // Import Swiper Vue.js components
 import { Autoplay, Navigation, Pagination } from 'swiper';
 // Import Swiper styles
@@ -11,10 +12,6 @@ import 'swiper/css/pagination';
 import "swiper/css/navigation";
 
 // TODO: Upgrade to swipper 9 version.
-
-const swiperModules = [Pagination, Autoplay, Navigation];
-const swiperControls = { prevEl: '.nav-control.prev', nextEl: '.nav-control.next' }
-
 const props = defineProps({
   sliderPerView: {
     type: Number,
@@ -25,6 +22,11 @@ const props = defineProps({
     required: false,
     default: 'bottomIn',
   },
+  showNavsInMobile: {
+    type: Boolean,
+    required: false,
+    default: true,
+  },
   showPagination: {
     type: Boolean,
     required: false,
@@ -32,10 +34,27 @@ const props = defineProps({
   }
 });
 
+const breakpoints = useBreakpoints(breakpointsTailwind);
+const swiperModules = [Pagination, Autoplay, Navigation];
+const swiperControls = { prevEl: '.nav-control.prev', nextEl: '.nav-control.next' }
+
 const paginationOptions: PaginationOptions = {
   clickable: true,
 }
 
+const slidesToShow = computed(() => {
+  if (props.sliderPerView === 1 || breakpoints.isSmaller('sm')) return 1;
+
+  if (breakpoints.isInBetween('sm', 'lg')) return 2;
+
+  return props.sliderPerView;
+});
+
+const hideSliderNavs = computed(() => {
+  if (props.showNavsInMobile) return false;
+
+  return breakpoints.isSmaller('sm');
+})
 
 const navigationClass = computed(() => {
   const classes = {
@@ -60,15 +79,19 @@ const navButtonClass = computed(() => {
   <swiper
     loop
     :modules="swiperModules"
-    :slides-per-view="sliderPerView"
+    :slides-per-view="slidesToShow"
     :navigation="swiperControls"
     :space-between="30"
     :pagination="showPagination ? paginationOptions : false"
+    :class="{ 'mb-12': showPagination }"
     class="w-full relative overflow-visible overflow-x-clip"
   >
     <slot name="slides" />
 
-    <template #container-start>
+    <template
+      v-if="!hideSliderNavs"
+      #container-start
+    >
       <div
         class="navigation-controls"
         :class="navigationClass"
@@ -106,11 +129,11 @@ const navButtonClass = computed(() => {
 }
 
 :deep(.swiper-pagination-bullet) {
-  @apply w-3 h-3 bg-neutral-500 rounded-full !mx-1.5;
+  @apply w-2.5 h-2.5 lg:w-3 lg:h-3 bg-neutral-500 rounded-full !mx-1 lg:!mx-1.5;
   @apply last:!mr-0;
 }
 
 :deep(.swiper-pagination-bullet-active) {
-  @apply w-20 bg-neutral-400;
+  @apply w-16 lg:w-20 bg-neutral-400;
 }
 </style>
