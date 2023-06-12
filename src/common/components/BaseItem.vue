@@ -41,7 +41,7 @@ defineProps({
 }
 
 .item-image {
-  @apply hidden mb-5 w-20 object-cover z-10;
+  @apply mb-3 lg:mb-5 w-14 lg:w-20 object-cover z-10;
   @apply xl:block;
 }
 </style>

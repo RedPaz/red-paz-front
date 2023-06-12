@@ -121,7 +121,7 @@ const teamDescription: DescriptionItem[] = [
             >
 
             <div class="item-content p-6 text-white">
-              <h3 class="item-title text-left">
+              <h3 class="item-title !text-left text-xl">
                 {{ item.title }}
               </h3>
 
@@ -177,6 +177,6 @@ const teamDescription: DescriptionItem[] = [
 
 <style scoped>
 .description {
-  @apply text-center mb-8 text-lg;
+  @apply text-left lg:text-center mb-8 text-base lg:text-lg;
 }
 </style>
