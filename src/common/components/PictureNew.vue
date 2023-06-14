@@ -30,7 +30,7 @@ defineProps({
     </div>
 
     <div class="item-content p-6">
-      <h3 class="item-title !text-left">
+      <h3 class="item-title !text-left h-[92px]">
         <span class="item-category text-gray-unal-400 uppercase tracking-widest block text-base xl:text-lg text-left">{{ item.category }}</span>
         {{ item.title }}
       </h3>

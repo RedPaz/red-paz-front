@@ -1,11 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
 import Home from '@/views/Home.vue';
-import AboutUs from '@/views/AboutUs.vue';
-import Profile from '@/views/Profile.vue';
-
+import AboutUs from '@/views/about-us/AboutUs.vue';
+import Profile from '@/views/about-us/Profile.vue';
+import MainLayout from '@/common/layouts/MainLayout.vue';
 import experienceRoutes from '@/views/experiences/routes';
-import AboutUsWrapper from '@/views/about-us/AboutUsWrapper.vue';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -16,7 +15,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/sobre-nosotros',
     name: 'AboutUsWrapper',
-    component: AboutUsWrapper,
+    component: MainLayout,
     redirect: { name: 'AboutUs' },
     meta: { alias: 'Sobre Nosotros' },
     children: [

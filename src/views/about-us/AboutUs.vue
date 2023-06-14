@@ -148,6 +148,10 @@ const teamDescription: DescriptionItem[] = [
           :data="person"
         />
       </template>
+
+      <template #end>
+        <SectionDecoration />
+      </template>
     </GridSection>
   </section>
 </template>

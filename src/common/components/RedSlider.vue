@@ -94,7 +94,7 @@ const navButtonClass = computed(() => {
     :modules="swiperModules"
     :slides-per-view="slidesToShow"
     :navigation="swiperControls"
-    :space-between="30"
+    :space-between="32"
     :pagination="showPagination ? paginationOptions : false"
     :class="{ 'mb-12': showPagination }"
     class="w-full relative overflow-visible overflow-x-clip"

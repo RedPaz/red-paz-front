@@ -1,30 +1,29 @@
 <script setup lang="ts">
-defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  background: {
-    type: String,
-    required: true,
-    validator: (value: string) => /^#[0-9A-F]{6}$/i.test(value),
-  },
-  bannerSrc: {
-    type: String,
-    required: true,
-  },
-});
-
 const route = useRoute();
-const routeName = route.name?.toString() || '';
+
+const routeData = computed(() => {
+  const { alias, bannerBg, imageSrc } = route.meta;
+
+  return {
+    title: alias?.toString() || '',
+    bannerBg: bannerBg?.toString() || '#4DB372',
+    imageSrc: imageSrc?.toString() || '/images/about-us/header-image.png',
+  }
+});
 </script>
 
 <template>
   <PageHeader
-    :title="routeName"
-    background="#4DB372"
-    image="/images/about-us/header-image.png"
+    :title="routeData.title"
+    :image="routeData.imageSrc"
+    :background="routeData.bannerBg"
   />
 
-  <router-view/>
+  <section class="page-wrapper min-h-[calc(100vh-640px)]">
+    <router-view/>
+  </section>
 </template>
+
+<style scoped>
+
+</style>

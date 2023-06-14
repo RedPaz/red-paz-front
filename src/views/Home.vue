@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue';
 import { SwiperSlide } from 'swiper/vue';
 import { JOB_AREAS, PARTNERS, FEATURED_AREAS } from '@/common/constants';
 import { Banner, DescriptionItem, FeaturedItem } from '@/common/interfaces';
@@ -135,26 +134,7 @@ const featuredItems: FeaturedItem[] = [
       </template>
     </GridSection>
 
-    <GridSection
-      title="Áreas temáticas"
-      :desktop-cols="3"
-      :mobile-cols="2"
-    >
-      <template #description>
-        <p class="description">La comunidad universitaria ha venido desarrollando iniciativas en los siguientes campos:</p>
-      </template>
-
-      <template #items>
-        <ItemWithImage
-          v-for="(item, index) in JOB_AREAS"
-          :key="index"
-          :item="item"
-          :image-width="60"
-          :hide-image-in-mobile="true"
-          cover-image="/images/home/jobs-background.png"
-        />
-      </template>
-    </GridSection>
+    <JobAreas />
 
     <GridSection
       title="Contenidos destacados"

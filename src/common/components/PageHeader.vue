@@ -13,6 +13,7 @@ defineProps({
   background: {
     type: String,
     required: true,
+    validator: (value: string) => /^#[0-9A-F]{6}$/i.test(value),
   },
 });
 

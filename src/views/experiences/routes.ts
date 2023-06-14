@@ -1,6 +1,7 @@
 import { RouteRecordRaw } from 'vue-router';
 
-import ExperiencesWrapper from '@/views/experiences/ExperiencesWrapper.vue';
+import MainLayout from '@/common/layouts/MainLayout.vue';
+import Experiences from '@/views/experiences/Experiences.vue';
 
 import ENEP from '@/views/experiences/activities/ENEP.vue';
 import ActivitiesRedPaz from '@/views/experiences/activities/ActivitiesRedPaz.vue';
@@ -12,9 +13,19 @@ const experienceRoutes: RouteRecordRaw[] = [
   {
     path: '/experiencias-de-paz',
     name: 'Experiencias de Paz',
-    component: ExperiencesWrapper,
-    meta: { alias: 'Experiencias de Paz' },
+    component: MainLayout,
+    redirect: { name: 'Experiences' },
+    meta: {
+      alias: 'Experiencias de Paz',
+      imageSrc: '/images/experiences/main-banner.png',
+    },
     children: [
+      {
+        path: '',
+        name: 'Experiences',
+        meta: { alias: 'Experiencias de Paz' },
+        component: Experiences,
+      },
       {
         path: 'iniciativas-redpaz-unal',
         name: 'Iniciativas RedPaz Unal',

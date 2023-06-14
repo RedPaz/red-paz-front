@@ -54,12 +54,14 @@ const person = PROFILE_MEMBERS_INFO.find((person) => person.slug === route.param
         </a>
       </div>
     </div>
+
+    <SectionDecoration />
   </section>
 </template>
 
 <style scoped>
 .descriptions-section {
-  @apply w-full px-5 py-9 flex flex-col items-start justify-between z-20;
+  @apply relative w-full px-5 pt-9 pb-28 flex flex-col items-start justify-between z-20;
   @apply xl:px-28 xl:py-32 xl:flex-row;
 }
 
