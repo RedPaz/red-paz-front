@@ -17,8 +17,8 @@ const person = PROFILE_MEMBERS_INFO.find((person) => person.slug === route.param
       class="person-image rounded-md w-3/5 xl:w-auto mx-auto"
     >
 
-    <div class="person-info w-full mt-6 xl:mt-0 xl:px-16">
-      <div class="basic-info text-center xl:text-left">
+    <div class="person-info">
+      <div class="basic-info">
         <h3 class="section-title xl:!text-left">{{ person.name }}</h3>
 
         <h6 class="item-subtitle">
@@ -30,9 +30,9 @@ const person = PROFILE_MEMBERS_INFO.find((person) => person.slug === route.param
         </p>
       </div>
 
-      <p class="description whitespace-pre-line my-10 text-base xl:text-lg font-light">{{  person.description }}</p>
+      <p class="description">{{  person.description }}</p>
 
-      <div class="job-links flex items-center justify-center xl:justify-start">
+      <div class="job-links">
         <a
           v-if="person.cvLac"
           :href="person.cvLac"
@@ -61,6 +61,26 @@ const person = PROFILE_MEMBERS_INFO.find((person) => person.slug === route.param
 .descriptions-section {
   @apply w-full px-5 py-9 flex flex-col items-start justify-between z-20;
   @apply xl:px-28 xl:py-32 xl:flex-row;
+}
+
+.person-info {
+  @apply w-full mt-6;
+  @apply xl:mt-0 xl:px-16;
+}
+
+.basic-info {
+  @apply text-center;
+  @apply xl:text-left;
+}
+
+.description {
+  @apply whitespace-pre-line my-10 text-base font-light;
+  @apply xl:text-lg;
+}
+
+.job-links {
+  @apply flex items-center justify-center;
+  @apply xl:justify-start;
 }
 
 .item-subtitle {
