@@ -11,28 +11,28 @@ const person = PROFILE_MEMBERS_INFO.find((person) => person.slug === route.param
     v-if="person"
     class="descriptions-section"
   >
-    <!-- <pre>{{ personData }}</pre> -->
-
     <img
       :src="person.image"
       :alt="person.name"
-      class="person-image rounded-md"
+      class="person-image rounded-md w-3/5 xl:w-auto mx-auto"
     >
 
-    <div class="person-info w-full xl:px-16">
-      <h3 class="section-title !text-left">{{ person.name }}</h3>
+    <div class="person-info w-full mt-6 xl:mt-0 xl:px-16">
+      <div class="basic-info text-center xl:text-left">
+        <h3 class="section-title xl:!text-left">{{ person.name }}</h3>
 
-      <h6 class="item-subtitle">
-        {{ person.faculty }} <span class="block font-normal">{{ person.location }}</span>
-      </h6>
+        <h6 class="item-subtitle">
+          {{ person.faculty }} <span class="block font-normal">{{ person.location }}</span>
+        </h6>
 
-      <p class="content">
-        <Icon icon="mdi-email-outline" class="mr-3"/> {{ person.email }}
-      </p>
+        <p class="content">
+          <Icon icon="mdi-email-outline" class="mr-3"/> {{ person.email }}
+        </p>
+      </div>
 
-      <p class="description whitespace-pre-line my-10 text-lg font-light">{{  person.description }}</p>
+      <p class="description whitespace-pre-line my-10 text-base xl:text-lg font-light">{{  person.description }}</p>
 
-      <div class="job-links flex items-center">
+      <div class="job-links flex items-center justify-center xl:justify-start">
         <a
           v-if="person.cvLac"
           :href="person.cvLac"
@@ -64,12 +64,12 @@ const person = PROFILE_MEMBERS_INFO.find((person) => person.slug === route.param
 }
 
 .item-subtitle {
-  @apply font-bold text-green-red italic text-sm;
+  @apply font-bold text-green-red italic text-base -mt-8 mb-1;
   @apply xl:text-2xl xl:-mt-8 xl:mb-4;
 }
 .content {
-  @apply flex items-center text-gray-unal-100 italic;
-  @apply xl:my-1 xl:text-xl;
+  @apply flex items-center text-gray-unal-100 italic justify-center;
+  @apply xl:my-1 xl:text-xl xl:justify-start;
 }
 
 .item-action svg {
@@ -77,7 +77,7 @@ const person = PROFILE_MEMBERS_INFO.find((person) => person.slug === route.param
 }
 
 .item-action {
-  @apply w-40 rounded-lg text-lg leading-8 font-bold px-2 py-1 flex items-center justify-center duration-200 ease-in-out;
+  @apply w-36 xl:w-40 rounded-lg text-lg leading-8 font-bold px-2 py-1 flex items-center justify-center duration-200 ease-in-out;
   @apply xl:text-xl xl:py-2 xl:px-4;
 }
 .item-action:last-of-type {
