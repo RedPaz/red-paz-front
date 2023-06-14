@@ -15,10 +15,6 @@
 </template>
 
 <style scoped>
-.end-decoration {
-  @apply absolute bottom-0 left-0 h-16 w-full;
-}
-
 .end-decoration .dec-image {
   @apply h-8 w-full opacity-20;
 }

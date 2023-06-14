@@ -24,16 +24,28 @@ const routeList = computed(() => {
   const result: BreadCrumbItem[] = [
     { label: 'Inicio', src: '/', isCurrentRoute: false, alias: 'Inicio' },
   ];
+
+  let disabledPath = '';
   // Add child routes
-  route.matched.forEach((r) => {
+  route.matched.forEach((r, i) => {
+    const name = r.meta['alias']?.toString() || '';
+
+    if (r.path === disabledPath) {
+      result[i].isCurrentRoute = true;
+
+      return;
+    }
+
     result.push({
-      label: r.name?.toString() || '',
+      label: name,
       src: r.path,
       isCurrentRoute: r.name === currentRoute,
-      alias: r.meta['alias']?.toString() || '',
-    })
+      alias: name,
+    });
+
+    if (r.redirect) disabledPath = r.path;
   });
-  
+
   return result;
 });
 </script>

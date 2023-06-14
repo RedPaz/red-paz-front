@@ -7,8 +7,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Facultad de Ciencias Humanas',
     location: 'Sede Bogotá',
     email: 'correounal@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: true,
   },
   {
     name: 'Juan Alfonso de la Rosa Munar',
@@ -16,8 +14,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Facultad de Artes',
     location: 'Sede Bogotá',
     email: 'correounal@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Adriana Patricia Muñoz Ramírez',
@@ -25,8 +21,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Fac. de Medicina Veterinaria y Zootecnia',
     location: 'Sede Bogotá',
     email: 'apmunozr@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Ana Patricia Noguera de E.',
@@ -34,8 +28,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Facultad de Adminiztración',
     location: 'Sede Manizales',
     email: 'apnoguerad@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Adriana Villota',
@@ -43,8 +35,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Facultad de Administración',
     location: 'Sede Manizales',
     email: 'adrianavimar@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Bois Duarte Caviedes',
@@ -52,8 +42,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Centro de pensamiento y seguimiento',
     location: '--',
     email: 'bduartec@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Carlos Eduardo Satizábal A.',
@@ -61,8 +49,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Facultad de Artes',
     location: 'Sede Bogotá',
     email: 'cesatizabala@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Carlos Eduardo Barriga Acevedo',
@@ -70,8 +56,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Facultad de Artes',
     location: 'Sede Bogotá',
     email: 'correounal@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Claudia Patricia Sierra Pardo',
@@ -79,8 +63,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Facultad de Ciencias Humanas',
     location: 'Sede Bogotá',
     email: 'correounal@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Fabio Rodrigo Leiva Barón',
@@ -88,8 +70,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Facultad de Ciencias Agrarias',
     location: 'Sede Bogotá',
     email: 'frleivab@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'James León Parra-Monsalve',
@@ -97,8 +77,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Dir. Académica Com. Social/Historia',
     location: 'Sede La Paz',
     email: 'jlparram@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Jovani Alberto Jiménez Builes',
@@ -106,8 +84,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Facultad de Minas',
     location: 'Sede Medellín',
     email: 'jajimen1@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Karol Bibiana Barragán Fonseca',
@@ -115,8 +91,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Fac. de Medicina Veterinaria y Zootecnia',
     location: 'Sede Bogotá',
     email: 'kbbarraganf@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Maria Clemencia Castro Vergara',
@@ -124,8 +98,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Facultad de Ciencias Humanas',
     location: 'Sede Bogotá',
     email: 'mccastrov@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Marina Sánchez de Praguer',
@@ -133,8 +105,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Facultad de Ingeniería y Administración',
     location: 'Sede Palmira',
     email: 'msanchezpr@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Mario Esteban Hernández Álvarez',
@@ -142,8 +112,6 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Facultad de Medicina',
     location: 'Sede Bogotá',
     email: 'mehernandeza@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
   {
     name: 'Rafael Antonio Malagón Oviedo',
@@ -151,9 +119,12 @@ export const TEAM_MEMBERS: Person[] = [
     faculty: 'Facultad de Odontología',
     location: 'Sede Bogotá',
     email: 'ramalagono@unal.edu.co',
-    link: { label: 'Ver perfil', src: '#' },
-    highLight: false,
   },
-];
+]
+.map((person, index) => ({
+  ...person,
+  id: index + 1 ,
+  slug: person.name.split(' ').map((w) => w.toLowerCase()).join('-'),
+}));
 
 export default TEAM_MEMBERS;

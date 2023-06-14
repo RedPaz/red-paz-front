@@ -2,8 +2,10 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
 import Home from '@/views/Home.vue';
 import AboutUs from '@/views/AboutUs.vue';
+import Profile from '@/views/Profile.vue';
 
 import experienceRoutes from '@/views/experiences/routes';
+import AboutUsWrapper from '@/views/about-us/AboutUsWrapper.vue';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -13,20 +15,23 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/sobre-nosotros',
-    name: 'Sobre Nosotros',
-    component: AboutUs,
+    name: 'AboutUsWrapper',
+    component: AboutUsWrapper,
+    redirect: { name: 'AboutUs' },
     meta: { alias: 'Sobre Nosotros' },
     children: [
       {
-        path: 'test',
-        name: 'Ruta hija 1',
+        path: '',
+        name: 'AboutUs',
+        meta: { alias: 'Sobre Nosotros' },
         component: AboutUs,
       },
       {
-        path: 'test-2',
-        name: 'Ruta hija 2',
-        component: AboutUs,
-      }
+        path: 'equipo-de-trabajo/:slug',
+        name: 'Profile',
+        component: Profile,
+        meta: { alias: 'Equipo de trabajo' },
+      },
     ],
   },
   ...experienceRoutes,

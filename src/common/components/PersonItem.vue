@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
+import { Icon } from '@iconify/vue';
 import { Person } from '@/common/interfaces';
 
 const props = defineProps({
@@ -7,13 +8,9 @@ const props = defineProps({
     type: Object as PropType<Person>,
     required: true,
   },
-  highlight: {
-    type: Boolean,
-    required: false,
-  },
 });
 
-const { name, image, faculty, location, email, link } = props.data;
+const { name, image, faculty, location, email } = props.data;
 </script>
 
 <template>
@@ -26,19 +23,21 @@ const { name, image, faculty, location, email, link } = props.data;
 
     <div class="person-data">
       <h3 class="item-title">{{ name }}</h3>
-      <h6
-        class="item-subtitle"
-      >
+
+      <h6 class="item-subtitle">
         {{ faculty }} <span class="block font-normal">{{ location }}</span>
       </h6>
-      <p class="content"><i-mdi-email-outline class="mr-3"/> {{ email }}</p>
-      <a
-        v-if="link"
-        :href="link.src"
+
+      <p class="content">
+        <Icon icon="mdi-email-outline" class="mr-3"/> {{ email }}
+      </p>
+
+      <router-link
+        :to="{ name: 'Profile', params: { slug: data.slug } }"
         class="item-action"
       >
-        {{ link.label }}
-      </a>
+        Ver más
+      </router-link>
     </div>
   </div>
 </template>

@@ -39,17 +39,6 @@ const whatWeDoItems: Item[] = buildBaseItems([
   'Apoya la identificación  y vinculación de fuentes de financiación internas y externas que contribuyan al desarrollo de iniciativas de construcción de paz territorial en el corto, mediano y largo plazo',
 ]);
 
-const whichWeDo: DescriptionItem = {
-  title: '¿Qué hace la RedPaz Unal?',
-  description: `- Promueve el diálogo de saberes entre los diferentes actores sociales interesados en el abordaje integral de la construcción de paz territorial
-
-- Establece formas de relacionamiento y colaboración significativas y efectivas entre los miembros de la comunidad universitaria y entre estos y los diferentes actores sociales interesados en la construcción de paz territorial
-
-- Define con las comunidades canales y formas de comunicación adecuados, pertinentes y efectivos en la construcción de paz territorial
-
-- Apoya la identificación  y vinculación de fuentes de financiación internas y externas que contribuyan al desarrollo de iniciativas de construcción de paz territorial en el corto, mediano y largo plazo`
-}
-
 const actionLines: Item[] = buildBaseItems([
   'Seguir apoyando, a partir del trabajo entre facultades y sedes, los procesos de reincorporación y reconciliación que toman lugar en los territorios de influencia de las sedes de la Universidad',
   'Crear espacios de discusión en la comunidad universitaria y entre esta y otros actores sociales sobre temas de coyuntura relacionados con el proceso de construcción de paz',
@@ -75,12 +64,6 @@ const teamDescription: DescriptionItem[] = [
 
 <template>
   <section class="about-us">
-    <PageHeader
-      title="Sobre Nosotros"
-      background="#4DB372"
-      image="/images/about-us/header-image.png"
-    />
-
     <DescriptionSection
       :items="aboutUsDescriptions"
       main-image="/images/about-us/aboutUs.png"
@@ -119,7 +102,6 @@ const teamDescription: DescriptionItem[] = [
               :key="index"
               class="featured-item rounded-lg overflow-hidden shadow-sm bg-white/20"
             >
-
             <div class="item-content p-6 text-white">
               <h3 class="item-title !text-left text-xl">
                 {{ item.title }}
@@ -161,15 +143,10 @@ const teamDescription: DescriptionItem[] = [
     <GridSection :desktop-cols="3">
       <template #items>
         <PersonItem
-          v-for="(person, index) in TEAM_MEMBERS"
-          :key="index"
+          v-for="person in TEAM_MEMBERS"
+          :key="person.id"
           :data="person"
-          :highlight="person.highLight"
         />
-      </template>
-
-      <template #end>
-        <SectionDecoration/>
       </template>
     </GridSection>
   </section>
