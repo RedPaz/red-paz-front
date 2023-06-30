@@ -26,6 +26,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  denseBottom: {
+    type: Boolean,
+    default: false,
+  }
 });
 
 const gridClasses = computed(() => `grid-cols-${props.mobileCols} xl:grid-cols-${props.desktopCols}`)
@@ -34,7 +38,11 @@ const gridClasses = computed(() => `grid-cols-${props.mobileCols} xl:grid-cols-$
 <template>
   <div
     class="grid-col-items"
-    :class="[background, { '!pb-36': $slots['end'], 'lg:-mt-20': !title.length }]"
+    :class="[background, {
+      '!pb-36': $slots['end'],
+      'lg:-mt-20': !title.length,
+      '!pb-10': denseBottom,
+    }]"
   >
     <h2
       v-if="title"

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { SwiperSlide } from 'swiper/vue';
 import { buildBaseItems } from '@/common/utils';
-import { TEAM_MEMBERS } from '@/common/constants';
+import { TEAM_DIRECTORS, TEAM_MEMBERS } from '@/common/constants';
 import { DescriptionItem, Item } from '@/common/interfaces';
 
 const historyItems: DescriptionItem[] = [
@@ -140,12 +140,32 @@ const teamDescription: DescriptionItem[] = [
       main-image="/images/about-us/team.png"
     />
 
-    <GridSection :desktop-cols="3">
+    <GridSection
+      :desktop-cols="3"
+      dense-bottom
+    >
       <template #items>
         <PersonItem
           v-for="person in TEAM_MEMBERS"
           :key="person.id"
           :data="person"
+        />
+      </template>
+    </GridSection>
+
+    <GridSection
+      title="Nuestros coordinadores"
+      :desktop-cols="3"
+    >
+      <template #description>
+        <p class="description xl:w-2/3 mx-auto xl:!text-xl">La Red Paz UNAL busca hacer un aporte significativo a la construcción de paz desde las siguientes líneas de acción en el período 2022-2024.</p>
+      </template>
+
+      <template #items>
+        <PersonItem
+          v-for="director in TEAM_DIRECTORS"
+          :key="director.id"
+          :data="director"
         />
       </template>
 

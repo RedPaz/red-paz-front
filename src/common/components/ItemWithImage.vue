@@ -24,8 +24,10 @@ defineProps({
 </script>
 
 <template>
-  <div
+  <a
     class="item"
+    :class="{ 'cursor-auto': !item.src?.length }"
+    :href="item.src"
     :style="{ backgroundColor: item.color }"
   >
     <img
@@ -60,12 +62,12 @@ defineProps({
       </button>
     </div>
 
-    <div 
+    <div
       v-if="coverImage"
       class="mask"
       :style="{ backgroundImage: `url(${coverImage})` }">
     </div>
-  </div>
+  </a>
 </template>
 
 <style scoped>

@@ -5,3 +5,5 @@ export * from './partners';
 export * from './territoryMemories';
 export * from './teamMembers';
 export * from './profileMembersInfo';
+export * from './teamDirectors';
+export * from './thematicAreas';

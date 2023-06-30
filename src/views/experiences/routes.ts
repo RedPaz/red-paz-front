@@ -2,6 +2,7 @@ import { RouteRecordRaw } from 'vue-router';
 
 import MainLayout from '@/common/layouts/MainLayout.vue';
 import Experiences from '@/views/experiences/Experiences.vue';
+import ThematicAreas from '@/views/experiences/ThematicAreas.vue';
 
 import ENEP from '@/views/experiences/activities/ENEP.vue';
 import ActivitiesRedPaz from '@/views/experiences/activities/ActivitiesRedPaz.vue';
@@ -25,6 +26,12 @@ const experienceRoutes: RouteRecordRaw[] = [
         name: 'Experiences',
         meta: { alias: 'Experiencias de Paz' },
         component: Experiences,
+      },
+      {
+        path: 'areas-tematicas/:area',
+        name: 'ThematicAreas',
+        meta: { alias: 'Áreas temáticas' },
+        component: ThematicAreas,
       },
       {
         path: 'iniciativas-redpaz-unal',

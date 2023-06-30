@@ -1,5 +1,5 @@
 export interface Area {
   name: string;
-  icon: string;
+  icon?: string;
   color: string;
 }

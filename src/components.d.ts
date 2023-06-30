@@ -42,6 +42,8 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SectionDecoration: typeof import('./common/components/SectionDecoration.vue')['default']
+    ThematicArea: typeof import('./views/experiences/thematic-areas/ThematicArea.vue')['default']
+    ThematicAreas: typeof import('./views/experiences/ThematicAreas.vue')['default']
     YoutubeItem: typeof import('./common/components/YoutubeItem.vue')['default']
   }
 }

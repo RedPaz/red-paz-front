@@ -1,1 +1,14 @@
-export type RedArea = 'videos' | 'podcast' | 'articles' | 'training' | 'events' | 'others' | 'processes';
+export type RedArea = 'videos'
+                    | 'podcast'
+                    | 'articles'
+                    | 'training'
+                    | 'events'
+                    | 'others'
+                    | 'processes'
+                    | 'science'
+                    | 'art'
+                    | 'health'
+                    | 'territory'
+                    | 'victims'
+                    | 'agreements'
+                    | 'citizenship';

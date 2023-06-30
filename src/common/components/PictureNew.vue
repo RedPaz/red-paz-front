@@ -8,11 +8,15 @@ defineProps({
     type: Object as PropType<FeaturedItem>,
     required: true,
   },
+  showRedIcon: {
+    type: Boolean,
+    required: false,
+  },
 });
 </script>
 
 <template>
-  <div class="rounded-lg overflow-hidden shadow-sm bg-white">
+  <div class="rounded-lg border border-gray-100 overflow-hidden shadow-lg bg-white">
     <div class="item-image relative">
       <img :src="item.image" :alt="item.title">
 
@@ -37,7 +41,17 @@ defineProps({
 
       <div class="item-details mt-5 flex justify-between items-center">
         <div class="item-date flex items-center italic text-gray-unal-100 text-sm xl:text-base">
-          <Icon icon="mdi-clock-outline" class="mr-2 lg:mr-3 mb-1" />
+          <img
+            v-if="showRedIcon"
+            src="/images/home/red-paz.svg"
+            class="w-3"
+          />
+
+          <Icon
+            v-else
+            icon="mdi-clock-outline"
+            class="mr-2 lg:mr-3 mb-1"
+          />
           {{ item.date }}
         </div>
 

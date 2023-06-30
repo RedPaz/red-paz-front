@@ -10,6 +10,11 @@ defineProps({
     type: String,
     required: true,
   },
+  subtitle: {
+    type: String,
+    required: false,
+    default: '',
+  },
   background: {
     type: String,
     required: true,
@@ -53,11 +58,14 @@ const routeList = computed(() => {
 
 <template>
   <div
-    class="page-header flex items-center"
+    class="page-header flex items-center flex-nowrap"
     :style="{ background }"
   >
     <div class="header-content">
-      <h2 class="section-title whitespace-pre-line">{{ title }}</h2>
+      <h2 class="section-title whitespace-pre-line">
+        {{ title }}
+        <span v-if="subtitle.length" class="section-subtitle block !mb-0">{{ subtitle }}</span>
+      </h2>
 
       <!-- Breadcrumbs -->
       <div class="breadcrumbs">
