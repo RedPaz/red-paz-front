@@ -13,7 +13,7 @@ export const THEMATIC_AREAS: AreaItem[] = [
     name: 'Arte, educación y cultura para la paz',
     slug: 'arte-educacio-y-cultura-para-la-paz',
     color: '#EFB96D',
-    bannerSrc: '/images/experiences/thematic-areas/science/banner.png',
+    bannerSrc: '/images/experiences/thematic-areas/art/banner.png',
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const THEMATIC_AREAS: AreaItem[] = [
     name: 'Territorio, medio ambiente, ruralidad y paz',
     slug: 'territorio-medio-ambiente-ruralidad-y-paz',
     color: '#B8CF76',
-    bannerSrc: '/images/experiences/thematic-areas/science/banner.png',
+    bannerSrc: '/images/experiences/thematic-areas/territory/banner.png',
   },
   {
     id: 5,
@@ -41,14 +41,14 @@ export const THEMATIC_AREAS: AreaItem[] = [
     name: 'Implementación del Acuerdo de paz',
     slug: 'implementacion-del-acuerdo-de-paz',
     color: '#50AE98',
-    bannerSrc: '/images/experiences/thematic-areas/science/banner.png',
+    bannerSrc: '/images/experiences/thematic-areas/agreements/banner.png',
   },
   {
     id: 7,
     name: 'Ciudadanía y democracia',
     slug: 'ciudadania-y-democracia',
     color: '#E26F60',
-    bannerSrc: '/images/experiences/thematic-areas/science/banner.png',
+    bannerSrc: '/images/experiences/thematic-areas/citizenship/banner.png',
   },
 ];
 

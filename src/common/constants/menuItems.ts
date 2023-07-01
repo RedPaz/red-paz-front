@@ -14,13 +14,10 @@ export const HEADER_ITEMS: HeaderItem[] = [
   {
     label: 'Experiencias de Paz',
     src: '/experiencias-de-paz',
-    subItems: [],
-    // subItems: [
-    //   { label: 'Iniciativas RedPaz Unal', src: '/experiencias-de-paz/iniciativas-redpaz-unal' },
-    //   { label: 'Proyectos de Docencia', src: '#' },
-    //   { label: 'Proyectos de Investigación', src: '#' },
-    //   { label: 'Proyectos de Extensión', src: '#' },
-    // ],
+    subItems: [
+      { label: 'Iniciativas RedPaz Unal', src: '/experiencias-de-paz/iniciativas-redpaz-unal' },
+      { label: 'Áreas temáticas', src: '/experiencias-de-paz/areas-temáticas' },
+    ],
   },
   {
     label: 'Nuestro Aliados',

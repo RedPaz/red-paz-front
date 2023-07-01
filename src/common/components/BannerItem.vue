@@ -30,11 +30,11 @@ const bannerInfo: DescriptionItem = {
 
     <DescriptionSection :items="[bannerInfo]" />
 
-    <div 
+    <div
       v-if="image"
       class="banner-image"
-      :style="{ backgroundImage: `url(${image})` }">
-    </div>
+      :style="{ backgroundImage: `url(${image})` }"
+    />
   </div>
 </template>
 

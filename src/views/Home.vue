@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { SwiperSlide } from 'swiper/vue';
-import { JOB_AREAS, PARTNERS, FEATURED_AREAS } from '@/common/constants';
+import { PARTNERS, FEATURED_AREAS } from '@/common/constants';
 import { Banner, DescriptionItem, FeaturedItem } from '@/common/interfaces';
 
 const homeBanners: Banner[] = [
