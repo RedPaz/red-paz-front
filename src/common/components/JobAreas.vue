@@ -10,7 +10,8 @@ import { JOB_AREAS } from '@/common/constants';
     :mobile-cols="2"
   >
     <template #description>
-      <p class="description">La comunidad universitaria ha venido desarrollando iniciativas en los siguientes campos:</p>
+      <p class="description">A partir del encuentro Nacional de Experiencias de Paz que se realizó en 2020 logramos identificar las diferentes áreas en las que la comunidad universitaria ha venido desarrollando iniciativas, proyectos, y experiencias de trabajo.
+Da click en para conocer más:</p>
     </template>
 
     <template #items>

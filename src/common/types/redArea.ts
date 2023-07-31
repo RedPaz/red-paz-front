@@ -1,4 +1,5 @@
-export type RedArea = 'videos'
+export type RedArea = 'all'
+                    | 'videos'
                     | 'podcast'
                     | 'articles'
                     | 'training'

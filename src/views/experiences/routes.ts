@@ -1,6 +1,7 @@
 import { RouteRecordRaw } from 'vue-router';
 
 import MainLayout from '@/common/layouts/MainLayout.vue';
+import RedPazNew from '@/views/experiences/RedPazNew.vue';
 import Experiences from '@/views/experiences/Experiences.vue';
 import ThematicAreas from '@/views/experiences/ThematicAreas.vue';
 
@@ -34,6 +35,12 @@ const experienceRoutes: RouteRecordRaw[] = [
         component: ThematicAreas,
       },
       {
+        path: 'areas-tematicas/:area/:id',
+        name: 'RedPazNew',
+        meta: { alias: 'Proyecto' },
+        component: RedPazNew,
+      },
+      {
         path: 'iniciativas-redpaz-unal',
         name: 'Iniciativas RedPaz Unal',
         component: ActivitiesRedPaz,
@@ -43,7 +50,11 @@ const experienceRoutes: RouteRecordRaw[] = [
             path: 'conversatorios',
             name: 'Conversatorios \nterritoriales y temáticos',
             component: DiscussionActivities,
-            meta: { alias: 'Conversatorios' },
+            meta: {
+              alias: 'Conversatorios',
+              bannerBg: '#FECB38',
+              imageSrc: '/images/experiences/discussions/main-banner.png',
+            },
           },
           {
             path: 'podcast',

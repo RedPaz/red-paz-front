@@ -38,6 +38,7 @@ declare module '@vue/runtime-core' {
     PictureNew: typeof import('./common/components/PictureNew.vue')['default']
     PodcastActivities: typeof import('./views/experiences/activities/PodcastActivities.vue')['default']
     Profile: typeof import('./views/about-us/Profile.vue')['default']
+    RedPazNew: typeof import('./views/experiences/RedPazNew.vue')['default']
     RedSlider: typeof import('./common/components/RedSlider.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

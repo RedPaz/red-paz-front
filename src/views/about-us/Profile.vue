@@ -67,7 +67,7 @@ const person = PROFILE_MEMBERS_INFO.find((person) => person.slug === route.param
 
 .person-info {
   @apply w-full mt-6;
-  @apply xl:mt-0 xl:px-16;
+  @apply xl:mt-0 xl:px-16 xl:mb-14;
 }
 
 .basic-info {

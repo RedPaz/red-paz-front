@@ -2,6 +2,7 @@ import { Area } from '@/common/interfaces';
 import { RedArea } from '../types';
 
 export const FEATURED_AREAS: Record<RedArea, Area> = {
+  all: { name: 'Todas', icon: 'border-all', color: '#4DB372' },
   videos: { name: 'Videos', icon: 'filmstrip', color: '#402D5C' },
   podcast: { name: 'Podcast', icon: 'microphone-outline', color: '#031449' },
   articles: { name: 'Artículos', icon: 'text-box-outline', color: '#4DB372' },

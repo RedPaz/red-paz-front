@@ -6,7 +6,7 @@ export const THEMATIC_NEWS: FeaturedItem[] = [
     image: '/images/experiences/thematic-areas/science/mosca-soldado.jpg',
     title: 'Uso de la Mosca Soldado Negra como alimento alternativo en peces.',
     date: '16 de septiembre de 2022',
-    url: '#',
+    url: '/experiencias-de-paz/areas-tematicas/ciencia-tecnologia-e-innovacion-para-la-paz/1',
     area: { ...FEATURED_AREAS.science }
   },
   {

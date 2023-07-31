@@ -6,4 +6,6 @@ export interface Person {
   location: string;
   email: string;
   slug: string;
+  description: string;
+  isDirector?: boolean;
 }

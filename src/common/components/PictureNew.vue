@@ -16,7 +16,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="rounded-lg border border-gray-100 overflow-hidden shadow-lg bg-white">
+  <div class="rounded-lg border border-gray-100 overflow-hidden shadow-md bg-white">
     <div class="item-image relative">
       <img :src="item.image" :alt="item.title">
 

@@ -54,7 +54,7 @@ const { name, image, faculty, location, email } = props.data;
 
 .item-title {
   @apply leading-4 mb-1 !text-left;
-  @apply xl:!leading-6 xl:mb-2 xl:min-h-[48px];
+  @apply xl:!leading-6 xl:mb-2 xl:min-h-[48px] xl:pr-10;
 }
 
 .item-subtitle {

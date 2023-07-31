@@ -141,24 +141,12 @@ const teamDescription: DescriptionItem[] = [
     />
 
     <GridSection
+      title="Nuestros coordinadores"
       :desktop-cols="3"
       dense-bottom
     >
-      <template #items>
-        <PersonItem
-          v-for="person in TEAM_MEMBERS"
-          :key="person.id"
-          :data="person"
-        />
-      </template>
-    </GridSection>
-
-    <GridSection
-      title="Nuestros coordinadores"
-      :desktop-cols="3"
-    >
       <template #description>
-        <p class="description xl:w-2/3 mx-auto xl:!text-xl">La Red Paz UNAL busca hacer un aporte significativo a la construcción de paz desde las siguientes líneas de acción en el período 2022-2024.</p>
+        <p class="description xl:w-2/3 mx-auto xl:!text-xl">Coordinadores que han pasado por la RedPaz Unal</p>
       </template>
 
       <template #items>
@@ -166,6 +154,23 @@ const teamDescription: DescriptionItem[] = [
           v-for="director in TEAM_DIRECTORS"
           :key="director.id"
           :data="director"
+        />
+      </template>
+    </GridSection>
+
+    <GridSection
+      title="Equipo actual de trabajo"
+      :desktop-cols="3"
+    >
+      <template #description>
+        <p class="description">Profesores que hacen parte actualmente de la RedPaz Unal</p>
+      </template>
+
+      <template #items>
+        <PersonItem
+          v-for="person in TEAM_MEMBERS"
+          :key="person.id"
+          :data="person"
         />
       </template>
 
@@ -178,6 +183,7 @@ const teamDescription: DescriptionItem[] = [
 
 <style scoped>
 .description {
-  @apply text-left lg:text-center mb-8 text-base lg:text-lg;
+  @apply text-left lg:text-center mb-8 font-light text-base lg:text-lg;
+  @apply xl:w-2/3 mx-auto xl:!text-xl;
 }
 </style>
