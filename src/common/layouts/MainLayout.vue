@@ -9,7 +9,7 @@ const areaSlug = route.params.area;
 const routeData = computed(() => {
   const areasStore = useAreasStore();
   const { currentArea } = storeToRefs(areasStore);
-  const { alias, bannerBg, imageSrc } = route.meta;
+  const { bannerBg, imageSrc, subtitle } = route.meta;
 
   if (areaSlug?.length) {
     const areaIndex = THEMATIC_AREAS.findIndex((area) => area.slug === areaSlug);
@@ -19,10 +19,10 @@ const routeData = computed(() => {
   }
 
   return {
-    title: alias?.toString() || '',
+    title: route.name?.toString() || '',
     bannerBg: bannerBg?.toString() || '#4DB372',
     imageSrc: currentArea.value?.bannerSrc || imageSrc?.toString() || '/images/about-us/header-image.png',
-    subtitle: currentArea.value?.name || '',
+    subtitle: currentArea.value?.name || subtitle?.toString() || '',
     color: currentArea.value?.color,
   };
 });

@@ -16,18 +16,18 @@ const routes: RouteRecordRaw[] = [
     path: '/sobre-nosotros',
     name: 'AboutUsWrapper',
     component: MainLayout,
-    redirect: { name: 'AboutUs' },
+    redirect: { name: 'Sobre Nosotros' },
     meta: { alias: 'Sobre Nosotros' },
     children: [
       {
         path: '',
-        name: 'AboutUs',
+        name: 'Sobre Nosotros',
         meta: { alias: 'Sobre Nosotros' },
         component: AboutUs,
       },
       {
         path: 'equipo-de-trabajo/:slug',
-        name: 'Profile',
+        name: 'Equipo de trabajo',
         component: Profile,
         meta: { alias: 'Equipo de trabajo' },
       },

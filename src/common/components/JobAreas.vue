@@ -1,11 +1,20 @@
 <script setup lang="ts">
 import { JOB_AREAS } from '@/common/constants';
+import { PropType } from 'vue';
+
+defineProps({
+  background: {
+    type: String as PropType<'bg-white' | 'bg-gray-100' | 'bg-green-red'>,
+    required: false,
+    default: 'bg-gray-100',
+  },
+});
 </script>
 
 <template>
   <GridSection
     title="Áreas temáticas"
-    background="bg-gray-100"
+    :background="background"
     :desktop-cols="3"
     :mobile-cols="2"
   >

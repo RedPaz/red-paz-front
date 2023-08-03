@@ -7,3 +7,4 @@ export * from './teamMembers';
 export * from './profileMembersInfo';
 export * from './teamDirectors';
 export * from './thematicAreas';
+export * from './territoriesSupport';

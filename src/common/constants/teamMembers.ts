@@ -1,9 +1,11 @@
+import { slugify } from '@/common/utils';
 import { Person } from '@/common/interfaces';
 
 export const TEAM_MEMBERS: Person[] = [
   {
     name: 'Jairo Alexis Rodríguez López',
-    image: '/images/about-us/team/doris-santos.png',
+    image: '/images/about-us/team/jairo-rodriguez.png',
+    imageDetail: '/images/about-us/team/jairo-rodriguez-full.png',
     faculty: 'Coordinador 2023',
     location: 'Sede Bogotá',
     email: 'jarodriguezl@unal.edu.co',
@@ -15,6 +17,7 @@ export const TEAM_MEMBERS: Person[] = [
   {
     name: 'Doris Adriana Santos Caicedo',
     image: '/images/about-us/team/doris-santos.png',
+    imageDetail: '/images/about-us/team/doris-santos-full.png',
     faculty: 'Coordinadora 2022 - 2023',
     location: 'Sede Bogotá',
     email: 'dasantosc@unal.edu.co',
@@ -27,7 +30,8 @@ export const TEAM_MEMBERS: Person[] = [
   },
   {
     name: 'Juan Alfonso de la Rosa Munar',
-    image: '/images/about-us/team/doris-santos.png',
+    image: '/images/about-us/team/juan-de-la-rosa.png',
+    imageDetail: '/images/about-us/team/juan-de-la-rosa-full.png',
     faculty: 'Co-coordinador 2022',
     location: 'Sede Bogotá',
     email: 'jadelarosam@unal.edu.co',
@@ -38,7 +42,8 @@ export const TEAM_MEMBERS: Person[] = [
   },
   {
     name: 'Camilo Alberto Borrero García',
-    image: '/images/about-us/team/man-default.jpg',
+    image: '/images/about-us/team/camilo-borrero.png',
+    imageDetail: '/images/about-us/team/camilo-borrero-full.png',
     faculty: 'Coordinador 2021',
     location: 'Sede Bogotá',
     email: 'caborrerog@unal.edu.co',
@@ -49,7 +54,8 @@ export const TEAM_MEMBERS: Person[] = [
   },
   {
     name: 'Martha Nubia Bello Albarracín',
-    image: '/images/about-us/team/man-default.jpg',
+    image: '/images/about-us/team/woman-default.png',
+    imageDetail: '/images/about-us/team/martha-bello-full.png',
     faculty: 'Coordinadora 2020',
     location: 'Sede Bogotá',
     email: 'mnbelloa@unal.edu.co',
@@ -63,6 +69,7 @@ export const TEAM_MEMBERS: Person[] = [
   {
     name: 'Diana Hincapié',
     image: '/images/about-us/team/diana-hincapie.png',
+    imageDetail: '/images/about-us/team/diana-hincapie-full.png',
     faculty: 'Facultad de Ciencias Políticas',
     location: 'Sede Bogotá',
     email: 'dmhincapiec@unal.edu.co',
@@ -75,6 +82,7 @@ export const TEAM_MEMBERS: Person[] = [
   {
     name: 'Adriana Patricia Muñoz Ramírez',
     image: '/images/about-us/team/adriana-munoz.png',
+    imageDetail: '/images/about-us/team/adriana-munoz-full.png',
     faculty: 'Fac. de Medicina Veterinaria y Zootecnia',
     location: 'Sede Bogotá',
     email: 'apmunozr@unal.edu.co',
@@ -82,30 +90,10 @@ export const TEAM_MEMBERS: Person[] = [
 
     Actualmente es Directora de la Dirección de Extensión de la Facultad de Medicina Veterinaria y Zootecnia de la Universidad Nacional de Colombia.`,
   },
-  // {
-  //   name: 'Ana Patricia Noguera de E.',
-  //   image: '/images/about-us/team/doris-santos.jpeg',
-  //   faculty: 'Facultad de Adminiztración',
-  //   location: 'Sede Manizales',
-  //   email: 'apnoguerad@unal.edu.co',
-  // },
-  // {
-  //   name: 'Jairo Alexis Rodríguez López',
-  //   image: '/images/about-us/team/jairo-rodriguez.jpg',
-  //   faculty: 'Facultad de Ciencias',
-  //   location: 'Sede Bogotá',
-  //   email: 'correounal@unal.edu.co',
-  // },
-  // {
-  //   name: 'Bois Duarte Caviedes',
-  //   image: '/images/about-us/team/doris-santos.jpeg',
-  //   faculty: 'Centro de pensamiento y seguimiento',
-  //   location: '--',
-  //   email: 'bduartec@unal.edu.co',
-  // },
   {
     name: 'Carlos Eduardo Satizábal A.',
     image: '/images/about-us/team/carlos-satizabal.png',
+    imageDetail: '/images/about-us/team/carlos-satizabal-full.png',
     faculty: 'Facultad de Artes',
     location: 'Sede Bogotá',
     email: 'cesatizabala@unal.edu.co',
@@ -116,6 +104,7 @@ export const TEAM_MEMBERS: Person[] = [
   {
     name: 'Carlos Eduardo Barriga Acevedo',
     image: '/images/about-us/team/carlos-barriga.png',
+    imageDetail: '/images/about-us/team/carlos-barriga-full.png',
     faculty: 'Facultad de Artes',
     location: 'Sede Bogotá',
     email: 'cebarrigaa@unal.edu.co',
@@ -126,6 +115,7 @@ export const TEAM_MEMBERS: Person[] = [
   {
     name: 'Claudia Patricia Sierra Pardo',
     image: '/images/about-us/team/claudia-sierra.png',
+    imageDetail: '/images/about-us/team/claudia-sierra-full.png',
     faculty: 'Facultad de Ciencias Humanas',
     location: 'Sede Bogotá',
     email: 'cpsierrap@unal.edu.co',
@@ -136,6 +126,7 @@ export const TEAM_MEMBERS: Person[] = [
   {
     name: 'Fabio Rodrigo Leiva Barón',
     image: '/images/about-us/team/fabio-leiva.png',
+    imageDetail: '/images/about-us/team/fabio-leiva-full.png',
     faculty: 'Facultad de Ciencias Agrarias',
     location: 'Sede Bogotá',
     email: 'frleivab@unal.edu.co',
@@ -143,38 +134,19 @@ export const TEAM_MEMBERS: Person[] = [
 
     Actualmente se desempeña como Director del Centro de Pensamiento en Desarrollo Rural de la Universidad Nacional de Colombia`
   },
-  // {
-  //   name: 'James León Parra-Monsalve',
-  //   image: '/images/about-us/team/doris-santos.jpeg',
-  //   faculty: 'Dir. Académica Com. Social/Historia',
-  //   location: 'Sede La Paz',
-  //   email: 'jlparram@unal.edu.co',
-  // },
   {
     name: 'Jovani Alberto Jiménez Builes',
     image: '/images/about-us/team/jovani-jimenez.png',
+    imageDetail: '/images/about-us/team/jovani-jimenez-full.png',
     faculty: 'Facultad de Minas',
     location: 'Sede Medellín',
     email: 'jajimen1@unal.edu.co',
     description: `El grupo de investigación Inteligencia Artificial en Educación tiene como propósitos la formación del talento humano a alto nivel en las líneas asociadas al uso de TIC en educación, implementando técnicas de IA.`,
   },
-  // {
-  //   name: 'Jairo Humberto Lopez',
-  //   image: '/images/about-us/team/jairo-lopez.jpg',
-  //   faculty: 'Facultad de Ciencias',
-  //   location: 'Sede Bogotá',
-  //   email: 'correounal@unal.edu.co',
-  // },
-  // {
-  //   name: 'Karol Bibiana Barragán Fonseca',
-  //   image: '/images/about-us/team/doris-santos.jpeg',
-  //   faculty: 'Fac. de Medicina Veterinaria y Zootecnia',
-  //   location: 'Sede Bogotá',
-  //   email: 'kbbarraganf@unal.edu.co',
-  // },
   {
     name: 'Maria Clemencia Castro Vergara',
     image: '/images/about-us/team/maria-castro.png',
+    imageDetail: '/images/about-us/team/maria-castro-full.png',
     faculty: 'Facultad de Ciencias Humanas',
     location: 'Sede Bogotá',
     email: 'mccastrov@unal.edu.co',
@@ -187,6 +159,7 @@ export const TEAM_MEMBERS: Person[] = [
   {
     name: 'Marina Sánchez de Praguer',
     image: '/images/about-us/team/maria-sanchez.png',
+    imageDetail: '/images/about-us/team/maria-sanchez-full.png',
     faculty: 'Facultad de Ingeniería y Administración',
     location: 'Sede Palmira',
     email: 'msanchezpr@unal.edu.co',
@@ -197,6 +170,7 @@ export const TEAM_MEMBERS: Person[] = [
   {
     name: 'Mario Esteban Hernández Álvarez',
     image: '/images/about-us/team/mario-hernandez.png',
+    imageDetail: '/images/about-us/team/mario-hernandez-full.png',
     faculty: 'Facultad de Medicina',
     location: 'Sede Bogotá',
     email: 'mehernandeza@unal.edu.co',
@@ -206,7 +180,8 @@ export const TEAM_MEMBERS: Person[] = [
   },
   {
     name: 'Adriana Villota',
-    image: '/images/about-us/team/woman-default.jpg',
+    image: '/images/about-us/team/woman-default.png',
+    imageDetail: '/images/about-us/team/woman-default-full.png',
     faculty: 'Facultad de Administración',
     location: 'Sede Manizales',
     email: 'adrianavimar@unal.edu.co',
@@ -216,7 +191,8 @@ export const TEAM_MEMBERS: Person[] = [
   },
   {
     name: 'Rafael Antonio Malagón Oviedo',
-    image: '/images/about-us/team/man-default.jpg',
+    image: '/images/about-us/team/man-default.png',
+    imageDetail: '/images/about-us/team/man-default-full.png',
     faculty: 'Facultad de Odontología',
     location: 'Sede Bogotá',
     email: 'ramalagono@unal.edu.co',
@@ -226,7 +202,7 @@ export const TEAM_MEMBERS: Person[] = [
 .map((person, index) => ({
   ...person,
   id: index + 1 ,
-  slug: person.name.split(' ').map((w) => w.toLowerCase()).join('-'),
+  slug: person.name.split(' ').map((w) => slugify(w)).join('-'),
 }));
 
 export default TEAM_MEMBERS;

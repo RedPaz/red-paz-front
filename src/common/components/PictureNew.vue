@@ -21,7 +21,7 @@ defineProps({
       <img :src="item.image" :alt="item.title">
 
       <div
-        class="item-type text-white flex items-center justify-center p-1 w-1/3 xl:w-1/4 absolute top-0 right-0 rounded-bl-lg"
+        class="item-type text-white flex items-center justify-center p-1 w-1/3 absolute top-0 right-0 rounded-bl-lg"
         :style="{ backgroundColor: item.area.color }"
       >
         <img

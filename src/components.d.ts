@@ -37,6 +37,8 @@ declare module '@vue/runtime-core' {
     PersonItem: typeof import('./common/components/PersonItem.vue')['default']
     PictureNew: typeof import('./common/components/PictureNew.vue')['default']
     PodcastActivities: typeof import('./views/experiences/activities/PodcastActivities.vue')['default']
+    ProcessSuport: typeof import('./views/experiences/ProcessSuport.vue')['default']
+    ProcessSupport: typeof import('./views/experiences/ProcessSupport.vue')['default']
     Profile: typeof import('./views/about-us/Profile.vue')['default']
     RedPazNew: typeof import('./views/experiences/RedPazNew.vue')['default']
     RedSlider: typeof import('./common/components/RedSlider.vue')['default']

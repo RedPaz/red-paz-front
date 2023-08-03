@@ -33,7 +33,7 @@ const homeBanners: Banner[] = [
 ];
 
 const homeDescription: DescriptionItem = {
-  title: '¿Qué es la RedPaz Unal?',
+  title: '¿Qué es la RedPaz UNAL?',
   description: 'Es una iniciativa institucional creada para fortalecer y proyectar el relacionamiento de miembros de la comunidad universitaria de diferentes facultades y sedes interesados en el trabajo colaborativo pertinente y oportuno con comunidades y aliados estratégicos del orden local, regional, nacional e internacional para la construcción de paz en los territorios.',
   links: [
     { label: 'Conoce más', src: '#' },
@@ -112,9 +112,9 @@ const featuredItems: FeaturedItem[] = [
       </template>
     </RedSlider>
 
-    <DescriptionSection
-      :items="[homeDescription]"
-      main-image="/images/home/description-image.png"
+    <DescriptionVideo
+      :data="homeDescription"
+      video-src="https://www.youtube.com/watch?v=oCbAKjTLMLo"
     />
 
     <GridSection
@@ -134,7 +134,7 @@ const featuredItems: FeaturedItem[] = [
       </template>
     </GridSection>
 
-    <JobAreas />
+    <JobAreas background="bg-white"/>
 
     <GridSection
       title="Contenidos destacados"

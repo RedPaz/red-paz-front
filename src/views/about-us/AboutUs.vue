@@ -60,6 +60,8 @@ const teamDescription: DescriptionItem[] = [
     - Proponer una estrategia orientada a avanzar en la sostenibilidad académica, organizacional, comunicacional y financiera de la RedPaz UNAL en el corto, mediano y largo plazo.`,
   },
 ];
+
+const teamMembers = TEAM_MEMBERS.filter((person) => !person.isDirector);
 </script>
 
 <template>
@@ -168,7 +170,7 @@ const teamDescription: DescriptionItem[] = [
 
       <template #items>
         <PersonItem
-          v-for="person in TEAM_MEMBERS"
+          v-for="person in teamMembers"
           :key="person.id"
           :data="person"
         />

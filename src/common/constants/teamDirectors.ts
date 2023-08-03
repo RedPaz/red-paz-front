@@ -5,7 +5,6 @@ export const TEAM_DIRECTORS: Person[] = TEAM_MEMBERS
   .map((person, index) => ({
     ...person,
     id: index + 1 ,
-    slug: person.name.split(' ').map((w) => w.toLowerCase()).join('-'),
   }),
 );
 

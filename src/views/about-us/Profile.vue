@@ -12,7 +12,7 @@ const person = PROFILE_MEMBERS_INFO.find((person) => person.slug === route.param
     class="descriptions-section"
   >
     <img
-      :src="person.image"
+      :src="person.imageDetail"
       :alt="person.name"
       class="person-image rounded-md w-3/5 xl:w-1/3 mx-auto"
     >
@@ -32,7 +32,7 @@ const person = PROFILE_MEMBERS_INFO.find((person) => person.slug === route.param
 
       <p class="description">{{  person.description }}</p>
 
-      <div class="job-links">
+      <!-- <div class="job-links">
         <a
           v-if="person.cvLac"
           :href="person.cvLac"
@@ -52,7 +52,7 @@ const person = PROFILE_MEMBERS_INFO.find((person) => person.slug === route.param
           <Icon icon="mdi-linkedin"/>
           LinkedIn
         </a>
-      </div>
+      </div> -->
     </div>
 
     <SectionDecoration />
@@ -67,7 +67,7 @@ const person = PROFILE_MEMBERS_INFO.find((person) => person.slug === route.param
 
 .person-info {
   @apply w-full mt-6;
-  @apply xl:mt-0 xl:px-16 xl:mb-14;
+  @apply xl:mt-2 xl:px-16 xl:mb-14;
 }
 
 .basic-info {

@@ -32,12 +32,13 @@ const { name, image, faculty, location, email } = props.data;
         <Icon icon="mdi-email-outline" class="mr-3"/> {{ email }}
       </p>
 
-      <router-link
-        :to="{ name: 'Profile', params: { slug: data.slug } }"
+
+      <a
         class="item-action"
+        :href="`/sobre-nosotros/equipo-de-trabajo/${data.slug}`"
       >
         Ver más
-      </router-link>
+      </a>
     </div>
   </div>
 </template>
