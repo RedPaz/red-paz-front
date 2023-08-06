@@ -12,7 +12,7 @@ body {
 
 .section-title {
   @apply font-bold text-2xl mb-8;
-  @apply xl:text-center xl:text-4xl xl:mb-12;
+  @apply xl:text-center xl:text-4xl xl:mb-10;
 }
 
 .section-subtitle {

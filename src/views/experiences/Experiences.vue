@@ -9,7 +9,7 @@ const featuredItems = computed((): FeaturedItem[] => {
     {
       category: 'INICIATIVAS REDPAZ UNAL',
       image: '/images/experiences/activities/catedra.png',
-      title: 'Cátedra Construcción de paz en tiempos de Pos-acuerdo',
+      title: 'Cátedra: Construcción de paz en tiempos de Pos-acuerdo',
       date: '2023',
       url: '#',
       area: { ...FEATURED_AREAS.training }
@@ -51,7 +51,7 @@ const featuredItems = computed((): FeaturedItem[] => {
       image: '/images/experiences/activities/encuentro-nacional.jpg',
       title: 'Encuentro Nacional de Experiencias de Paz 2020',
       date: '2020',
-      url: '#',
+      url: '/experiencias-de-paz/enep-2020',
       area: { ...FEATURED_AREAS.events }
     },
     {
@@ -59,7 +59,7 @@ const featuredItems = computed((): FeaturedItem[] => {
       image: '/images/experiences/activities/conflicto-armado.jpg',
       title: 'Catedra: Del conflicto armado a la construcción de paz',
       date: '16 de septiembre de 2020',
-      url: '#',
+      url: '/experiencias-de-paz/catedra-conflicto-armado',
       area: { ...FEATURED_AREAS.training }
     },
   ];
@@ -70,8 +70,6 @@ const featuredItems = computed((): FeaturedItem[] => {
 });
 
 const categories = Object.values(FEATURED_AREAS).filter((value) => !value.id);
-
-const selectedCategory = computed(() => categories.find((item) => item.name === filter.value));
 </script>
 
 <template>

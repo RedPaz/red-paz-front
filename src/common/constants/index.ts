@@ -8,3 +8,4 @@ export * from './profileMembersInfo';
 export * from './teamDirectors';
 export * from './thematicAreas';
 export * from './territoriesSupport';
+export * from './partnerCategories';

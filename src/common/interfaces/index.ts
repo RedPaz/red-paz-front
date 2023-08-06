@@ -13,3 +13,4 @@ export * from './mediaSrc';
 export * from './featuredItem';
 export * from './area';
 export * from './areaItem';
+export * from './partnerCategory';

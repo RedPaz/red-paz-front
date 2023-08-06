@@ -81,7 +81,7 @@ defineProps({
 }
 
 .item-description {
-  @apply my-4 italic text-lg leading-5 font-light;
+  @apply my-3 italic text-lg leading-5 font-light;
 }
 
 .item-image {

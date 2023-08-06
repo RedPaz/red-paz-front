@@ -40,23 +40,11 @@ const records: Episode[] = [
     main-image="/images/experiences/discussions/discussions-description.png"
   />
 
-  <GridSection
-    title="Ejes temáticos"
-    background="bg-gray-100"
-    :desktop-cols="3"
-    :mobile-cols="2"
-  >
-    <template #items>
-      <ItemWithImage
-        v-for="(item, index) in JOB_AREAS"
-        :key="index"
-        :item="item"
-        :image-width="60"
-        :hide-image-in-mobile="true"
-        cover-image="/images/home/jobs-background.png"
-      />
+  <JobAreas>
+    <template #description>
+      <p class="description">La comunidad universitaria ha venido desarrollando iniciativas en los siguientes campos:</p>
     </template>
-  </GridSection>
+  </JobAreas>
 
   <GridSection
     title="Páneles"
@@ -84,4 +72,7 @@ const records: Episode[] = [
 </template>
 
 <style scoped>
+.description {
+  @apply text-center mb-8 text-lg;
+}
 </style>

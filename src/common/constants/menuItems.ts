@@ -23,9 +23,10 @@ export const HEADER_ITEMS: HeaderItem[] = [
     label: 'Nuestro Aliados',
     src: '#',
     subItems: [
-      { label: 'Sistema Integral para la Paz', src: '#' },
-      { label: 'Entidades Gubernamentales', src: '#' },
-      { label: 'Organismos Internacionales', src: '#' },
+      { label: 'Sistema Integral para la Paz', src: '/nuestros-aliados/sistema-integral-para-la-paz' },
+      { label: 'Entidades Gubernamentales', src: '/nuestros-aliados/entidades-gubernamentales' },
+      { label: 'Organismos Internacionales', src: '/nuestros-aliados/organismos-internacionales' },
+      { label: 'Organismos Sociales', src: '/nuestros-aliados/organismos-sociales' },
     ],
   },
   {

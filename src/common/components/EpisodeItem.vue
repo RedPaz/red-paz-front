@@ -22,17 +22,17 @@ const props = defineProps({
 })
 
 const youtube = ref();
-const selectedSource = ref<'spotify' | 'radioUnal' | 'youtube'>('spotify');
+const selectedSource = ref<'spotify' | 'radioUnal' | 'facebook' | 'youtube'>('spotify');
 
 const embedSpotifySrc = computed(() => {
   if (!props.data.sources.spotify) return '';
-  
+
   return props.data.sources.spotify.replace('https://open.spotify.com/', '');
 });
 
 watch(selectedSource, (newValue) => {
   if (newValue === 'youtube') {
-    youtube.value.playVideo();
+    youtube.value?.playVideo();
   }
 });
 </script>
@@ -41,7 +41,7 @@ watch(selectedSource, (newValue) => {
   <div class="episode py-0 xl:py-2 flex flex-col xl:flex-row bg-white xl:bg-transparent rounded-xl shadow-md xl:shadow-none shadow-gray-300 ">
     <div class="media w-full xl:w-1/2">
       <YoutubeItem
-        v-if="data.sources.youtube"
+        v-if="data.sources.youtube && (selectedSource === 'youtube')"
         :url="data.sources.youtube"
         :title="data.name"
         class="rounded-b-none xl:rounded-xl"
@@ -57,7 +57,7 @@ watch(selectedSource, (newValue) => {
       </template>
     </div>
 
-    <div class="content p-5 w-full xl:bg-transparent xl:py-0 xl:w-1/2 xl:px-10">
+    <div class="content p-5 w-full xl:bg-transparent xl:py-0 xl:w-1/2 xl:pl-10">
       <h4
         v-if="title"
         class="episode-title uppercase font-bold text-neutral-500 tracking-widest mb-2"
@@ -87,7 +87,7 @@ watch(selectedSource, (newValue) => {
           class="w-full"
         />
       </div>
-      
+
       <!-- Change 'theme=0' by 't=0' to set spotify background -->
       <iframe
         v-if="(selectedSource === 'spotify') && data.sources.spotify"
@@ -96,7 +96,7 @@ watch(selectedSource, (newValue) => {
         width="100%"
         height="160"
         frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       />
 
@@ -108,6 +108,7 @@ watch(selectedSource, (newValue) => {
           :class="{
             'bg-yellow-400': key === 'radioUnal',
             'bg-green-400': key === 'spotify',
+            'bg-blue-600': key === 'facebook',
             'bg-red-600': key === 'youtube',
           }"
           @click="selectedSource = key"
@@ -115,6 +116,7 @@ watch(selectedSource, (newValue) => {
           <div class="provider flex items-center">
             <i-mdi-radio-tower v-if="key === 'radioUnal'" class="text-xl"/>
             <i-mdi-spotify v-if="key === 'spotify'" class="text-xl"/>
+            <i-mdi-facebook v-if="key === 'facebook'" class="text-xl"/>
             <i-mdi-youtube v-if="key === 'youtube'" class="text-xl"/>
             <span class="ml-4 mt-1">{{ capitalizeVariable(key) }}</span>
           </div>

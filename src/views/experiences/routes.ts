@@ -5,12 +5,14 @@ import RedPazNew from '@/views/experiences/RedPazNew.vue';
 import Experiences from '@/views/experiences/Experiences.vue';
 import ThematicAreas from '@/views/experiences/ThematicAreas.vue';
 import ProcessSupport from '@/views/experiences/ProcessSupport.vue';
+import CathedraEdition from '@/views/experiences/cathedra/CathedraEdition.vue';
+import ConflictCathedra from '@/views/experiences/cathedra/ConflictCathedra.vue';
+import BuildingCathedra from '@/views/experiences/cathedra/BuildingCathedra.vue';
 
-import ENEP from '@/views/experiences/activities/ENEP.vue';
-import ActivitiesRedPaz from '@/views/experiences/activities/ActivitiesRedPaz.vue';
-import MiniserieActivity from '@/views/experiences/activities/MiniserieActivity.vue';
-import PodcastActivities from '@/views/experiences/activities/PodcastActivities.vue';
-import DiscussionActivities from '@/views/experiences/activities/DiscussionActivities.vue';
+import ENEP from '@/views/experiences/ENEP.vue';
+import MiniserieActivity from '@/views/experiences/MiniserieActivity.vue';
+import PodcastActivities from '@/views/experiences/PodcastActivities.vue';
+import DiscussionActivities from '@/views/experiences/DiscussionActivities.vue';
 
 const experienceRoutes: RouteRecordRaw[] = [
   {
@@ -68,6 +70,7 @@ const experienceRoutes: RouteRecordRaw[] = [
         meta: {
           alias: 'Podcast',
           subtitle: 'Vidas y caminos entre la guerra y la paz',
+          imageSrc: '/images/experiences/podcasts/main-banner.png',
           bannerBg: '#031449',
         },
       },
@@ -75,14 +78,49 @@ const experienceRoutes: RouteRecordRaw[] = [
         path: 'miniserie',
         name: 'Miniserie: La Paz en Foco',
         component: MiniserieActivity,
-        meta: { alias: 'Miniserie' },
+        meta: {
+          alias: 'Miniserie',
+        },
       },
       {
         path: 'enep-2020',
         name: 'Encuentro Nacional de Experiencias de Paz 2020',
         component: ENEP,
-        meta: { alias: 'ENEP 2020' },
+        meta: {
+          alias: 'ENEP 2020',
+          bannerBg: '#FECB38',
+        },
       },
+      {
+        path: 'catedra-conflicto-armado',
+        name: 'Cátedra \nDel conflicto armado a la construcción de paz',
+        component: ConflictCathedra,
+        meta: {
+          alias: 'Cátedra',
+          bannerBg: '#0279AF',
+          imageSrc: '/images/experiences/conflict-cathedra/main-banner.png',
+        },
+      },
+      {
+        path: 'catedra-conflicto-armado/2021-2',
+        name: 'Cátedra 2021-2\nDel conflicto armado a la construcción de paz',
+        component: CathedraEdition,
+        meta: {
+          alias: 'Cátedra',
+          bannerBg: '#0279AF',
+          imageSrc: '/images/experiences/conflict-cathedra/main-banner.png',
+        },
+      },
+      // {
+      //   path: 'catedra-construccion-de-paz',
+      //   name: 'Cátedra',
+      //   component: BuildingCathedra,
+      //   meta: {
+      //     alias: 'Cátedra',
+      //     subtitle: 'Construcción de paz en tiempos de Pos-acuerdo',
+      //     bannerBg: '#0279AF',
+      //   },
+      // },
     ],
   },
 ];
