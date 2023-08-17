@@ -92,13 +92,17 @@ const experienceRoutes: RouteRecordRaw[] = [
         },
       },
       {
-        path: 'catedra-conflicto-armado',
+        path: 'catedra-conflicto-armado/:data',
         name: 'Cátedra \nDel conflicto armado a la construcción de paz',
         component: ConflictCathedra,
         meta: {
           alias: 'Cátedra',
           bannerBg: '#0279AF',
           imageSrc: '/images/experiences/conflict-cathedra/main-banner.png',
+          tabs: [
+            { label: 'Informe', src: '/experiencias-de-paz/catedra-conflicto-armado/informe' },
+            { label: 'Trabajos finales', src: '/experiencias-de-paz/catedra-conflicto-armado/trabajos-finales' },
+          ],
         },
       },
       {

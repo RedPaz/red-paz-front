@@ -59,7 +59,7 @@ const featuredItems = computed((): FeaturedItem[] => {
       image: '/images/experiences/activities/conflicto-armado.jpg',
       title: 'Catedra: Del conflicto armado a la construcción de paz',
       date: '16 de septiembre de 2020',
-      url: '/experiencias-de-paz/catedra-conflicto-armado',
+      url: '/experiencias-de-paz/catedra-conflicto-armado/informe',
       area: { ...FEATURED_AREAS.training }
     },
   ];
