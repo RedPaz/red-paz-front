@@ -109,19 +109,11 @@ const categories = Object.values(FEATURED_AREAS).filter((value) => !value.id);
           />
         </template>
 
-        <div
+        <EmpyItems
           v-else
-          class="empty-items shadow-md bg-gray-200/25 rounded-lg border border-gray-100 p-6 text-gray-500/75 flex flex-col justify-center items-center"
-        >
-          <Icon
-            icon="mdi-grid-off"
-            class="m-14 text-8xl"
-          />
-
-          <h3 class="text-lg w-80 text-center mb-14">
-            No se encontraron iniciativas con la categoría seleccionada, intenta con otro tipo.
-          </h3>
-        </div>
+          show-shadow
+          empty-text="No se encontraron iniciativas con la categoría seleccionada, intenta con otro tipo."
+        />
       </template>
     </GridSection>
 
