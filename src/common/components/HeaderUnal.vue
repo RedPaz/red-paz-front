@@ -167,7 +167,14 @@ function setCurrentParent(index: number) {
               :key="index"
               class="sub-item"
             >
-              <a :href="subitem.src">{{ subitem.label }}</a>
+              <router-link
+                v-if="item.allowTabs"
+                :to="subitem.src"
+              >
+                {{ subitem.label }}
+              </router-link>
+
+              <a v-else :href="subitem.src">{{ subitem.label }}</a>
             </li>
           </ul>
         </li>

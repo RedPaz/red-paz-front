@@ -40,6 +40,7 @@ declare module '@vue/runtime-core' {
     MainLayout: typeof import('./common/layouts/MainLayout.vue')['default']
     MiniserieActivity: typeof import('./views/experiences/MiniserieActivity.vue')['default']
     PageHeader: typeof import('./common/components/PageHeader.vue')['default']
+    PartnerDetail: typeof import('./views/partners/PartnerDetail.vue')['default']
     Partners: typeof import('./views/partners/Partners.vue')['default']
     PersonItem: typeof import('./common/components/PersonItem.vue')['default']
     PictureNew: typeof import('./common/components/PictureNew.vue')['default']

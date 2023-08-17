@@ -202,7 +202,7 @@ export const TEAM_MEMBERS: Person[] = [
 .map((person, index) => ({
   ...person,
   id: index + 1 ,
-  slug: person.name.split(' ').map((w) => slugify(w)).join('-'),
+  slug: slugify(person.name),
 }));
 
 export default TEAM_MEMBERS;

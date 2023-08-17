@@ -6,6 +6,7 @@ declare global {
   const HEADER_ITEMS: typeof import('./common/constants/menuItems')['HEADER_ITEMS']
   const JOB_AREAS: typeof import('./common/constants/jobAreas')['JOB_AREAS']
   const PARTNERS: typeof import('./common/constants/partners')['PARTNERS']
+  const PARTNER_CATEGORIES: typeof import('./common/constants/partnerCategories')['PARTNER_CATEGORIES']
   const PROFILE_MEMBERS_INFO: typeof import('./common/constants/profileMembersInfo')['PROFILE_MEMBERS_INFO']
   const TEAM_DIRECTORS: typeof import('./common/constants/teamDirectors')['TEAM_DIRECTORS']
   const TEAM_MEMBERS: typeof import('./common/constants/teamMembers')['TEAM_MEMBERS']

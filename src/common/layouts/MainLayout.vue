@@ -37,6 +37,8 @@ const routeData = computed(() => {
   />
 
   <section class="page-wrapper">
+    <slot />
+
     <router-view/>
   </section>
 </template>

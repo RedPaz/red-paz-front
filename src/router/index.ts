@@ -6,6 +6,7 @@ import Profile from '@/views/about-us/Profile.vue';
 import Partners from '@/views/partners/Partners.vue';
 import MainLayout from '@/common/layouts/MainLayout.vue';
 import experienceRoutes from '@/views/experiences/routes';
+import PartnerDetail from '@/views/partners/PartnerDetail.vue';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -36,22 +37,28 @@ const routes: RouteRecordRaw[] = [
   },
   ...experienceRoutes,
   {
-    path: '/nuestros-aliados',
+    path: '/nuestros-aliados/:category',
     name: 'Nuestros Aliados',
-    component: MainLayout,
+    component: Partners,
     meta: {
       alias: 'Nuestros Aliados',
       bannerBg: '#402D5C',
+      tabs: [
+        { label: 'Sistema Integral para la Paz', src: '/nuestros-aliados/sistema-integral-para-la-paz' },
+        { label: 'Entidades Gubernamentales', src: '/nuestros-aliados/entidades-gubernamentales' },
+        { label: 'Organismos Internacionales', src: '/nuestros-aliados/organismos-internacionales' },
+        { label: 'Organismos Sociales', src: '/nuestros-aliados/organismos-sociales' },
+      ],
     },
     children: [
       {
-        path: ':category',
+        path: '/nuestros-aliados/:category/:entity',
+        component: PartnerDetail,
         name: 'Entidades',
         meta: { alias: 'Entidades' },
-        component: Partners,
       },
-    ],
-  }
+    ]
+  },
 ];
 
 const router = createRouter({
