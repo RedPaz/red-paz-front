@@ -431,6 +431,7 @@ const FINAL_PAPERS: FeaturedItem[] = [
     </template>
 
     <FeaturedItemsFilter
+      v-else
       :items="FINAL_PAPERS"
     />
   </div>
