@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
+import { storeToRefs } from 'pinia';
 import { JOB_AREAS } from '@/common/constants';
+import { useAreasStore } from '@/common/stores';
+
+// const route = useRoute();
+const areasStore = useAreasStore();
+const { currentArea } = storeToRefs(areasStore);
+// const isMainRoute = computed(() => route.path === '/experiencias-de-paz/areas-tematicas');
 
 defineProps({
   background: {
@@ -13,6 +20,7 @@ defineProps({
 
 <template>
   <GridSection
+    v-if="!currentArea.id"
     title="Áreas temáticas"
     :background="background"
     :desktop-cols="3"
@@ -41,8 +49,12 @@ Da click en para conocer más:</p>
       #end
     >
       <slot name="append" />
+
+      <SectionDecoration v-if="!currentArea.id" />
     </template>
   </GridSection>
+
+  <router-view v-else />
 </template>
 
 <style scoped>

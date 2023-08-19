@@ -4,7 +4,7 @@ export const TERRITORY_MEMORIES: GridItem[] = [
   {
     title: 'Catatumbo',
     image: '/images/experiences/discussions/catatumbo.png',
-    src: '#',
+    src: '/experiencias-de-paz/conversatorios/catatumbo',
     color: '#402B5A',
     description: 'Entre la violencia que no cesa y la resistencia que se hace siembra y autocuidado',
     cta: 'Ver más',

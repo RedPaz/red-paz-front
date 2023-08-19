@@ -18,6 +18,10 @@ export const useHeaderStore = defineStore('header', {
     selectTab(tab: HeaderItem) {
       this.currentTab = tab.label;
     },
+
+    setAlias(value: string) {
+      this.alias = value;
+    },
   },
 });
 

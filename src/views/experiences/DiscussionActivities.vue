@@ -10,19 +10,21 @@ const whatWeDo: DescriptionItem = {
 const description: DescriptionItem = {
   description: `Estos encuentros giraron en torno a 4 asuntos relevantes:
 
-- Indagar por el estado de implementación de los acuerdos de paz en la coyuntura de la emergencia sanitaria. 
+- Indagar por el estado de implementación de los acuerdos de paz en la coyuntura de la emergencia sanitaria.
 - Realizar un diagnóstico de la situación de derechos humanos, particularmente de los líderes y lideresas sociales.
 - Identificar de desafíos y nuevas realidades que ha planteado la pandemia del COVID-19 en las regiones.
-- Ubicar llamados urgentes al estado y a la sociedad civil, en aras de superar las situaciones de violación derechos humanos y contribuir en procesos de construcción de paz. 
+- Ubicar llamados urgentes al estado y a la sociedad civil, en aras de superar las situaciones de violación derechos humanos y contribuir en procesos de construcción de paz.
 
-Estos conversatorios fueron organizados por la Red Paz UNAL y Fescol, y contaron con la participación de distintas organizaciones, actores y líderes sociales, y expertos del mundo académico. 
+Estos conversatorios fueron organizados por la Red Paz UNAL y Fescol, y contaron con la participación de distintas organizaciones, actores y líderes sociales, y expertos del mundo académico.
 
 Te invitamos a leer las memorias de estos conversatorios`,
 }
 </script>
 
 <template>
-  <div class="discussions">
+  <div
+    class="discussions"
+  >
     <DescriptionVideo
       :data="whatWeDo"
       video-src="https://www.youtube.com/watch?v=uBDsfkZRe2k"
@@ -53,6 +55,8 @@ Te invitamos a leer las memorias de estos conversatorios`,
       </template>
     </GridSection>
   </div>
+
+  <router-view />
 </template>
 
 <style scoped>

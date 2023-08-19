@@ -1,5 +1,6 @@
 import { RouteRecordRaw } from 'vue-router';
 
+import JobAreas from '@/common/components/JobAreas.vue';
 import MainLayout from '@/common/layouts/MainLayout.vue';
 import RedPazNew from '@/views/experiences/RedPazNew.vue';
 import Experiences from '@/views/experiences/Experiences.vue';
@@ -7,11 +8,12 @@ import ThematicAreas from '@/views/experiences/ThematicAreas.vue';
 import ProcessSupport from '@/views/experiences/ProcessSupport.vue';
 import CathedraEdition from '@/views/experiences/cathedra/CathedraEdition.vue';
 import ConflictCathedra from '@/views/experiences/cathedra/ConflictCathedra.vue';
-import BuildingCathedra from '@/views/experiences/cathedra/BuildingCathedra.vue';
 
 import ENEP from '@/views/experiences/ENEP.vue';
+import MemoryDetail from '@/views/experiences/MemoryDetail.vue';
 import MiniserieActivity from '@/views/experiences/MiniserieActivity.vue';
 import PodcastActivities from '@/views/experiences/PodcastActivities.vue';
+import RedPazInitiatives from '@/views/experiences/RedPazInitiatives.vue';
 import DiscussionActivities from '@/views/experiences/DiscussionActivities.vue';
 import ProcessSupportDetail from '@/views/experiences/ProcessSupportDetail.vue';
 
@@ -33,10 +35,22 @@ const experienceRoutes: RouteRecordRaw[] = [
         component: Experiences,
       },
       {
-        path: 'areas-tematicas/:area',
+        path: 'iniciativas-redpaz-unal',
+        name: 'Iniciativas RedPaz UNAL',
+        meta: { alias: 'Iniciativas RedPaz UNAL' },
+        component: RedPazInitiatives,
+      },
+      {
+        path: 'areas-tematicas',
         name: 'Áreas temáticas',
         meta: { alias: 'Áreas temáticas' },
-        component: ThematicAreas,
+        component: JobAreas,
+        children: [
+          {
+            path: ':area',
+            component: ThematicAreas,
+          },
+        ]
       },
       {
         path: 'areas-tematicas/:area/:id',
@@ -53,6 +67,19 @@ const experienceRoutes: RouteRecordRaw[] = [
           bannerBg: '#FECB38',
           imageSrc: '/images/experiences/discussions/main-banner.png',
         },
+        children: [
+          {
+            path: 'catatumbo',
+            name: 'Apoyo a procesos en Putumayo',
+            component: MemoryDetail,
+            meta: {
+              alias: 'Catatumbo',
+              subtitle: 'Entre la violencia que no cesa y la resistencia que se hace siembra y autocuidado',
+              bannerBg: '#402C5A',
+              imageSrc: '/images/experiences/activities/regions/main-banner.png',
+            },
+          },
+        ]
       },
       {
         path: 'apoyo-a-procesos',

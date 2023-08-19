@@ -46,7 +46,7 @@ const routeList = computed(() => {
       path.push(value)
     });
 
-    const name = r.meta['alias']?.toString() || '';
+    const name = r.meta['alias']?.toString() || alias.value || '';
 
     if (r.path === disabledPath) {
       result[i].isCurrentRoute = true;
@@ -86,7 +86,7 @@ onBeforeMount(() => {
   >
     <div class="header-content">
       <h2 class="section-title whitespace-pre-line">
-        {{ alias || title }}
+        {{ title }}
         <span v-if="subtitle.length" class="section-subtitle block !mb-0">{{ subtitle }}</span>
       </h2>
 
