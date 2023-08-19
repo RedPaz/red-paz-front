@@ -19,8 +19,8 @@ export const TERRITORIES_SUPPORT: GridItem[] = [
   },
   {
     title: 'Putumayo',
-    image: '/images/experiences/activities/regions/arauca.png',
-    src: '#',
+    image: '/images/experiences/discussions/putumayo.png',
+    src: '/experiencias-de-paz/apoyo-a-procesos/putumayo/2021',
     color: '#4DB372',
     description: 'Apoyo a procesos en el Departamento de Putumayo',
     cta: 'Ver más',
@@ -35,7 +35,7 @@ export const TERRITORIES_SUPPORT: GridItem[] = [
   },
   {
     title: 'Nariño',
-    image: '/images/experiences/activities/regions/arauca.png',
+    image: '/images/experiences/discussions/narino.png',
     src: '#',
     color: '#031449',
     description: 'Apoyo a procesos en el Departamento de Nariño',

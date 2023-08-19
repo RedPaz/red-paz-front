@@ -13,6 +13,7 @@ import ENEP from '@/views/experiences/ENEP.vue';
 import MiniserieActivity from '@/views/experiences/MiniserieActivity.vue';
 import PodcastActivities from '@/views/experiences/PodcastActivities.vue';
 import DiscussionActivities from '@/views/experiences/DiscussionActivities.vue';
+import ProcessSupportDetail from '@/views/experiences/ProcessSupportDetail.vue';
 
 const experienceRoutes: RouteRecordRaw[] = [
   {
@@ -62,6 +63,22 @@ const experienceRoutes: RouteRecordRaw[] = [
           bannerBg: '#402C5A',
           imageSrc: '/images/experiences/activities/regions/main-banner.png',
         },
+        children: [
+          {
+            path: 'putumayo/:year',
+            name: 'Apoyo a procesos en Putumayo',
+            component: ProcessSupportDetail,
+            meta: {
+              alias: 'Putumayo',
+              bannerBg: '#4DB372',
+              imageSrc: '/images/experiences/activities/regions/main-banner.png',
+              tabs: [
+                { label: '2021', src: '/experiencias-de-paz/apoyo-a-procesos/putumayo/2021' },
+                { label: '2022', src: '/experiencias-de-paz/apoyo-a-procesos/putumayo/2022' },
+              ],
+            },
+          },
+        ],
       },
       {
         path: 'podcast',

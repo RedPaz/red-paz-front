@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import { storeToRefs } from 'pinia';
+import { useHeaderStore } from '@/common/stores';
 import { DescriptionItem } from '@/common/interfaces';
 import { TERRITORIES_SUPPORT } from '@/common/constants';
+
+const headerStore = useHeaderStore();
+const { currentTab } = storeToRefs(headerStore);
 
 const description: DescriptionItem = {
   title: '¿Como apoya RedPaz en las regiones?',
@@ -17,7 +22,10 @@ const description: DescriptionItem = {
 </script>
 
 <template>
-  <div class="discussions">
+  <div
+    v-if="!currentTab"
+    class="discussions"
+  >
     <DescriptionSection
       :items="[description]"
       main-image="/images/experiences/activities/regions/description.png"
@@ -42,6 +50,8 @@ const description: DescriptionItem = {
       </template>
     </GridSection>
   </div>
+
+  <router-view v-else />
 </template>
 
 <style scoped>

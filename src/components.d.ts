@@ -49,6 +49,7 @@ declare module '@vue/runtime-core' {
     PodcastActivities: typeof import('./views/experiences/PodcastActivities.vue')['default']
     ProcessSuport: typeof import('./views/experiences/ProcessSuport.vue')['default']
     ProcessSupport: typeof import('./views/experiences/ProcessSupport.vue')['default']
+    ProcessSupportDetail: typeof import('./views/experiences/ProcessSupportDetail.vue')['default']
     Profile: typeof import('./views/about-us/Profile.vue')['default']
     RedPazNew: typeof import('./views/experiences/RedPazNew.vue')['default']
     RedSlider: typeof import('./common/components/RedSlider.vue')['default']
