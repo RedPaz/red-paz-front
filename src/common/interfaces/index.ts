@@ -14,3 +14,4 @@ export * from './featuredItem';
 export * from './area';
 export * from './areaItem';
 export * from './partnerCategory';
+export * from './processDetail';

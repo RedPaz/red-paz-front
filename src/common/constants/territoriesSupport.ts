@@ -12,7 +12,7 @@ export const TERRITORIES_SUPPORT: GridItem[] = [
   {
     title: 'Caquetá',
     image: '/images/experiences/activities/regions/arauca.png',
-    src: '#',
+    src: '/experiencias-de-paz/apoyo-a-procesos/caqueta/2021',
     color: '#0279AF',
     description: 'Apoyo a procesos en el Departamento de Caquetá',
     cta: 'Ver más',

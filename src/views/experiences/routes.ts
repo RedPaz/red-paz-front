@@ -78,6 +78,20 @@ const experienceRoutes: RouteRecordRaw[] = [
               ],
             },
           },
+          {
+            path: 'caqueta/:year',
+            name: 'Apoyo a procesos en Caquetá',
+            component: ProcessSupportDetail,
+            meta: {
+              alias: 'Caquetá',
+              bannerBg: '#0279AF',
+              imageSrc: '/images/experiences/activities/regions/main-banner.png',
+              tabs: [
+                { label: '2021', src: '/experiencias-de-paz/apoyo-a-procesos/caqueta/2021' },
+                { label: '2022', src: '/experiencias-de-paz/apoyo-a-procesos/caqueta/2022' },
+              ],
+            },
+          },
         ],
       },
       {
