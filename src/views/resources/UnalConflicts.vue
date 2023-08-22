@@ -159,7 +159,7 @@ const cartographyId = computed(() => {
     <iframe
       src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1Uk8o3LbXXAWewsJElnljWJz5laiT_Qiv0cqRtbDkO9k&font=Bitter-Raleway&lang=es&initial_zoom=1&height=700"
       frameborder="0"
-      class="w-full h-[80vh]"
+      class="w-full min-h-[50vh]"
     />
   </div>
 
@@ -176,7 +176,7 @@ const cartographyId = computed(() => {
     <iframe
       :src="`https://uploads.knightlab.com/storymapjs/06180d6a64fbba8afb7f8be4c73bca3c/${cartographyId}/index.html`"
       frameborder="0"
-      class="w-full h-[80vh]"
+      class="w-full min-h-[50vh]"
     />
   </div>
 
