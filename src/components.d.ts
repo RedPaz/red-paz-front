@@ -46,6 +46,7 @@ declare module '@vue/runtime-core' {
     PersonItem: typeof import('./common/components/PersonItem.vue')['default']
     PictureNew: typeof import('./common/components/PictureNew.vue')['default']
     PodcastActivities: typeof import('./views/experiences/PodcastActivities.vue')['default']
+    Posts: typeof import('./views/resources/Posts.vue')['default']
     ProcessSupport: typeof import('./views/experiences/ProcessSupport.vue')['default']
     ProcessSupportDetail: typeof import('./views/experiences/ProcessSupportDetail.vue')['default']
     Profile: typeof import('./views/about-us/Profile.vue')['default']
@@ -56,6 +57,7 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     SectionDecoration: typeof import('./common/components/SectionDecoration.vue')['default']
     ThematicAreas: typeof import('./views/experiences/ThematicAreas.vue')['default']
+    UnalConflicts: typeof import('./views/resources/UnalConflicts.vue')['default']
     YoutubeItem: typeof import('./common/components/YoutubeItem.vue')['default']
   }
 }

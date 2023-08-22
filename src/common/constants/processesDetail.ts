@@ -88,8 +88,6 @@ export const PROCESSES_DETAILS: ProcessDetail[] = [
     area: 'Caquetá',
     description: `Durante el 2021 en el marco del eje estratégico Alianzas que aportan a la implementación del Acuerdo de Paz a nivel nacional, territorial y local se propuso el desarrollo de una serie de actividades de apoyo en el Departamento de Caquetá, titulado "Fortalecimiento de dinámicas territoriales para la implementación del Acuerdo Final para la Terminación del Conflicto y la Construcción de una Paz Estable y Duradera, con énfasis en reincorporación".
 
-    Estas actividades fueron lideradas por las profesoras María Clemencia Castro y Patricia Sierra, integrantes del Comité de Impulso de la RedPaz UNAL, quienes fueron apoyadas por profesionales en territorio.Durante el 2021 en el marco del eje estratégico Alianzas que aportan a la implementación del Acuerdo de Paz a nivel nacional, territorial y local se propuso el desarrollo de una serie de actividades de apoyo en el Departamento de Caquetá, titulado "Fortalecimiento de dinámicas territoriales para la implementación del Acuerdo Final para la Terminación del Conflicto y la Construcción de una Paz Estable y Duradera, con énfasis en reincorporación".
-
     Estas actividades fueron lideradas por las profesoras María Clemencia Castro y Patricia Sierra, integrantes del Comité de Impulso de la RedPaz UNAL, quienes fueron apoyadas por profesionales en territorio.`,
     subtitle: 'Se realizaron dos acciones específicas en el Departamento de Caquetá:',
     activities: [

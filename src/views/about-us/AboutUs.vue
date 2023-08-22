@@ -23,6 +23,14 @@ const historyItems: DescriptionItem[] = [
     title: '2021',
     description: 'En abril de 2021, bajo la coordinación del profesor Camilo Borrero de la Facultad de Derecho, Ciencias Políticas y Sociales, la RedPaz UNAL pone en marcha un plan de acción con seis líneas estratégicas relacionadas con el quehacer académico de los miembros del Comité de Impulso.',
   },
+  {
+    title: '2022',
+    description: 'En 2022 culmina en desarrollo de las líneas de trabajo bajo la coordinación de la profesora Doris Santos de la Facultad de Ciencias Humanas, quien asume ese rol con el profesor Juan Alfonso de la Rosa de la Facultad de Artes en febrero de 2022. Iniciado un nuevo período en la Rectoría de la profesora Dolly Montoya (2022-2024), la VRI propone a la RedPaz UNAL elaborar un nuevo plan de acción para esta nueva etapa. El equipo de la coordinación de la RedPaz UNAL se reconfigura a partir del 1 de octubre de 2022, cuando se posesiona el profesor Juan Alfonso de la Rosa como decano de la Facultad de Artes.',
+  },
+  {
+    title: '2023',
+    description: 'Durante el primer semestre de 2023 el Comité de Impulso de la RedPaz UNAL trabaja en un plan de acción para el 2022-2024, el cual se divide en cuatro líneas estratégicas: Apoyo interdisciplinario e intersedes a procesos de reincorporación en todas sus dimensiones, creación de espacios de discusión en la comunidad universitaria entre esta y otros actores sociales sobre temas de coyuntura relacionados con construcción de paz, apoyo al Sistema Integral de Verdad, Justicia, Reparación y No Repetición e Identificación de líneas de acción curricular que promuevan la formación transdisciplinar de los miembros de la comunidad universitaria. A partir del 1 de julio de 2023, asume la coordinación de la RedPaz UNAL el profesor Jairo Alexis López de la Facultad de Ciencias.',
+  },
 ];
 
 const aboutUsDescriptions: DescriptionItem[] = [
@@ -147,10 +155,6 @@ const teamMembers = TEAM_MEMBERS.filter((person) => !person.isDirector);
       :desktop-cols="3"
       dense-bottom
     >
-      <template #description>
-        <p class="description xl:w-2/3 mx-auto xl:!text-xl">Coordinadores que han pasado por la RedPaz Unal</p>
-      </template>
-
       <template #items>
         <PersonItem
           v-for="director in TEAM_DIRECTORS"

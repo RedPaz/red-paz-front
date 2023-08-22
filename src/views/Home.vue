@@ -62,37 +62,57 @@ const actionLines: any[] = [
 const featuredItems: FeaturedItem[] = [
   {
     category: 'INICIATIVAS REDPAZ UNAL',
-    image: '/images/home/featured/featured-1.jpg',
-    title: 'Podcast: Vidas y caminos entre la guerra y la paz',
-    date: '16 de septiembre de 2022',
-    url: '#',
-    area: { ...FEATURED_AREAS.podcast }
-  },
-  {
-    category: 'INICIATIVAS REDPAZ UNAL',
-    image: '/images/home/featured/featured-2.jpg',
-    title: 'Catedra: Del conflicto armado a la construcción de paz',
-    date: '16 de septiembre de 2022',
-    url: '#',
+    image: '/images/experiences/activities/catedra.png',
+    title: 'Catedra: Construcción de paz en tiempos del posacuerdo',
+    date: '2023',
+    url: 'https://sites.google.com/unal.edu.co/catedra-construccion-de-paz/inicio',
     area: { ...FEATURED_AREAS.training }
   },
   {
     category: 'INICIATIVAS REDPAZ UNAL',
-    image: '/images/home/featured/featured-3.jpg',
-    title: 'Encuentro Nacional de Experiencias de Paz 2020',
-    date: '16 de septiembre de 2022',
-    url: '#',
-    area: { ...FEATURED_AREAS.events }
+    image: '/images/experiences/activities/apoyo-regiones.png',
+    title: 'Apoyo a procesos en regiones',
+    date: '2023',
+    url: '/experiencias-de-paz/apoyo-a-procesos',
+    area: { ...FEATURED_AREAS.processes }
   },
   {
     category: 'INICIATIVAS REDPAZ UNAL',
-    image: '/images/home/featured/featured-2.jpg',
-    title: 'Catedra: Del conflicto armado a la construcción de paz',
-    date: '16 de septiembre de 2022',
-    url: '#',
-    area: { ...FEATURED_AREAS.training }
+    image: '/images/experiences/activities/linea-base.jpg',
+    title: 'Diagnóstico de Linea Base',
+    date: '2020',
+    url: '/experiencias-de-paz/enep-2020',
+    area: { ...FEATURED_AREAS.articles }
   },
 ];
+
+const homeNews: FeaturedItem[] = [
+  {
+    category: 'Agencia de noticias UNAL',
+    image: '/images/home/news/ciencia.png',
+    title: 'Ciencia para la paz, un diálogo necesario entre la Investigación y las Comunidades',
+    date: '06 de junio de 2023',
+    url: 'https://agenciadenoticias.unal.edu.co/detalle/ciencia-para-la-paz-un-dialogo-necesario-entre-la-investigacion-y-las-comunidades',
+    area: { ...FEATURED_AREAS.articles }
+  },
+  {
+    category: 'Agencia de noticias UNAL',
+    image: '/images/home/news/saravena.png',
+    title: 'Huertas comunitarias para la reconciliación en Saravena',
+    date: '01 de junio de 2023',
+    url: 'https://agenciadenoticias.unal.edu.co//detalle/huertas-comunitarias-para-la-reconciliacion-en-saravena-arauca',
+    area: { ...FEATURED_AREAS.articles }
+  },
+  {
+    category: 'Periódico UNAL',
+    image: '/images/home/news/deforestacion.png',
+    title: 'Política de guerra contra la deforestación es errada',
+    date: '28 de junio de 2022',
+    url: 'https://periodico.unal.edu.co/articulos/politica-de-guerra-contra-la-deforestacion-es-errada/',
+    area: { ...FEATURED_AREAS.articles }
+  },
+];
+
 </script>
 
 <template>
@@ -162,6 +182,31 @@ const featuredItems: FeaturedItem[] = [
       </template>
     </GridSection>
 
+    <GridSection
+      title="Noticias"
+      align-title-left
+      :desktop-cols="1"
+    >
+      <template #items>
+        <RedSlider
+          show-pagination
+          navigation-position="topOut"
+          :slider-per-view="3"
+          :show-navs-in-mobile="false"
+        >
+          <template #slides>
+            <swiper-slide
+              v-for="(item, index) in homeNews"
+              :key="index"
+              class="featured-item"
+            >
+              <PictureNew :item="item"/>
+            </swiper-slide>
+          </template>
+        </RedSlider>
+      </template>
+    </GridSection>
+
     <div class="partners">
       <h2 class="section-title text-white">Conoce a nuestros aliados</h2>
 
@@ -170,7 +215,7 @@ const featuredItems: FeaturedItem[] = [
           v-for="(partner, index) in PARTNERS"
           :key="index"
           class="logo text-center inline-grid justify-items-center items-center"
-          :class="partner.isLarge ? 'col-span-2 xl:col-span-4' : 'col-span-1 xl:col-span-2'"
+          :class="partner.isLarge ? 'col-span-2 xl:col-span-3' : 'col-span-1 xl:col-span-3'"
         >
           <img
             :src="partner.image"
@@ -191,7 +236,7 @@ const featuredItems: FeaturedItem[] = [
 
 .logos {
   @apply grid grid-cols-2 gap-10;
-  @apply xl:grid-cols-8 xl:gap-20;
+  @apply xl:grid-cols-8 xl:gap-5;
 }
 
 .description {

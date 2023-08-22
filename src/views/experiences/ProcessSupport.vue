@@ -8,16 +8,8 @@ const headerStore = useHeaderStore();
 const { currentTab } = storeToRefs(headerStore);
 
 const description: DescriptionItem = {
-  title: '¿Como apoya RedPaz en las regiones?',
-  description: `Como equipo de trabajo de la RedPaz UNAL buscamos:
-
-  - Formular conjuntamente un plan estratégico que permita el logro de los objetivos de la RedPaz UNAL.
-
-  - Promover la participación de profesore(a)s de todas las sedes y de todas las áreas del conocimiento en el Comité de Impulso.
-
-  - Fortalecer el trabajo colaborativo entre miembros de la comunidad universitaria pertenecientes a diferentes facultades y a diferentes sedes.
-
-  - Proponer una estrategia orientada a avanzar en la sostenibilidad académica, organizacional, comunicacional y financiera de la RedPaz UNAL en el corto, mediano y largo plazo.`,
+  title: '¿Como apoya RedPaz UNAL en las regiones?',
+  description: `La RedPaz UNAL fue creada como una iniciativa institucional para fortalecer y proyectar el relacionamiento de miembros de la comunidad universitaria de diferentes sedes y facultades interesados en el trabajo colaborativo por la paz. Por tal razón, desde nuestro accionar hemos emprendido diversas acciones en regiones coordinadas por miembros docentes de la RedPaz UNAL, que junto con diversos actores como organizaciones sociales, cooperación internacional, entidades gubernamentales, líderes y líderesas comunitarias hemos aportado a la construcción de paz con un enfoque transversal y colaborativo.`,
 }
 </script>
 

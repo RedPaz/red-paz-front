@@ -3,7 +3,7 @@ import { Person } from '@/common/interfaces';
 
 export const TEAM_MEMBERS: Person[] = [
   {
-    name: 'Jairo Alexis Rodríguez López',
+    name: 'Jairo Alexis López',
     image: '/images/about-us/team/jairo-rodriguez.png',
     imageDetail: '/images/about-us/team/jairo-rodriguez-full.png',
     faculty: 'Coordinador 2023',
@@ -54,7 +54,7 @@ export const TEAM_MEMBERS: Person[] = [
   },
   {
     name: 'Martha Nubia Bello Albarracín',
-    image: '/images/about-us/team/woman-default.png',
+    image: '/images/about-us/team/martha-bello.png',
     imageDetail: '/images/about-us/team/martha-bello-full.png',
     faculty: 'Coordinadora 2020',
     location: 'Sede Bogotá',
@@ -70,7 +70,7 @@ export const TEAM_MEMBERS: Person[] = [
     name: 'Diana Hincapié',
     image: '/images/about-us/team/diana-hincapie.png',
     imageDetail: '/images/about-us/team/diana-hincapie-full.png',
-    faculty: 'Facultad de Ciencias Políticas',
+    faculty: 'Fac. de Derecho, Cienc. Políticas y Sociales',
     location: 'Sede Bogotá',
     email: 'dmhincapiec@unal.edu.co',
     description: `Abogada (Universidad Nacional de Colombia); Especialista en Derecho Administrativo y Tributario (Universidad del Rosario y UMNG), Magíster en Derecho Constitucional y Doctoranda en Derecho de la Universidad Nacional de Colombia y Universidad de Jaén (España), Doctoranda en Bioética del Instituto de Investigaciones Bioéticas de Monterrey(México)

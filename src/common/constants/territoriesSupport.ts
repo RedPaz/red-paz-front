@@ -3,7 +3,7 @@ import { GridItem } from '@/common/interfaces';
 export const TERRITORIES_SUPPORT: GridItem[] = [
   {
     title: 'Arauca',
-    image: '/images/experiences/activities/regions/arauca.png',
+    image: '/images/experiences/discussions/arauca.png',
     src: '#',
     color: '#402D5C',
     description: 'Apoyo a procesos en el Departamento de Arauca',
@@ -11,7 +11,7 @@ export const TERRITORIES_SUPPORT: GridItem[] = [
   },
   {
     title: 'Caquetá',
-    image: '/images/experiences/activities/regions/arauca.png',
+    image: '/images/experiences/discussions/caqueta.png',
     src: '/experiencias-de-paz/apoyo-a-procesos/caqueta/2021',
     color: '#0279AF',
     description: 'Apoyo a procesos en el Departamento de Caquetá',
@@ -27,7 +27,7 @@ export const TERRITORIES_SUPPORT: GridItem[] = [
   },
   {
     title: 'Caquetá y Meta',
-    image: '/images/experiences/activities/regions/arauca.png',
+    image: '/images/experiences/discussions/caqueta-meta.png',
     src: '#',
     color: '#334A3F',
     description: 'Apoyo a procesos en el Departamento de San Vicente del Caguán (Caquetá) y la Macarena (Meta)',
