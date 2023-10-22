@@ -141,12 +141,17 @@ const experienceRoutes: RouteRecordRaw[] = [
         },
       },
       {
-        path: 'enep-2020',
+        path: 'enep-2020/:data',
         name: 'Encuentro Nacional de Experiencias de Paz 2020',
         component: ENEP,
         meta: {
           alias: 'ENEP 2020',
           bannerBg: '#FECB38',
+          imageSrc: '/images/experiences/enep-2020/main-banner.png',
+          tabs: [
+            { label: 'Informe', src: '/experiencias-de-paz/enep-2020/informe' },
+            { label: 'Proyectos', src: '/experiencias-de-paz/enep-2020/proyectos' },
+          ],
         },
       },
       {

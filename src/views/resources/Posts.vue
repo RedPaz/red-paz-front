@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { FeaturedItem } from '@/common/interfaces';
-import { useHeaderStore } from '@/common/stores';
-import { storeToRefs } from 'pinia';
 
-const headerStore = useHeaderStore();
-const { currentTab, showTabs } = storeToRefs(headerStore);
+const route = useRoute();
+const isMainRoute = computed(() => route.name === 'Publicaciones');
 
 const POSTS: FeaturedItem[] = [
   {
@@ -52,7 +50,7 @@ const POSTS: FeaturedItem[] = [
     image: '/images/experiences/thematic-areas/art/no-image.jpg',
     title: 'Diagnóstico de Linea Base',
     date: '2020',
-    url: '#',
+    url: '/recursos/publicaciones/diagnostico-de-linea-base',
     area: { ...FEATURED_AREAS.articles }
   },
   {
@@ -64,11 +62,13 @@ const POSTS: FeaturedItem[] = [
     area: { ...FEATURED_AREAS.articles }
   },
 ];
+
+
 </script>
 
 <template>
   <GridSection
-    v-if="!currentTab.length"
+    v-if="isMainRoute"
     title="Publicaciones"
     align-title-left
     :desktop-cols="3"

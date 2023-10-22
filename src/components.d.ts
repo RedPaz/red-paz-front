@@ -11,6 +11,8 @@ declare module '@vue/runtime-core' {
     ActivitiesRedPaz: typeof import('./views/experiences/ActivitiesRedPaz.vue')['default']
     BannerItem: typeof import('./common/components/BannerItem.vue')['default']
     BaseItem: typeof import('./common/components/BaseItem.vue')['default']
+    BaseLine: typeof import('./views/resources/BaseLinePublication.vue')['default']
+    BaseLinePublication: typeof import('./views/resources/BaseLinePublication.vue')['default']
     BuildingCathedra: typeof import('./views/experiences/cathedra/BuildingCathedra.vue')['default']
     CathedraEdition: typeof import('./views/experiences/cathedra/CathedraEdition.vue')['default']
     ConflictCathedra: typeof import('./views/experiences/cathedra/ConflictCathedra.vue')['default']

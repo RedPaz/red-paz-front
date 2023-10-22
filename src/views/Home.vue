@@ -231,7 +231,7 @@ const homeNews: FeaturedItem[] = [
 <style scoped>
 .partners {
   @apply bg-green-red px-10 py-8;
-  @apply xl:px-60 xl:py-40
+  @apply xl:px-60 xl:py-40;
 }
 
 .logos {

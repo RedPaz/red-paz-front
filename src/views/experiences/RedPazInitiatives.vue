@@ -53,7 +53,7 @@ const featuredItems = computed((): FeaturedItem[] => {
       image: '/images/experiences/activities/encuentro-nacional.jpg',
       title: 'Encuentro Nacional de Experiencias de Paz 2020',
       date: '2020',
-      url: '/experiencias-de-paz/enep-2020',
+      url: '/experiencias-de-paz/enep-2020/informe',
       area: { ...FEATURED_AREAS.events }
     },
     {

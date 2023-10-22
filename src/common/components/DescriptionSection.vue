@@ -91,7 +91,7 @@ defineProps({
       v-if="mainImage"
       :src="mainImage"
       alt="Section image"
-      class="xl:w-1/2"
+      class="mt-10 xl:mt-0 xl:w-1/2"
     >
   </section>
 </template>

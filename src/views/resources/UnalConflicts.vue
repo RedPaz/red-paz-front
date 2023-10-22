@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import VuePdfEmbed from 'vue-pdf-embed';
+import { VuePDF, usePDF } from '@tato30/vue-pdf';
 import { DescriptionItem, Person } from '@/common/interfaces';
 
+const page = ref(1);
 const route = useRoute();
+const { pdf, pages } = usePDF('/pdf/memoriasUNconflicto.pdf');
 
 const conflictsData: DescriptionItem[] = [
   {
@@ -141,16 +143,52 @@ const cartographyId = computed(() => {
     :main-image="currentDescription.image"
   />
 
-  <!-- <div
-    v-if="currentDescription.id === 'informe'"
-    class="embed-pdf px-28 pb-28 relative"
+  <GridSection
+    background="bg-gray-100"
+    :desktop-cols="1"
+    class="!pt-12"
   >
-    <VuePdfEmbed
-      source="/pdf/memoriasUNconflicto.pdf"
-      :page="1"
-      :scale="1"
-    />
-  </div> -->
+    <template #description>
+      <p class="description text-center text-lg mb-3">{{ page }} / {{ pages }}</p>
+    </template>
+
+    <template #items>
+      <div class="relative pdf-wrapper w-full xl:w-1/2 border mx-auto">
+        <button
+          class="icon left-1/4 xl:-left-12"
+          @click="page = page > 1 ? page - 1 : page"
+        >
+          <span class="icon-circle-left" />
+        </button>
+
+        <VuePDF
+          :pdf="pdf"
+          :page="page"
+          fit-parent
+        />
+
+        <a
+          href="/pdf/memoriasUNconflicto.pdf"
+          target="_blank"
+          alt="Descargar"
+          class="icon download left-1/2 -translate-x-1/2"
+        >
+          <span class="icon-download" />
+        </a>
+
+        <button
+          class="icon right-1/4 xl:-right-12"
+          @click="page = page < pages ? page + 1 : page"
+        >
+          <span class="icon-circle-right" />
+        </button>
+      </div>
+    </template>
+
+    <template #end>
+      <SectionDecoration />
+    </template>
+  </GridSection>
 
   <div
     v-if="currentDescription.id === 'linea-de-tiempo'"
@@ -210,5 +248,13 @@ const cartographyId = computed(() => {
 
 .city-buttons button.active {
   @apply bg-green-red text-white border-green-red ;
+}
+
+.icon {
+  @apply text-3xl xl:text-4xl absolute -bottom-16 xl:top-1/2 xl:-translate-y-1/2;
+}
+
+.download {
+  @apply xl:translate-y-0 xl:-bottom-14 top-[unset];
 }
 </style>

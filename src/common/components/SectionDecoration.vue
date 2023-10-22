@@ -1,4 +1,13 @@
 <script setup lang="ts">
+import { PropType } from 'vue';
+
+defineProps({
+  type: {
+    type: String as PropType<'dark' | 'white'>,
+    required: false,
+    default: 'dark',
+  }
+});
 </script>
 
 <template>
@@ -6,11 +15,15 @@
     <div
       class="dec-image"
       :style="{
-        background: `url(/images/about-us/red-paz.svg) repeat-x 0 0 transparent`,
+        background: `url(/images/about-us/red-paz${type === 'dark' ? '' : '-white'}.svg) repeat-x 0 0 transparent`,
         backgroundSize: '64px',
       }"
     />
-    <div class="dec-color"/>
+
+    <div
+      class="dec-color"
+      :class="(type === 'dark') ? 'bg-green-red' : 'bg-white'"
+    />
   </div>
 </template>
 
@@ -24,6 +37,6 @@
 }
 
 .dec-color {
-  @apply h-8 bg-green-red z-10;
+  @apply h-8 z-10;
 }
 </style>

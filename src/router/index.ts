@@ -10,6 +10,7 @@ import PartnerDetail from '@/views/partners/PartnerDetail.vue';
 
 import Posts from '@/views/resources/Posts.vue';
 import UnalConflicts from '@/views/resources/UnalConflicts.vue';
+import resourcesRoutes from '@/views/resources/routes';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -62,39 +63,7 @@ const routes: RouteRecordRaw[] = [
       },
     ],
   },
-  {
-    path: '/recursos/',
-    name: 'Recursos',
-    component: MainLayout,
-    meta: { alias: 'Recursos' },
-    children: [
-      {
-        path: 'publicaciones',
-        component: Posts,
-        name: 'Publicaciones',
-        meta: {
-          alias: 'Publicaciones',
-        },
-        children: [
-          {
-            path: 'universidad-nacional-y-conflicto/:data',
-            component: UnalConflicts,
-            name: 'Universidad Nacional y Conflicto',
-            meta: {
-              alias: 'Universidad Nacional y Conflicto',
-              bannerBg: '#334A3F',
-              tabs: [
-                { label: 'Informe', src: '/recursos/publicaciones/universidad-nacional-y-conflicto/informe' },
-                { label: 'Línea de tiempo', src: '/recursos/publicaciones/universidad-nacional-y-conflicto/linea-de-tiempo' },
-                { label: 'Cartografía', src: '/recursos/publicaciones/universidad-nacional-y-conflicto/cartografia-de-la-memoria' },
-                { label: 'Equipo', src: '/recursos/publicaciones/universidad-nacional-y-conflicto/equipo' },
-              ],
-            },
-          },
-        ],
-      },
-    ],
-  }
+  ...resourcesRoutes
 ];
 
 const router = createRouter({
