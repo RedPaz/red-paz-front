@@ -144,6 +144,7 @@ const cartographyId = computed(() => {
   />
 
   <GridSection
+    v-if="currentDescription.id === 'informe'"
     background="bg-gray-100"
     :desktop-cols="1"
     class="!pt-12"
