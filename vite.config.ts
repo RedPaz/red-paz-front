@@ -74,4 +74,8 @@ export default defineConfig({
     // https://github.com/antfu/unplugin-icons
     Icons(),
   ],
+
+  build: {
+    chunkSizeWarningLimit: 2000,
+  },
 })
