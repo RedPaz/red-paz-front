@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { SwiperSlide } from 'swiper/vue';
-import { PARTNERS, FEATURED_AREAS } from '@/common/constants';
+import { PARTNERS, FEATURED_AREAS, RED_PAZ_POSTS, RED_PAZ_INITIATIVES } from '@/common/constants';
 import { Banner, DescriptionItem, FeaturedItem } from '@/common/interfaces';
 
 const homeBanners: Banner[] = [
@@ -59,32 +59,10 @@ const actionLines: any[] = [
   },
 ];
 
-const featuredItems: FeaturedItem[] = [
-  {
-    category: 'INICIATIVAS REDPAZ UNAL',
-    image: '/images/experiences/activities/catedra.png',
-    title: 'Catedra: Construcción de paz en tiempos del posacuerdo',
-    date: '2023',
-    url: 'https://sites.google.com/unal.edu.co/catedra-construccion-de-paz/inicio',
-    area: { ...FEATURED_AREAS.training }
-  },
-  {
-    category: 'INICIATIVAS REDPAZ UNAL',
-    image: '/images/experiences/activities/apoyo-regiones.png',
-    title: 'Apoyo a procesos en regiones',
-    date: '2023',
-    url: '/experiencias-de-paz/apoyo-a-procesos',
-    area: { ...FEATURED_AREAS.processes }
-  },
-  {
-    category: 'INICIATIVAS REDPAZ UNAL',
-    image: '/images/experiences/activities/linea-base.jpg',
-    title: 'Diagnóstico de Linea Base',
-    date: '2020',
-    url: '/experiencias-de-paz/enep-2020',
-    area: { ...FEATURED_AREAS.articles }
-  },
-];
+const featuredItems = computed(() => [
+  ...RED_PAZ_INITIATIVES.filter((p) => p.highlighted),
+  ...RED_PAZ_POSTS.filter((p) => p.highlighted),
+]);
 
 const homeNews: FeaturedItem[] = [
   {
@@ -93,7 +71,8 @@ const homeNews: FeaturedItem[] = [
     title: 'Ciencia para la paz, un diálogo necesario entre la Investigación y las Comunidades',
     date: '06 de junio de 2023',
     url: 'https://agenciadenoticias.unal.edu.co/detalle/ciencia-para-la-paz-un-dialogo-necesario-entre-la-investigacion-y-las-comunidades',
-    area: { ...FEATURED_AREAS.articles }
+    area: { ...FEATURED_AREAS.articles },
+    blank: true,
   },
   {
     category: 'Agencia de noticias UNAL',
@@ -101,7 +80,8 @@ const homeNews: FeaturedItem[] = [
     title: 'Huertas comunitarias para la reconciliación en Saravena',
     date: '01 de junio de 2023',
     url: 'https://agenciadenoticias.unal.edu.co//detalle/huertas-comunitarias-para-la-reconciliacion-en-saravena-arauca',
-    area: { ...FEATURED_AREAS.articles }
+    area: { ...FEATURED_AREAS.articles },
+    blank: true,
   },
   {
     category: 'Periódico UNAL',
@@ -109,7 +89,8 @@ const homeNews: FeaturedItem[] = [
     title: 'Política de guerra contra la deforestación es errada',
     date: '28 de junio de 2022',
     url: 'https://periodico.unal.edu.co/articulos/politica-de-guerra-contra-la-deforestacion-es-errada/',
-    area: { ...FEATURED_AREAS.articles }
+    area: { ...FEATURED_AREAS.articles },
+    blank: true,
   },
 ];
 

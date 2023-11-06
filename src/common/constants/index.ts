@@ -9,3 +9,6 @@ export * from './teamDirectors';
 export * from './thematicAreas';
 export * from './territoriesSupport';
 export * from './partnerCategories';
+export * from './enepPapers';
+export * from './redPazPosts';
+export * from './redPazInitiatives';

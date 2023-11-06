@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
-import { RedArea } from '@/common/types';
 import { FeaturedItem } from '@/common/interfaces';
 
 const props = defineProps({
@@ -43,8 +42,6 @@ const filteredItems = computed(() => items.value
 );
 
 const areas = Object.values(FEATURED_AREAS).filter((value) => value.id !== undefined);
-
-
 </script>
 
 <template>
@@ -85,12 +82,6 @@ const areas = Object.values(FEATURED_AREAS).filter((value) => value.id !== undef
         >{{ area.name }}</option>
       </select>
     </div>
-
-    <!-- <button
-      class="filter-submit"
-    >
-      Buscar
-    </button> -->
   </div>
 
   <GridSection
@@ -108,7 +99,7 @@ const areas = Object.values(FEATURED_AREAS).filter((value) => value.id !== undef
         />
       </template>
 
-      <EmpyItems
+      <EmptyItems
         v-else
         empty-text="No se encontraron trabajos con los filtros seleccionados, intenta con nuevamente."
       />

@@ -2,10 +2,10 @@
 import { PropType } from 'vue';
 import { DescriptionItem } from '@/common/interfaces';
 
-const props = defineProps({
+defineProps({
   data: {
     type: Object as PropType<DescriptionItem>,
-    required: true, 
+    required: true,
   },
   videoSrc: {
     type: String,

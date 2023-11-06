@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
-import { AreaItem, FeaturedItem } from '../interfaces';
-import THEMATIC_NEWS from '../constants/thematicNews';
+import { ENEP_PAPERS } from '@/common/constants';
+import { AreaItem, FeaturedItem } from '@/common/interfaces';
 
 export const useAreasStore = defineStore('areas', {
   state: () => ({
@@ -11,7 +11,7 @@ export const useAreasStore = defineStore('areas', {
     currentAreaNews: (state): FeaturedItem[] => {
       if (!state.currentArea.id) return [];
 
-      return THEMATIC_NEWS.filter((item) => item.area.id === state.currentArea.id);
+      return ENEP_PAPERS.filter((item) => item.area.id === state.currentArea.id);
     }
   },
 

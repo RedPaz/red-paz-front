@@ -7,4 +7,6 @@ export interface FeaturedItem {
   image: string;
   date: string;
   url: string;
+  blank?: boolean;
+  highlighted?: boolean;
 }

@@ -5,4 +5,5 @@ export interface ItemWithImage extends Item {
   color: string;
   src?: string;
   cta?: string;
+  blank?: boolean;
 }

@@ -81,7 +81,7 @@ Alejo Vargas | Director del Centro de Pensamiento y Seguimiento al Diálogo de P
       :items="[description]"
       main-image="/images/experiences/miniseries/miniserie-description.png"
     />
-    
+
     <GridSection
       title="Episodios"
       background="bg-gray-100"
@@ -100,7 +100,7 @@ Alejo Vargas | Director del Centro de Pensamiento y Seguimiento al Diálogo de P
           :title="`Capítulo ${index + 1}`"
           :show-divider="(index + 1) < episodes.length"
         />
-        
+
       </template>
 
       <template #end>

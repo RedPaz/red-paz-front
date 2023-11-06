@@ -1,4 +1,6 @@
+import { slugify } from '@/common/utils';
 import { Partner } from "@/common/interfaces";
+import { FEATURED_AREAS } from '@/common/constants';
 import { PARTNER_CATEGORIES } from './partnerCategories';
 
 export const PARTNERS: Partner[] = [

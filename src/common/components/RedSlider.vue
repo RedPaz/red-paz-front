@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Prop, PropType } from 'vue';
+import { PropType } from 'vue';
 import { Icon } from '@iconify/vue';
 import { Swiper } from 'swiper/vue';
 import { PaginationOptions } from 'swiper/types';

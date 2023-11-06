@@ -19,7 +19,7 @@ declare module '@vue/runtime-core' {
     DescriptionSection: typeof import('./common/components/DescriptionSection.vue')['default']
     DescriptionVideo: typeof import('./common/components/DescriptionVideo.vue')['default']
     DiscussionActivities: typeof import('./views/experiences/DiscussionActivities.vue')['default']
-    EmpyItems: typeof import('./common/components/EmpyItems.vue')['default']
+    EmptyItems: typeof import('./common/components/EmptyItems.vue')['default']
     ENEP: typeof import('./views/experiences/ENEP.vue')['default']
     EpisodeItem: typeof import('./common/components/EpisodeItem.vue')['default']
     Experiences: typeof import('./views/experiences/Experiences.vue')['default']

@@ -29,6 +29,7 @@ defineProps({
     :class="{ 'cursor-auto': !item.src?.length }"
     :href="item.src"
     :style="{ backgroundColor: item.color }"
+    :target="item.blank ? '_blank' : ''"
   >
     <img
       v-if="item.image"

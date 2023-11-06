@@ -52,12 +52,23 @@ defineProps({
           {{ item.date }}
         </div>
 
-        <a class="item-link bg-green-red text-white px-6 lg:px-8 xl:px-10 2xl:px-12 py-1 xl:py-1.5 text-sm lg:text-base xl:text-lg 2xl:text-xl tracking-wider rounded-md" :href="item.url">Ver más</a>
+        <a
+          class="item-link"
+          :href="item.url"
+          :target="item.blank ? '_blank' : ''"
+        >
+          Ver más
+        </a>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-
+.item-link {
+  @apply bg-green-red text-white px-6 py-1 text-sm tracking-wider rounded-md;
+  @apply lg:px-8 lg:text-base;
+  @apply xl:px-10 xl:py-1.5 xl:text-lg;
+  @apply 2xl:px-12 2xl:text-xl;
+}
 </style>

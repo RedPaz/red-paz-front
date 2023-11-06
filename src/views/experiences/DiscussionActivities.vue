@@ -18,7 +18,7 @@ const description: DescriptionItem = {
 Estos conversatorios fueron organizados por la Red Paz UNAL y Fescol, y contaron con la participación de distintas organizaciones, actores y líderes sociales, y expertos del mundo académico.
 
 Te invitamos a leer las memorias de estos conversatorios`,
-}
+};
 </script>
 
 <template>

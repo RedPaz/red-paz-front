@@ -5,12 +5,10 @@ import AboutUs from '@/views/about-us/AboutUs.vue';
 import Profile from '@/views/about-us/Profile.vue';
 import Partners from '@/views/partners/Partners.vue';
 import MainLayout from '@/common/layouts/MainLayout.vue';
-import experienceRoutes from '@/views/experiences/routes';
 import PartnerDetail from '@/views/partners/PartnerDetail.vue';
 
-import Posts from '@/views/resources/Posts.vue';
-import UnalConflicts from '@/views/resources/UnalConflicts.vue';
 import resourcesRoutes from '@/views/resources/routes';
+import experienceRoutes from '@/views/experiences/routes';
 
 const routes: RouteRecordRaw[] = [
   {
