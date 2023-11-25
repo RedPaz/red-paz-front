@@ -11,8 +11,8 @@ body {
 }
 
 .section-title {
-  @apply font-bold text-2xl mb-8;
-  @apply xl:text-center xl:text-4xl xl:mb-10;
+  @apply font-bold text-3xl mb-8;
+  @apply xl:text-center xl:text-5xl xl:mb-10;
 }
 
 .section-subtitle {

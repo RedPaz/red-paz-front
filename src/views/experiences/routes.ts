@@ -133,11 +133,16 @@ const experienceRoutes: RouteRecordRaw[] = [
         },
       },
       {
-        path: 'miniserie',
+        path: 'miniserie/:year',
         name: 'Miniserie: La Paz en Foco',
         component: MiniserieActivity,
         meta: {
           alias: 'Miniserie',
+          bannerBg: '#402D5C',
+          tabs: [
+            { label: '2021', src: '/experiencias-de-paz/miniserie/2021' },
+            { label: '2022', src: '/experiencias-de-paz/miniserie/2022' },
+          ],
         },
       },
       {

@@ -25,7 +25,7 @@ export const RED_PAZ_INITIATIVES: FeaturedItem[] = [
     image: '/images/experiences/activities/episodios.jpg',
     title: 'Episodios: La paz en Foco',
     date: '2022',
-    url: '/experiencias-de-paz/miniserie',
+    url: '/experiencias-de-paz/miniserie/2021',
     area: { ...FEATURED_AREAS.videos }
   },
   {

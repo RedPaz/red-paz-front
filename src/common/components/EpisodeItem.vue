@@ -6,6 +6,8 @@ import { capitalizeVariable } from '@/common/utils';
 
 import 'vue3-audio-player/dist/style.css';
 
+type MediaSource = 'spotify' | 'radioUnal' | 'facebook' | 'youtube';
+
 const props = defineProps({
   data: {
     type: Object as PropType<Episode>,
@@ -19,10 +21,14 @@ const props = defineProps({
     type: Boolean,
     required: false,
   },
+  source: {
+    type: String,
+    required: false,
+  }
 })
 
 const youtube = ref();
-const selectedSource = ref<'spotify' | 'radioUnal' | 'facebook' | 'youtube'>('spotify');
+const selectedSource = ref<MediaSource>('spotify');
 
 const embedSpotifySrc = computed(() => {
   if (!props.data.sources.spotify) return '';
@@ -33,6 +39,12 @@ const embedSpotifySrc = computed(() => {
 watch(selectedSource, (newValue) => {
   if (newValue === 'youtube') {
     youtube.value?.playVideo();
+  }
+});
+
+onBeforeMount(() => {
+  if (props.source === 'youtube') {
+    selectedSource.value = props.source;
   }
 });
 </script>

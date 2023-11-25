@@ -32,15 +32,7 @@ export const HEADER_ITEMS: HeaderItem[] = [
   },
   {
     label: 'Recursos',
-    src: '#',
-    subItems: [
-      { label: 'Formación y cursos de extensión', src: '#' },
-      { label: 'Publicaciones', src: '/recursos/publicaciones' },
-    ],
-  },
-  {
-    label: 'Contacto',
-    src: '#',
+    src: '/recursos',
     subItems: [],
   },
   {

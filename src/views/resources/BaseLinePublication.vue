@@ -8,7 +8,7 @@ const description: DescriptionItem = {
   En esta vía, en el 2020 se llevó a cabo un proceso de búsqueda, consolidación y procesamiento de información que dio como resultado el documento “Diagnóstico - Línea Base de Aportes de la Universidad Nacional de Colombia a la Construcción de Paz (2010-2019)”. Este documento representa un primer avance en el propósito mencionado, por lo que no representa el universo completo de los aportes. Estamos trabajando en el diseño de un mecanismo de actualización permanente de la información y en la creación de herramientas virtuales que faciliten su consulta.`,
   image: '/images/about-us/aboutUs.png',
   links: [
-    { label: 'Ver PDF', src: '/pdf/memoriasUNconflicto.pdf' },
+    { label: 'Ver PDF', src: '/pdf/recursos/diagnostico-linea-base.pdf' },
     { label: 'Ver matríz', src: '/pdf/memoriasUNconflicto.pdf' },
   ],
 }

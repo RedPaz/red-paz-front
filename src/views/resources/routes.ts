@@ -8,43 +8,32 @@ const resourcesRoutes: RouteRecordRaw[] = [
   {
     path: '/recursos/',
     name: 'Recursos',
-    component: MainLayout,
+    component: Posts,
     meta: { alias: 'Recursos' },
     children: [
       {
-        path: 'publicaciones',
-        component: Posts,
-        name: 'Publicaciones',
+        path: 'diagnostico-de-linea-base',
+        component: BaseLinePublication,
+        name: 'Diagnóstico de línea base',
         meta: {
-          alias: 'Publicaciones',
+          alias: 'Diagnóstico de línea base',
           bannerBg: '#334A3F',
         },
-        children: [
-          {
-            path: 'diagnostico-de-linea-base',
-            component: BaseLinePublication,
-            name: 'Diagnóstico de línea base',
-            meta: {
-              alias: 'Diagnóstico de línea base',
-              bannerBg: '#334A3F',
-            },
-          },
-          {
-            path: 'universidad-nacional-y-conflicto/:data',
-            component: UnalConflicts,
-            name: 'Universidad Nacional y Conflicto',
-            meta: {
-              alias: 'Universidad Nacional y Conflicto',
-              bannerBg: '#334A3F',
-              tabs: [
-                { label: 'Informe', src: '/recursos/publicaciones/universidad-nacional-y-conflicto/informe' },
-                { label: 'Línea de tiempo', src: '/recursos/publicaciones/universidad-nacional-y-conflicto/linea-de-tiempo' },
-                { label: 'Cartografía', src: '/recursos/publicaciones/universidad-nacional-y-conflicto/cartografia-de-la-memoria' },
-                { label: 'Equipo', src: '/recursos/publicaciones/universidad-nacional-y-conflicto/equipo' },
-              ],
-            },
-          },
-        ],
+      },
+      {
+        path: 'universidad-nacional-y-conflicto/:data',
+        component: UnalConflicts,
+        name: 'Universidad Nacional y Conflicto',
+        meta: {
+          alias: 'Universidad Nacional y Conflicto',
+          bannerBg: '#334A3F',
+          tabs: [
+            { label: 'Informe', src: '/recursos/universidad-nacional-y-conflicto/informe' },
+            { label: 'Línea de tiempo', src: '/recursos/universidad-nacional-y-conflicto/linea-de-tiempo' },
+            { label: 'Cartografía', src: '/recursos/universidad-nacional-y-conflicto/cartografia-de-la-memoria' },
+            { label: 'Equipo', src: '/recursos/universidad-nacional-y-conflicto/equipo' },
+          ],
+        },
       },
     ],
   }

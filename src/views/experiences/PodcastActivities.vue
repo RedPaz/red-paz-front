@@ -58,6 +58,7 @@ const episodes: Episode[] = [
     image: '/images/experiences/podcasts/catatumbo.jpg',
     sources: {
       radioUnal: 'http://radio.unal.edu.co/fileadmin/Radio/2022-Audio-Imagenes/11/4/PANORAMA_DE_LA_CIENCIA-11_23_2022.mp3',
+      youtube: 'https://www.youtube.com/watch?v=CQOx_ZBxJlA',
     },
   },
   {
@@ -67,6 +68,7 @@ const episodes: Episode[] = [
     image: '/images/experiences/podcasts/indigenas.jpg',
     sources: {
       radioUnal: 'http://radio.unal.edu.co/fileadmin/Radio/2022-Audio-Imagenes/11/4/PANORAMA_DE_LA_CIENCIA-11_23_2022.mp3',
+      youtube: 'https://www.youtube.com/watch?v=2Qr_INl1yWc',
     },
   },
 ];

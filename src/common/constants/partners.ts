@@ -4,28 +4,43 @@ import { FEATURED_AREAS } from '@/common/constants';
 import { PARTNER_CATEGORIES } from './partnerCategories';
 
 export const PARTNERS: Partner[] = [
-  // SIP
   {
-    name: 'Comisión de la Verdad',
-    alias: 'Comisión de la Verdad',
-    image: '/images/home/partners/CV.png',
-    cardImage: '/images/partners/card-logos/CV.jpg',
-    detailImage: '/images/partners/card-logos/CV.jpg',
-    category: PARTNER_CATEGORIES[0],
+    name: 'Friedrich Ebert Stiftung',
+    alias: 'FES',
+    image: '/images/home/partners/FES.png',
+    cardImage: '/images/partners/card-logos/FES.jpg',
+    detailImage: '/images/partners/card-logos/FES.jpg',
+    category: PARTNER_CATEGORIES[2],
     isLarge: false,
-    email: 'info@comisiondelaverdad.co',
-    phone: '(+57) (1) 7444344',
+    email: 'prensamisiononu@un.org',
+    phone: '+57 (1) 347 3077 / - 3092',
     webSrc: '#',
     youtubeSrc: '#',
-    description: `En el marco del Acuerdo Final para la terminación del conflicto y la construcción de una paz estable y duradera, mediante el Acto Legislativo 01 de 2017 y el Decreto 588 de 2017, se creó la Comisión para el Esclarecimiento de la Verdad, la Convivencia y la No Repetición, como un mecanismo de carácter temporal y extrajudicial del Sistema Integral de Verdad, Justicia, Reparación y No Repetición - SIVJRNR, para conocer la verdad de lo ocurrido en el marco del conflicto armado y contribuir al esclarecimiento de las violaciones e infracciones cometidas durante el mismo y ofrecer una explicación amplia de su complejidad a toda la sociedad. Busca satisfacer el derecho de las víctimas y de la sociedad a la verdad, promover el reconocimiento de lo sucedido, la convivencia en los territorios y contribuir a sentar las bases para la no repetición, mediante un proceso de participación amplio y plural para la construcción de paz.`,
+    description: `La Friedrich-Ebert-Stiftung (FES), fundada en 1925, es la fundación política más antigua de Alemania. Esta institución se fundó como legado político del primer presidente alemán elegido democráticamente, Friedrich Ebert, a quien debe su nombre así como los principios que la rigen. En calidad de fundación política cercana a un partido, nuestro trabajo se rige por los valores fundamentales de la democracia social: libertad, justicia y solidaridad. Estos valores nos vinculan de una forma ideal a la socialde- mocracia y a los sindicatos libres. Siendo una institución sin ánimo de lucro, diseñamos nuestras actividades de un modo independiente y autosuficiente.`,
     results: [
       {
         category: 'Nuestros Aliados',
         image: '/images/experiences/thematic-areas/science/no-image.jpg',
-        title: 'Informe final, Comisión de la verdad',
-        date: '2022',
+        title: 'Curso de formación A',
+        date: '16 de septiembre de 2022',
         url: '#',
-        area: { ...FEATURED_AREAS.articles }
+        area: { ...FEATURED_AREAS.training }
+      },
+      {
+        category: 'Nuestros Aliados',
+        image: '/images/experiences/thematic-areas/science/no-image.jpg',
+        title: 'Curso de formación B',
+        date: '16 de septiembre de 2022',
+        url: '#',
+        area: { ...FEATURED_AREAS.training }
+      },
+      {
+        category: 'Nuestros Aliados',
+        image: '/images/experiences/thematic-areas/science/no-image.jpg',
+        title: 'Curso de formación C',
+        date: '16 de septiembre de 2022',
+        url: '#',
+        area: { ...FEATURED_AREAS.training }
       },
     ],
   },
@@ -109,7 +124,70 @@ export const PARTNERS: Partner[] = [
       },
     ],
   },
-  // Gubernamental
+  {
+    name: 'Comisión de la Verdad',
+    alias: 'Comisión de la Verdad',
+    image: '/images/home/partners/CV.png',
+    cardImage: '/images/partners/card-logos/CV.jpg',
+    detailImage: '/images/partners/card-logos/CV.jpg',
+    category: PARTNER_CATEGORIES[0],
+    isLarge: false,
+    email: 'info@comisiondelaverdad.co',
+    phone: '(+57) (1) 7444344',
+    webSrc: '#',
+    youtubeSrc: '#',
+    description: `En el marco del Acuerdo Final para la terminación del conflicto y la construcción de una paz estable y duradera, mediante el Acto Legislativo 01 de 2017 y el Decreto 588 de 2017, se creó la Comisión para el Esclarecimiento de la Verdad, la Convivencia y la No Repetición, como un mecanismo de carácter temporal y extrajudicial del Sistema Integral de Verdad, Justicia, Reparación y No Repetición - SIVJRNR, para conocer la verdad de lo ocurrido en el marco del conflicto armado y contribuir al esclarecimiento de las violaciones e infracciones cometidas durante el mismo y ofrecer una explicación amplia de su complejidad a toda la sociedad. Busca satisfacer el derecho de las víctimas y de la sociedad a la verdad, promover el reconocimiento de lo sucedido, la convivencia en los territorios y contribuir a sentar las bases para la no repetición, mediante un proceso de participación amplio y plural para la construcción de paz.`,
+    results: [
+      {
+        category: 'Nuestros Aliados',
+        image: '/images/experiences/thematic-areas/science/no-image.jpg',
+        title: 'Informe final, Comisión de la verdad',
+        date: '2022',
+        url: '#',
+        area: { ...FEATURED_AREAS.articles }
+      },
+    ],
+  },
+  {
+    name: 'Instituto Colombo-Alemán para la Paz',
+    alias: 'ICAP',
+    image: '/images/home/partners/CAPAZ.png',
+    cardImage: '/images/partners/card-logos/CAPAZ.jpg',
+    detailImage: '/images/partners/card-logos/CAPAZ.jpg',
+    category: PARTNER_CATEGORIES[2],
+    isLarge: false,
+    email: 'info@www.instituto-capaz.org',
+    phone: '+57 (1)3422340 Ext. 29981',
+    webSrc: '#',
+    youtubeSrc: '#',
+    description: `El Instituto CAPAZ es una plataforma de cooperación entre Colombia y Alemania que promueve el intercambio de conocimientos y experiencias en temas de construcción de paz, mediante la conformación de redes entre universidades, centros de investigación, organizaciones de la sociedad civil y entidades gubernamentales, que actúan en el ámbito territorial. CAPAZ promueve actividades de investigación, enseñanza y asesoría, que permiten nuevas aproximaciones al entendimiento de la paz y el conflicto, transmiten conocimiento a la sociedad y plantean respuestas a los múltiples desafíos de una sociedad en transición. El Instituto CAPAZ es un Centro de Excelencia en Investigación y Docencia financiado por el Servicio Alemán de Intercambio Académico (DAAD), con recursos del Ministerio Federal de Asuntos Exteriores de Alemania.`,
+    results: [
+      {
+        category: 'Nuestros Aliados',
+        image: '/images/experiences/thematic-areas/science/no-image.jpg',
+        title: 'Curso de formación A',
+        date: '16 de septiembre de 2022',
+        url: '#',
+        area: { ...FEATURED_AREAS.training }
+      },
+      {
+        category: 'Nuestros Aliados',
+        image: '/images/experiences/thematic-areas/science/no-image.jpg',
+        title: 'Curso de formación B',
+        date: '16 de septiembre de 2022',
+        url: '#',
+        area: { ...FEATURED_AREAS.training }
+      },
+      {
+        category: 'Nuestros Aliados',
+        image: '/images/experiences/thematic-areas/science/no-image.jpg',
+        title: 'Curso de formación C',
+        date: '16 de septiembre de 2022',
+        url: '#',
+        area: { ...FEATURED_AREAS.training }
+      },
+    ],
+  },
   {
     name: 'Agencia para la Reincorporación y la Normalización',
     alias: 'ARN',
@@ -152,6 +230,21 @@ export const PARTNERS: Partner[] = [
       },
     ],
   },
+  {
+    name: 'Sistema Universitario Estatal - Mesa de Gobernabilidad y Paz',
+    alias: 'SUE',
+    image: '/images/home/partners/SUE.png',
+    cardImage: '/images/partners/card-logos/SUE.jpg',
+    detailImage: '/images/partners/card-logos/SUE.jpg',
+    category: PARTNER_CATEGORIES[1],
+    isLarge: true,
+    email: '',
+    phone: '',
+    webSrc: '',
+    youtubeSrc: '',
+    description: '',
+    results: [],
+  },
   // {
   //   name: 'Agencia de la Renovación del Territorio',
   //   image: '/images/home/partners/ART.png',
@@ -169,18 +262,6 @@ export const PARTNERS: Partner[] = [
   //   image: '/images/home/partners/DSCUI.png',
   //   cardImage: '/images/partners/card-logos/DSCUI.jpg',
   //   detailImage: '/images/partners/card-logos/DSCUI.jpg',
-  //   category: PARTNER_CATEGORIES[1],
-  //   isLarge: true,
-  //   email: '',
-  //   phone: '',
-  //   webSrc: '',
-  //   youtubeSrc: '',
-  // },
-  // {
-  //   name: 'Sistema Universitario Estatal - Mesa de Gobernabilidad y Paz',
-  //   image: '',
-  //   cardImage: '/images/partners/card-logos/SUE.jpg',
-  //   detailImage: '/images/partners/card-logos/SUE.jpg',
   //   category: PARTNER_CATEGORIES[1],
   //   isLarge: true,
   //   email: '',
@@ -265,86 +346,7 @@ export const PARTNERS: Partner[] = [
       },
     ],
   },
-  {
-    name: 'Instituto Colombo-Alemán para la Paz',
-    alias: 'ICAP',
-    image: '/images/home/partners/CAPAZ.png',
-    cardImage: '/images/partners/card-logos/CAPAZ.jpg',
-    detailImage: '/images/partners/card-logos/CAPAZ.jpg',
-    category: PARTNER_CATEGORIES[2],
-    isLarge: false,
-    email: 'info@www.instituto-capaz.org',
-    phone: '+57 (1)3422340 Ext. 29981',
-    webSrc: '#',
-    youtubeSrc: '#',
-    description: `El Instituto CAPAZ es una plataforma de cooperación entre Colombia y Alemania que promueve el intercambio de conocimientos y experiencias en temas de construcción de paz, mediante la conformación de redes entre universidades, centros de investigación, organizaciones de la sociedad civil y entidades gubernamentales, que actúan en el ámbito territorial. CAPAZ promueve actividades de investigación, enseñanza y asesoría, que permiten nuevas aproximaciones al entendimiento de la paz y el conflicto, transmiten conocimiento a la sociedad y plantean respuestas a los múltiples desafíos de una sociedad en transición. El Instituto CAPAZ es un Centro de Excelencia en Investigación y Docencia financiado por el Servicio Alemán de Intercambio Académico (DAAD), con recursos del Ministerio Federal de Asuntos Exteriores de Alemania.`,
-    results: [
-      {
-        category: 'Nuestros Aliados',
-        image: '/images/experiences/thematic-areas/science/no-image.jpg',
-        title: 'Curso de formación A',
-        date: '16 de septiembre de 2022',
-        url: '#',
-        area: { ...FEATURED_AREAS.training }
-      },
-      {
-        category: 'Nuestros Aliados',
-        image: '/images/experiences/thematic-areas/science/no-image.jpg',
-        title: 'Curso de formación B',
-        date: '16 de septiembre de 2022',
-        url: '#',
-        area: { ...FEATURED_AREAS.training }
-      },
-      {
-        category: 'Nuestros Aliados',
-        image: '/images/experiences/thematic-areas/science/no-image.jpg',
-        title: 'Curso de formación C',
-        date: '16 de septiembre de 2022',
-        url: '#',
-        area: { ...FEATURED_AREAS.training }
-      },
-    ],
-  },
-  {
-    name: 'Friedrich Ebert Stiftung',
-    alias: 'FES',
-    image: '/images/home/partners/FES.png',
-    cardImage: '/images/partners/card-logos/FES.jpg',
-    detailImage: '/images/partners/card-logos/FES.jpg',
-    category: PARTNER_CATEGORIES[2],
-    isLarge: false,
-    email: 'prensamisiononu@un.org',
-    phone: '+57 (1) 347 3077 / - 3092',
-    webSrc: '#',
-    youtubeSrc: '#',
-    description: `La Friedrich-Ebert-Stiftung (FES), fundada en 1925, es la fundación política más antigua de Alemania. Esta institución se fundó como legado político del primer presidente alemán elegido democráticamente, Friedrich Ebert, a quien debe su nombre así como los principios que la rigen. En calidad de fundación política cercana a un partido, nuestro trabajo se rige por los valores fundamentales de la democracia social: libertad, justicia y solidaridad. Estos valores nos vinculan de una forma ideal a la socialde- mocracia y a los sindicatos libres. Siendo una institución sin ánimo de lucro, diseñamos nuestras actividades de un modo independiente y autosuficiente.`,
-    results: [
-      {
-        category: 'Nuestros Aliados',
-        image: '/images/experiences/thematic-areas/science/no-image.jpg',
-        title: 'Curso de formación A',
-        date: '16 de septiembre de 2022',
-        url: '#',
-        area: { ...FEATURED_AREAS.training }
-      },
-      {
-        category: 'Nuestros Aliados',
-        image: '/images/experiences/thematic-areas/science/no-image.jpg',
-        title: 'Curso de formación B',
-        date: '16 de septiembre de 2022',
-        url: '#',
-        area: { ...FEATURED_AREAS.training }
-      },
-      {
-        category: 'Nuestros Aliados',
-        image: '/images/experiences/thematic-areas/science/no-image.jpg',
-        title: 'Curso de formación C',
-        date: '16 de septiembre de 2022',
-        url: '#',
-        area: { ...FEATURED_AREAS.training }
-      },
-    ],
-  },
+
   // {
   //   name: 'Oficina de DDHH de la ONU',
   //   alias: 'ODHO',

@@ -63,7 +63,7 @@ defineProps({
               :key="`logo-${j}`"
               :src="logo"
               alt="Section image"
-              :class="item.isBannerItem ? 'w-1/2 xl:w-1/3' : 'w-1/4 mr-10'"
+              :class="item.isBannerItem ? 'w-1/2' : 'w-1/4 mr-10'"
             >
           </div>
           <!-- Links -->

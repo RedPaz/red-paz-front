@@ -10,7 +10,7 @@ const homeBanners: Banner[] = [
     image: '/images/home/banner-image-1.png',
     background: '#4DB372',
     logos: ['/images/home/logo.svg'],
-    links: [{ label: 'Leer más', src: '#' }],
+    links: [{ label: 'Leer más', src: '/sobre-nosotros' }],
     isBannerItem: true,
   },
   {
@@ -18,7 +18,7 @@ const homeBanners: Banner[] = [
     description: 'Conoce más sobre las 95 iniciativas en torno a la paz que se están realizando en los territorios por la comunidad.',
     image: '/images/home/banner-image-1.png',
     background: '#402D5C',
-    links: [{ label: 'Leer más', src: '#' }],
+    links: [{ label: 'Leer más', src: '/experiencias-de-paz/enep-2020/informe' }],
     isBannerItem: true,
   },
   {
@@ -27,7 +27,7 @@ const homeBanners: Banner[] = [
     Con la presencia de: Mauricio Archila, Rodrigo Torrejano, Stalin Ballesteros, Oscar Cardozo, Patricia Nieto y Esteban Roncancio.`,
     image: '/images/home/banner-image-1.png',
     background: '#041449',
-    links: [{ label: 'Conoce más', src: '#' }],
+    links: [{ label: 'Conoce más', src: '/experiencias-de-paz/catedra-conflicto-armado/informe' }],
     isBannerItem: true,
   },
 ];
@@ -115,7 +115,7 @@ const homeNews: FeaturedItem[] = [
 
     <DescriptionVideo
       :data="homeDescription"
-      video-src="https://www.youtube.com/watch?v=oCbAKjTLMLo"
+      video-src="https://www.youtube.com/watch?v=p_lQEuP66dI"
     />
 
     <GridSection
@@ -196,7 +196,7 @@ const homeNews: FeaturedItem[] = [
           v-for="(partner, index) in PARTNERS"
           :key="index"
           class="logo text-center inline-grid justify-items-center items-center"
-          :class="partner.isLarge ? 'col-span-2 xl:col-span-3' : 'col-span-1 xl:col-span-3'"
+          :class="partner.isLarge ? 'col-span-2 xl:col-span-3' : 'col-span-1 xl:col-span-1'"
         >
           <img
             :src="partner.image"
@@ -216,7 +216,7 @@ const homeNews: FeaturedItem[] = [
 }
 
 .logos {
-  @apply grid grid-cols-2 gap-10;
+  @apply grid grid-cols-2 gap-20;
   @apply xl:grid-cols-8 xl:gap-5;
 }
 

@@ -6,4 +6,5 @@ export interface Episode {
   date: string;
   image?: string;
   sources: MediaSrc;
+  year?: number;
 }
