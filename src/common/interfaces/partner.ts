@@ -7,6 +7,7 @@ export interface Partner {
   image: string;
   src: string;
   isLarge: boolean;
+  bannerImage?: string;
   cardImage: string;
   category: PartnerCategory;
   detailImage: string;

@@ -46,7 +46,7 @@ const gridClasses = computed(() => `grid-cols-${props.mobileCols} xl:grid-cols-$
   >
     <h2
       v-if="title"
-      class="section-title"
+      class="section-subtitle"
       :class="{
         '!text-left': alignTitleLeft,
         'text-white': background === 'bg-green-red'

@@ -13,7 +13,7 @@ onBeforeMount(() => {
   // Hide tabs
   headerStore.$patch({
     alias,
-    imageSrc,
+    imageSrc: partner.value?.bannerImage,
     showTabs: false,
   });
 });
@@ -30,19 +30,38 @@ onBeforeMount(() => {
       <div class="detail col-span-2">
         <h3 class="section-title !text-left">{{ partner.name }}</h3>
 
-        <p class="description with-icon !-mt-5">
+        <p
+          v-if="partner.email"
+          class="description with-icon !-mt-5"
+        >
           <Icon icon="mdi-email-outline" class="mr-3"/> {{ partner.email }}
         </p>
 
-        <p class="description with-icon">
+        <p
+          v-if="partner.phone"
+          class="description with-icon"
+        >
           <Icon icon="mdi-phone" class="mr-3"/> {{ partner.phone }}
         </p>
 
-        <p class="description mt-6">{{ partner.description }}</p>
+        <p class="description mt-6 whitespace-pre-line">{{ partner.description }}</p>
+
+        <a
+          v-if="partner.webSrc"
+          :href="partner.webSrc"
+          class="bg-green-red flex media-action mt-10"
+        >
+          <i-mdi-web class="text-xl mr-3"/>
+
+          Sitio web
+        </a>
       </div>
     </section>
 
-    <div class="redpaz-areas col-span-3 mt-5 lg:mt-20">
+    <div
+      v-if="partner.results.length"
+      class="redpaz-areas col-span-3 mt-5 lg:mt-20"
+    >
       <GridSection
         :desktop-cols="3"
         :mobile-cols="1"
@@ -75,7 +94,8 @@ onBeforeMount(() => {
 
 <style scoped>
 .description {
-  @apply text-xl;
+  @apply text-base;
+  @apply xl:text-xl;
 }
 
 .description.with-icon {

@@ -15,13 +15,13 @@ defineProps({
   swapItems: {
     type: Boolean,
     required: false,
-  }
+  },
 });
 </script>
 
 <template>
   <section
-    class="descriptions-section"
+    class="descriptions-section relative"
     :class="{ 'xl:!flex-row-reverse': swapItems }"
   >
     <div
@@ -47,8 +47,9 @@ defineProps({
         <div class="section-content">
           <p
             class="content"
-            :class="item.isBannerItem ? '!text-white xl:!text-2xl !font-medium !pr-10' : 'pr-0'"
-
+            :class="[
+              item.isBannerItem ? '!text-white xl:!text-2xl !font-medium !pr-10' : 'pr-0',
+            ]"
           >
             {{ item.description }}
           </p>
@@ -93,6 +94,8 @@ defineProps({
       alt="Section image"
       class="mt-10 xl:mt-0 xl:w-1/2"
     >
+
+    <slot name="end"/>
   </section>
 </template>
 

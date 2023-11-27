@@ -35,6 +35,7 @@ declare module '@vue/runtime-core' {
     IMdiMenuDown: typeof import('~icons/mdi/menu-down')['default']
     IMdiRadioTower: typeof import('~icons/mdi/radio-tower')['default']
     IMdiSpotify: typeof import('~icons/mdi/spotify')['default']
+    IMdiWeb: typeof import('~icons/mdi/web')['default']
     IMdiYoutube: typeof import('~icons/mdi/youtube')['default']
     ItemWithImage: typeof import('./common/components/ItemWithImage.vue')['default']
     JobAreas: typeof import('./common/components/JobAreas.vue')['default']
