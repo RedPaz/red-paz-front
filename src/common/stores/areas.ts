@@ -16,7 +16,7 @@ export const useAreasStore = defineStore('areas', {
   },
 
   actions: {
-    setCurrentArea(area: AreaItem) {
+    setCurrentArea(area: Partial<AreaItem>) {
       Object.assign(this.currentArea, area);
     }
   },

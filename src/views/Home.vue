@@ -195,16 +195,25 @@ const homeNews: FeaturedItem[] = [
         <div
           v-for="(partner, index) in PARTNERS"
           :key="index"
-          class="logo text-center inline-grid justify-items-center items-center"
-          :class="partner.isLarge ? 'col-span-2 xl:col-span-3' : 'col-span-1 xl:col-span-1'"
+          class="logo text-center inline-grid justify-items-center items-center col-span-2 xl:col-span-3"
         >
           <img
             :src="partner.image"
             :alt="partner.name"
-            :class="{ 'w-4/5 my-4 xl:w-2/3 xl:my-0': partner.isLarge }"
+            class="w-4/5 my-4 xl:w-2/3 xl:my-0"
           >
         </div>
       </div>
+
+      <router-link
+        :to="{
+          name: 'Nuestros Aliados',
+          params: { category: 'sistema-integral-para-la-paz' }
+        }"
+        class="section-link block mx-auto my-14 w-44 !bg-white !text-green-red"
+      >
+        Ver más
+      </router-link>
     </div>
   </section>
 </template>
@@ -216,11 +225,16 @@ const homeNews: FeaturedItem[] = [
 }
 
 .logos {
-  @apply grid grid-cols-2 gap-20;
-  @apply xl:grid-cols-8 xl:gap-5;
+  @apply grid grid-cols-2 gap-16;
+  @apply xl:grid-cols-9 xl:gap-5;
 }
 
 .description {
   @apply text-center mb-8 text-lg;
+}
+
+.section-link {
+  @apply rounded-lg text-lg leading-8 font-bold px-2 py-1 text-center duration-200 ease-in-out;
+  @apply xl:text-xl xl:p-2;
 }
 </style>

@@ -173,9 +173,10 @@ const experienceRoutes: RouteRecordRaw[] = [
           ],
         },
       },
+      // Editions
       {
-        path: 'catedra-conflicto-armado/2021-2',
-        name: 'Cátedra 2021-2\nDel conflicto armado a la construcción de paz',
+        path: 'catedra-conflicto-armado/edicion/:year',
+        name: '',
         component: CathedraEdition,
         meta: {
           alias: 'Cátedra',
@@ -183,16 +184,6 @@ const experienceRoutes: RouteRecordRaw[] = [
           imageSrc: '/images/experiences/conflict-cathedra/main-banner.png',
         },
       },
-      // {
-      //   path: 'catedra-construccion-de-paz',
-      //   name: 'Cátedra',
-      //   component: BuildingCathedra,
-      //   meta: {
-      //     alias: 'Cátedra',
-      //     subtitle: 'Construcción de paz en tiempos de Pos-acuerdo',
-      //     bannerBg: '#0279AF',
-      //   },
-      // },
     ],
   },
 ];

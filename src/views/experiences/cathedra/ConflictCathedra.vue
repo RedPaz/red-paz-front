@@ -58,22 +58,22 @@ const objectives: DescriptionItem[] = [
 
 const editions: GridItem[] = [
   {
-    title: 'Año',
-    src: '#',
+    title: '2020-2',
+    src: '/experiencias-de-paz/catedra-conflicto-armado/edicion/2020-2',
     image: '/images/home/red-paz.svg',
     color: '#4DB372',
     description: 'Curso de conflicto armado a la construcción de Paz',
   },
   {
     title: '2021-1',
-    src: '#',
+    src: '/experiencias-de-paz/catedra-conflicto-armado/edicion/2021-1',
     image: '/images/home/red-paz.svg',
     color: '#4DB372',
     description: 'Curso de conflicto armado a la construcción de Paz',
   },
   {
     title: '2021-2',
-    src: '/experiencias-de-paz/catedra-conflicto-armado/2021-2',
+    src: '/experiencias-de-paz/catedra-conflicto-armado/edicion/2021-2',
     image: '/images/home/red-paz.svg',
     color: '#4DB372',
     description: 'Curso de conflicto armado a la construcción de Paz',
