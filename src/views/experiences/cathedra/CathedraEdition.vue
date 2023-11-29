@@ -6,101 +6,132 @@ const route = useRoute();
 const areaStore = useAreasStore();
 const { year } = route.params;
 
-const description = computed((): DescriptionItem => ({
-  title: 'Sobre esta edición',
-  description: `Coordinadores
+const description = computed((): DescriptionItem => {
+  const e20202 = `Fecha de inicio: 2 de septiembre de 2020
+  Fecha de finalización: 2 de diciembre 2020`;
 
-  - Camilo Alberto Borrero, Sede Bogotá
-  - Claudia Patricia Sierra, Sede Bogotá
-  - Mary Luz Alzate, Sede Medellín
-  - Rayén Amanda Rovira, Sede Manizales
-  - Oscar Mauricio Vélez, Sede Palmira
+  const e20211 = `Fecha de inicio: 3 de marzo de 2021
+  Fecha de finalización: 25 de agosto de 2021`;
 
-  Horario: Miércoles de 9:00 a.m. a 12:00 m.
-  Fecha de inicio: 6 de Octubre de 2021
+  const e20212 = `Fecha de inicio: 6 de Octubre de 2021
   Fecha de finalización: 6 de febrero de 2022
-  Código: 2027938`,
-}));
+  Código: 2027938`;
+
+
+  const result = {
+    title: 'Sobre esta edición',
+    description: `Coordinadores
+
+    - Camilo Alberto Borrero, Sede Bogotá
+    - Claudia Patricia Sierra, Sede Bogotá
+    - Mary Luz Alzate, Sede Medellín
+    - Rayén Amanda Rovira, Sede Manizales
+    ${year === '2020-2' ? '- Oscar Mauricio Vélez, Sede Palmira' : ''}
+
+    Horario: Miércoles de 9:00 a.m. a 12:00 m.
+    ${(year === '2020-2') ? e20202 : ''}${(year === '2021-1') ? e20211 : ''}${(year === '2021-2') ? e20212 : ''}`,
+  };
+
+
+  return result;
+});
 
 const records = computed((): Episode[] => [
   // 2021-2
   {
     name: 'Para entender el conflicto armado. Primera parte',
-    description: `Los factores explicativos del conflicto armado en Colombia, las modalidades de violencia y las víctimas.
+    description: `Invitados/as:
 
-    El conflicto armado en el territorio: caso Oriente Antioqueño`,
+    - Estefanía Ciro, Coordinadora del Área de Economías de la Cocaína, Narcotráfico y Conflicto Armado en la Comisión de la Verdad
+    - Max Yuri Gil, coordinador para Antioquia y el Eje Cafetero de la Comisión para el Esclarecimiento de la Verdad.`,
     date: '20 de Octubre de 2021',
     image: '/images/experiences/conflict-cathedra/2021-2-sesion-1.jpg',
     sources: {
-      youtube: 'https://www.youtube.com/watch?v=C6nrxjuVijk&list=PLMFnkq2QiS2CGZUA-V0mkQ8uP5IkGRm4Q&index=6',
+      youtube: 'https://www.youtube.com/watch?v=C6nrxjuVijk',
     },
     year: '2021-2',
   },
   {
     name: 'Para entender el conflicto armado. Segunda parte',
-    description: `Los factores explicativos del conflicto armado en Colombia, las modalidades de violencia y las víctimas.
+    description: `Invitados/as:
 
-    El conflicto armado en el territorio: caso Oriente Antioqueño`,
+    - Hellen Cristancho, Docente Departamento de Historia y Geografía, Directora de la Maestría en Estudios Territoriales, Universidad de Caldas, Manizales
+    - Jaime Márquez, Investigador para la iniciativa Barómetro, Intituto Kroc de Estudios Internacionales de Paz
+    - Fabio Leiva Barón, Centro de Pensamiento de Desarrollo Rural y profesor de la Facultad de Ciencias Agrarias de la Universidad Nacional de Colombia`,
     date: '27 de Octubre de 2021',
     image: '/images/experiences/conflict-cathedra/2021-2-sesion-2.jpg',
     sources: {
-      youtube: 'https://www.youtube.com/watch?v=0JfA7jsOZ_A&list=PLMFnkq2QiS2CGZUA-V0mkQ8uP5IkGRm4Q&index=11',
+      youtube: 'https://www.youtube.com/watch?v=0JfA7jsOZ_A',
     },
     year: '2021-2',
   },
   {
     name: 'Los factores persistentes y las nuevas dinámicas del conflicto armado',
-    description: `Los factores explicativos del conflicto armado en Colombia, las modalidades de violencia y las víctimas.
+    description: `Invitados/as:
 
-    El conflicto armado en el territorio: caso Oriente Antioqueño`,
+    - Germán Muñoz González, Líder del Grupo de Investigación "Jóvenes, Culturas y Poderes" Universidad Distrital de Bogotá y Universidad de Manizales, e Investigador CLACSO en juventades
+    - Luis Gabriel Salas, Docente Investigador del Departamento de Geografía de la Universidad Nacional de Colombia. Analista Jurisdicción Especial para la Paz (JEP - GRAI)
+    - Padre Jesús Albeiro Parra, Misionero Colombiano. Comisión Interétnica por la Verdad del Pacífico. Pacto por la Vida y Paz`,
     date: '03 de Noviembre de 2021',
     image: '/images/experiences/conflict-cathedra/2021-2-sesion-3.jpg',
     sources: {
-      youtube: 'https://www.youtube.com/watch?v=LfaffqFGd3Q&list=PLMFnkq2QiS2CGZUA-V0mkQ8uP5IkGRm4Q&index=10',
+      youtube: 'https://www.youtube.com/watch?v=LfaffqFGd3Q',
     },
     year: '2021-2',
   },
   {
     name: 'Los mecanismos para salir de las guerras y de las dictaduras',
-    description: `Los factores explicativos del conflicto armado en Colombia, las modalidades de violencia y las víctimas.
+    description: `Invitados/as:
 
-    El conflicto armado en el territorio: caso Oriente Antioqueño`,
+    - Steve J. Stern, Académico e Historiador de la Universidad de Wisconsin-Madison
+    - Ana Cristina Portilla, Magistrada Auxiliar Justicia Especial para la Paz`,
     date: '17 de Noviembre de 2021',
     image: '/images/experiences/conflict-cathedra/2021-2-sesion-4.jpg',
     sources: {
-      youtube: 'https://www.youtube.com/watch?v=K0kbffr9cOI&list=PLMFnkq2QiS2CGZUA-V0mkQ8uP5IkGRm4Q&index=9',
+      youtube: 'https://www.youtube.com/watch?v=K0kbffr9cOI',
     },
     year: '2021-2',
   },
   {
     name: 'Avatares de los procesos de paz en Colombia (1990 -2020)',
-    description: `Los factores explicativos del conflicto armado en Colombia, las modalidades de violencia y las víctimas.
+    description: `Invitados/as:
 
-    El conflicto armado en el territorio: caso Oriente Antioqueño`,
+    - Pastor Lisandro Alape, Delegado de los firmantes del Acuerdo al CNR e integrante del Consejo Político de Comunes
+    - Álvaro Villarraga Sarmiento, Presidente de la Fundación Cultura Democrática (FUCUDE)
+    - Orián Jiménez Meneses, Profesor del Departamento de Historia de la UNAL, Sede Medellín`,
     date: '24 de Noviembre de 2021',
     image: '/images/experiences/conflict-cathedra/2021-2-sesion-5.jpg',
     sources: {
-      youtube: 'https://www.youtube.com/watch?v=kolKiMow6Q4&list=PLMFnkq2QiS2CGZUA-V0mkQ8uP5IkGRm4Q&index=8',
+      youtube: 'https://www.youtube.com/watch?v=kolKiMow6Q4',
     },
     year: '2021-2',
   },
   {
     name: 'El Sistema Integral de Verdad, Justicia Reparación y no Repetición',
-    description: `Los factores explicativos del conflicto armado en Colombia, las modalidades de violencia y las víctimas.
+    description: `Invitados/as:
 
-    El conflicto armado en el territorio: caso Oriente Antioqueño`,
+    - Natalia Restrepo Ortíz, Investigadora de la Iniciativa Barómetro en Colombia, Instituto Krok de Estudios Internacionales de Paz
+    - Irene Piedrahita Arcila, Profesora del Instituto de Estudios Políticos, Universidad de Antioquia
+    - Sandra Alfaro Yara, Enlace Territorial de la Secretaría Ejecutiva de la JEP para el Departamento de Antioquia
+    - Catalina Cruz Betancour, Profesional de Diálogo Social para la Comisión de la Verdad Territorial Antioquia
+    - Wilson Alberto Gómez Garcés - Experto de la Unidad de Búsqueda de Personas dadas por Desaparecidas Equipo Territorial Medellín
+    - Modera, Mary Luz Alzate, Profesora de la Facultad de CienciasHumanas y Económicas de la UNAL, Sede Medellín`,
     date: '1 de Diciembre de 2021',
     image: '/images/experiences/conflict-cathedra/2021-2-sesion-6.jpg',
     sources: {
-      youtube: 'https://www.youtube.com/watch?v=rEWPMXgrqLo&list=PLMFnkq2QiS2CGZUA-V0mkQ8uP5IkGRm4Q&index=7',
+      youtube: 'https://www.youtube.com/watch?v=rEWPMXgrqLo',
     },
     year: '2021-2',
   },
   {
     name: 'La ciencia, la tecnología y la innovación como herramientas para construir paz en los territorios',
-    description: `Los factores explicativos del conflicto armado en Colombia, las modalidades de violencia y las víctimas.
+    description: `Invitados/as:
 
-    El conflicto armado en el territorio: caso Oriente Antioqueño`,
+    - Hernán Pérez Molano, Estudiante del Doctorado en Ciencias Políticas, de la Administración y Relaciones Internacionales de la U. Complutense de Madrid
+    - Nelcy Julieth Rodríguez, Extensionista para Paso Colombia en el Departamento del Guaviare
+    - Karol Bibiana Barragán, Profesora del Departamento de Producción Animal, Facultad de Medicina Veterinaria y Zootecnia, UNAL
+    - Antonio Lafuente, Profesor Centro de Ciencias Humanas y Sociales (CSIC), España
+    - Modera, Adriana Patricia Muñoz, Profesora del Departamento de Producción Animal, Facultad de Medicina Veterinaria y Zootecnia, UNAL`,
     date: '12 de Enero de 2022',
     image: '/images/experiences/conflict-cathedra/2021-2-sesion-6.jpg',
     sources: {
@@ -109,10 +140,31 @@ const records = computed((): Episode[] => [
     year: '2021-2',
   },
   {
-    name: 'Memorias de Violencia y Resistencia',
-    description: `Los factores explicativos del conflicto armado en Colombia, las modalidades de violencia y las víctimas.
+    name: 'Comunidades campesinas, indígenas y afrocolombianas construyendo paz en medio de la guerra',
+    description: `Invitados/as:
 
-    El conflicto armado en el territorio: caso Oriente Antioqueño`,
+    - Gina Santisteban, Periodista de la Universidad del Rosario y Creadora de Contenidos en Terra.com
+    - Luisa María Rincón, Profesional en Periodismo y Opinión Pública, Rutas del Conflicto
+    - Motilonas RAP
+    - Pilar Puentes, Periodista de la Universidad del Rosario y Reportera de Rutas del Conflicto
+    - Richard Romero, Periodista Multimedia y de Datos en Rutas del Conflicto
+    - Ramón Abril, Historiador, Defensor de los Derechos Humanos
+    - Juan David Espinel, Secretario Técnico de la Red Lllano & Selva`,
+    date: '26 de Enero de 2022',
+    image: '/images/experiences/conflict-cathedra/2021-2-sesion-6.jpg',
+    sources: {
+      youtube: 'https://www.youtube.com/watch?v=Q8bGgxr12DI',
+    },
+    year: '2021-2',
+  },
+  {
+    name: 'Memorias de Violencia y Resistencia',
+    description: `Invitados/as:
+
+    - Martha Nubia Bello,  profesora del Departamento de Trabajo Social, UNAL
+    - Juana Salgado, Artista escénica e historiadora
+    - José Antequera, Director del Centro de Memoria, Paz y Reconciliación
+    - El Aka, Agricultor y Rapero. Sembrador de Agroarte Colombia`,
     date: '26 de Enero de 2022',
     image: '/images/experiences/conflict-cathedra/2021-2-sesion-6.jpg',
     sources: {
@@ -122,9 +174,12 @@ const records = computed((): Episode[] => [
   },
   {
     name: 'Las lecturas de la guerra y de la paz desde la salud y el buen vivir',
-    description: `Los factores explicativos del conflicto armado en Colombia, las modalidades de violencia y las víctimas.
+    description: `Invitados/as:
 
-    El conflicto armado en el territorio: caso Oriente Antioqueño`,
+    - Patricia González, Secretaria Ejecutiva de la Red SaludPaz
+    - Rafael Malagón, Director del Departamento de Salud Colectiva UNAL
+    - Liliana Henao, Profesora del Instituto de Salud Pública Universidad Javeriana
+    - Modera, Mario Hernández, Coordinador de la Red SaludPaz y del Doctorado Interfacultades en Salud Pública`,
     date: '2 de Febrero de 2022',
     image: '/images/experiences/conflict-cathedra/2021-2-sesion-6.jpg',
     sources: {
@@ -133,10 +188,14 @@ const records = computed((): Episode[] => [
     year: '2021-2',
   },
   {
-    name: 'Memoria, violencia y universidad.',
-    description: `Los factores explicativos del conflicto armado en Colombia, las modalidades de violencia y las víctimas.
+    name: 'Memoria, violencia y universidad',
+    description: `Invitados/as:
 
-    El conflicto armado en el territorio: caso Oriente Antioqueño`,
+    - Mauricio Archila, Profesor e Investigador del Departamento de Historia, UNAL
+    - Esteban Roncancio, Estudiante Auxiliar de la Investigación "Memorias del Conflicto armado en la Universidad Nacional de Colombia"
+    - Patricia Nieto, Directora de Hacemos Memoria y Profesora de la Universidad de Antioquia
+    - Oscar Cardozo, Estudiante Auxiliar de la Investigación "Memorias del Conflicto armado en la Universidad Nacional de Colombia"
+    - Rodrigo Torrejano, Investogador de la Corporación de Estudios Sociales y Culturales de la Memoria y de Archivos del Búho`,
     date: '9 de Febrero de 2022',
     image: '/images/experiences/conflict-cathedra/2021-2-sesion-6.jpg',
     sources: {
