@@ -28,7 +28,7 @@ const categories = Object.values(FEATURED_AREAS).filter((value) => !value.id);
     </template>
 
     <template #items>
-      <div class="filters absolute right-28 top-36 flex items-center">
+      <div class="filters xl:absolute xl:right-28 xl:top-36 flex items-center">
         <label class="font-semibold">Filtra por categoría:</label>
 
         <select

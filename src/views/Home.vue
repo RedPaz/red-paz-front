@@ -22,12 +22,11 @@ const homeBanners: Banner[] = [
     isBannerItem: true,
   },
   {
-    title: 'Curso del conflicto armado a la construcción de paz: Memoria, Violencia y Universidad',
-    description: `Sesión 13 | Miércoles 9 de febrero de 2021 | 9:00 a.m.
-    Con la presencia de: Mauricio Archila, Rodrigo Torrejano, Stalin Ballesteros, Oscar Cardozo, Patricia Nieto y Esteban Roncancio.`,
+    title: 'Apoyo a proceso en regiones',
+    description: `Conoce las diversas acciones coordinadas por miembros docentes de la RedPaz UNAL, que junto con diversos actores hemos emprendido en departamentos como Arauca, Nariño, Caquetá, Putumayo y Meta.`,
     image: '/images/home/banner-image-1.png',
     background: '#041449',
-    links: [{ label: 'Conoce más', src: '/experiencias-de-paz/catedra-conflicto-armado/informe' }],
+    links: [{ label: 'Conoce más', src: '/experiencias-de-paz/apoyo-a-procesos' }],
     isBannerItem: true,
   },
 ];
