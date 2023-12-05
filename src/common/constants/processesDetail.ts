@@ -155,4 +155,48 @@ export const PROCESSES_DETAILS: ProcessDetail[] = [
 
     Los Diálogos Regionales Vinculantes del Caquetá se realizaron el martes 22 de noviembre de 2022 en Florencia, al interior de las instalaciones de la Universidad de la Amazonía. Fue presidida por el ministro de justicia, Néstor Osuna, y por el director del DNP, Jorge Iván González. Contó con la participación de múltiples instituciones y organizaciones de la sociedad civil, lo cual se vio reflejado en las mesas de trabajo alrededor de las transformaciones propuestas por el Gobierno. Llas mesas poblacionales contaron con la representación de jóvenes, comunidades negras, comunidades indígenas, diversidades sexuales y de género, mujeres, empresarios, víctimas, personas en reincorporación, entre otras.`
   },
+  {
+    title: '2023',
+    area: 'Caquetá - Meta',
+    description: `En el marco de la Red de Ética, Cultura, Creación, Ciencia, Tecnología e Innovación para la Paz de la Universidad Nacional de Colombia - Red Paz UNal de la Universidad Nacional de Colombia y del Accionatorio por el Derecho a la Salud y el Buen Vivir que adelanta el grupo de investigación en Estudios sociohistóricos de la salud y la protección social dentro de la Red SaludPaz, con el apoyo del Centro de Excelencia en Ciencias de la Vida y la Salud en la Amazonía, se llevó a cabo la visita a territorios rurales de los municipios de La Macarena (Meta) y San Vicente del Caguán (Caquetá), y el centro poblado (antiguo ETCR) Urías Rondón en el municipio de El Doncello (Caquetá), entre los días 13 y 21 de mayo de 2023, para dar continuidad a la relación que se ha venido construyendo con las comunidades y organizaciones campesinas e indígenas de la región desde 2017.
+
+    Esta jornada de trabajo tuvo el objetivo deavanzar en la implementación de la Estrategia regional de salud rural que se construyó de manera colectiva y fue presentada formalmente en los diálogos regionales vinculantes de Florencia, Caquetá, el pasado 22 de noviembre de 2022, para la elaboración del Plan Nacional de Desarrollo 2022-2026.
+
+    Para la jornada de trabajo se organizó un grupo de 36 personas conformado por estudiantes de pregrado de diferentes carreras (odontología, nutrición, terapia ocupacional, psicología, enfermería, ciencias políticas, cine y televisión), estudiantes de posgrado (maestría en seguridad alimentaria y nutricional, y maestría y doctorado en salud pública), algunos egresados y varios profesores(as) de las facultades de medicina y odontología vinculados al Doctorado Interfacultades en Salud Pública.
+
+    Se realizó un recorrido desde la zona noroccidental del municipio de San Vicente del Caguán, entrando por la Zona de Reserva Campesina (ZRC) de Pato-Balsillas, pasando por el área rural del municipio de La Macarena (Meta), y terminando en el centro poblado Urías Rondón  (antiguo ETCR) en el municipio de El Doncello (Caquetá).`,
+    subtitle: '',
+    activities: [
+      {
+        description: `El eje de la comunidad escolar alrededor del cuidado del cuerpo y cuidado del Territorio:
+
+        Con el fin de avanzar en una visión integrada de la salud, más allá de la atención de individuos enfermos que se da en la lógica de “brigada de salud”, el equipo de trabajo decidió construir una aproximación interdisciplinaria a la comunidad escolar de cada una de las instituciones educativas de los centros poblados programados para la visita. Mientras el grupo de odontología hacía una valoración de casos de niños, niñas y adultos que requirieran atención urgente, la mayor parte del equipo se dividió en cuatro grupos de trabajo: escolares, adolescentes, profesores y profesoras, padres y madres.
+
+        Con todos ellos se trató el tema de las prácticas relacionadas con “el cuidado del cuerpo y el cuidado del territorio”, con el fin de articular estas reflexiones con la idea de “casas comunitarias de salud y buen vivir”.`
+      },
+      {
+        description: `El eje de los líderes de las juntas y asociaciones para avanzar en la estrategia regional de salud rural
+
+        Se realizaron talleres con líderes y lideresas de las juntas de acción comunal, de la asociaciones campesinas, de delegados de los pueblos indígenas y de las asociaciones de mujeres de cada uno de los centro poblados visitados.
+
+        La agenda de los talleres se inició con una síntesis de la trayectoria del proceso iniciado en
+        2017 alrededor del plan comunitario de salud rural “Salud sin fronteras” en el municipio de
+        La Macarena, hasta llegar a la construcción de la estrategia regional de salud rural presentada oficialmente en noviembre de 2022.`
+      },
+      {
+        description: `El encuentro entre instituciones del sector salud y organizaciones sociales para avanzar en la implementación de la estrategia regional de salud rural
+        El día 19 de mayo, en la sede de la Aldea de Animadores, de la Diócesis de San Vicente del Caguán, se llevó a cabo el encuentro entre instituciones del sector salud de los niveles nacional, departamental y municipal y delegados de las organizaciones campesinas, de mujeres y de pueblos indígenas de la región de La Macarena (Meta), San Vicente del Caguán y los centros poblados Urías Rondón (El Doncello) y Agua Bonita (La Montañita). Alrededor de 90 personas, incluido el equipo del Accionatorio de la UNal, hicieron presencia, y unas 30 personas participaron de manera remota.
+
+        Posteriormente se llevó a cabo un ejercicio de discusión por mesas de trabajo, con la participación de asistentes de diferentes organizaciones, excepto por la mesa de trabajo con autoridades y miembros del cabildo indígena Embera Chamí, con el fin de contrastar las propuestas institucionales con las visiones e iniciativas de las organizaciones sociales. Para
+        cada una de las mesas se elaboró una relatoría sobre la discusión y las conclusiones.
+        Se expresó la disposición de las comunidades para participar en el proceso de caracterización de las familias y comunidades, con miras a la decisión sobre la ubicación de los posibles Centros de Atención Prioritarios en Salud- CAPS en los territorios. La información que se recabe deberá estar a disposición de las comunidades y las organizaciones sociales campesinas e indígenas, para avanzar en un sistema de información comunitario que permita hacer vigilancia en salud pública y orientar las decisiones locales en salud.
+
+        Expresan su beneplácito con la recuperación de la figura del(a) promotor(a) de salud, con la vinculación de personas de las mismas comunidades. Las casas comunitarias vendrían a ser las articuladoras del conjunto de actividades autónomas de las comunidades para el cuidado de la salud de las comunidades y sus territorios, en articulación con los CAPS y el desarrollo del modelo de Atención Primaria de Salud territorial, integral e intercultural.
+
+        La visita del equipo del Accionatorio por el Derecho a la Salud y el Buen Vivir, en el marco de la RedPaz UNAL, realizada entre los días 13 y 21 de mayo de 2023, a los territorios de la
+        región del norte del departamento del Caquetá y el municipio de La Macarena (Meta), permitió afianzar la ruta de construcción de una experiencia colectiva de salud rural que pretende superar los grandes obstáculos para el goce efectivo del derecho fundamental a la
+        salud de las poblaciones de estos territorios.`
+      },
+    ],
+  }
 ];

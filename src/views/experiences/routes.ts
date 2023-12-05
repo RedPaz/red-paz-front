@@ -106,6 +106,21 @@ const experienceRoutes: RouteRecordRaw[] = [
             },
           },
           {
+            path: 'arauca/:year',
+            name: 'Apoyo a procesos en Arauca',
+            component: ProcessSupportDetail,
+            meta: {
+              alias: 'Arauca',
+              bannerBg: '#402D5C',
+              imageSrc: '/images/experiences/activities/regions/main-banner.png',
+              tabs: [
+                { label: '2021', src: '/experiencias-de-paz/apoyo-a-procesos/arauca/2021' },
+                { label: '2022', src: '/experiencias-de-paz/apoyo-a-procesos/arauca/2022' },
+                { label: '2022', src: '/experiencias-de-paz/apoyo-a-procesos/arauca/2023' },
+              ],
+            },
+          },
+          {
             path: 'caqueta/:year',
             name: 'Apoyo a procesos en Caquetá',
             component: ProcessSupportDetail,
@@ -116,6 +131,19 @@ const experienceRoutes: RouteRecordRaw[] = [
               tabs: [
                 { label: '2021', src: '/experiencias-de-paz/apoyo-a-procesos/caqueta/2021' },
                 { label: '2022', src: '/experiencias-de-paz/apoyo-a-procesos/caqueta/2022' },
+              ],
+            },
+          },
+          {
+            path: 'caqueta-meta/:year',
+            name: 'Apoyo a procesos en Caquetá y Meta',
+            component: ProcessSupportDetail,
+            meta: {
+              alias: 'Caquetá - Meta',
+              bannerBg: '#334A3F',
+              imageSrc: '/images/experiences/activities/regions/main-banner.png',
+              tabs: [
+                { label: '2023', src: '/experiencias-de-paz/apoyo-a-procesos/caqueta-meta/2023' },
               ],
             },
           },

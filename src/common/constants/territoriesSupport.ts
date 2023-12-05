@@ -28,7 +28,7 @@ export const TERRITORIES_SUPPORT: GridItem[] = [
   {
     title: 'Caquetá y Meta',
     image: '/images/experiences/discussions/caqueta-meta.png',
-    src: '#',
+    src: '/experiencias-de-paz/apoyo-a-procesos/caqueta-meta/2023',
     color: '#334A3F',
     description: 'Apoyo a procesos en el Departamento de San Vicente del Caguán (Caquetá) y la Macarena (Meta)',
     cta: 'Ver más',

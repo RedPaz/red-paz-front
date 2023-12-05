@@ -9,7 +9,7 @@ const description: DescriptionItem = {
   image: '/images/about-us/aboutUs.png',
   links: [
     { label: 'Ver PDF', src: '/pdf/recursos/diagnostico-linea-base.pdf' },
-    { label: 'Ver matríz', src: '/pdf/memoriasUNconflicto.pdf' },
+    { label: 'Ver matríz', src: '/pdf/recursos/matriz.xlsx' },
   ],
 }
 

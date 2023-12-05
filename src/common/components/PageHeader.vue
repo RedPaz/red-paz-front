@@ -119,7 +119,7 @@ onBeforeMount(() => {
   </div>
 
   <div
-    v-if="tabs.length && showTabs"
+    v-if="(tabs.length > 1) && showTabs"
     class="header-tabs grid"
     :class="`grid-cols-${tabs.length}`"
     :style="{ background }"
